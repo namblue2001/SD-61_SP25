@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/apple/Downloads/macbook pro /FPT Polytechnic/Semester 7/Dự án tốt nghiệp - SP25/StyleTee/StyleTee/StyleTee.csproj": {}
+    "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\StyleTee.csproj": {}
   },
   "projects": {
-    "/Users/apple/Downloads/macbook pro /FPT Polytechnic/Semester 7/Dự án tốt nghiệp - SP25/StyleTee/StyleTee/StyleTee.csproj": {
+    "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\StyleTee.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/apple/Downloads/macbook pro /FPT Polytechnic/Semester 7/Dự án tốt nghiệp - SP25/StyleTee/StyleTee/StyleTee.csproj",
+        "projectUniqueName": "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\StyleTee.csproj",
         "projectName": "StyleTee",
-        "projectPath": "/Users/apple/Downloads/macbook pro /FPT Polytechnic/Semester 7/Dự án tốt nghiệp - SP25/StyleTee/StyleTee/StyleTee.csproj",
-        "packagesPath": "/Users/apple/.nuget/packages/",
-        "outputPath": "/Users/apple/Downloads/macbook pro /FPT Polytechnic/Semester 7/Dự án tốt nghiệp - SP25/StyleTee/StyleTee/obj/",
+        "projectPath": "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\StyleTee.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/apple/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/sdk/7.0.315/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -93,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.315/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
