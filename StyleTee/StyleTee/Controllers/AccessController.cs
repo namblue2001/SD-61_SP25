@@ -8,7 +8,20 @@ namespace StyleTee.Controllers
 {
     public class AccessController : Controller
     {
+        public AccessController()
+        {
 
+        }
+
+        public IActionResult DangNhap()
+        {
+            return View();
+        }
+
+        public IActionResult DangKy()
+        {
+            return View();
+        }
     }
 }
 
