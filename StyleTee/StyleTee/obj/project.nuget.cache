@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zxn//NNCxjN5Vmk6z1szqV/8haG6BiEsbtHXCkVlTX42oZqitESMtCS53vlzb7/fsw1ZCvY9dbTbvhrcLOY7Ew==",
+  "dgSpecHash": "stQH6YwwcvCRrMqkRaSZB2yeDaAadaaWvAAfHYoDX5d3fFv4xLVYHTrA7nGJbKcEPL6PJRSQjwrPKoKkMOL/wA==",
   "success": true,
-  "projectFilePath": "D:\\fall2025\\repos8\\StyleTee\\StyleTee\\StyleTee.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
@@ -53,6 +53,7 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",
