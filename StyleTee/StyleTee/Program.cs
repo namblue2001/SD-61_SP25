@@ -1,17 +1,20 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
+using StyleTee.Models;
+using StyleTee.Repository;
+using StyleTee.Service.IService;
+using StyleTee.Service.Service;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlite(connectionString));
+options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped(typeof(IAllRepositories<>),typeof(AllRepositories<>));
+builder.Services.AddScoped<ITaiKhoanService,TaiKhoanService>();
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -38,7 +41,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-app.MapRazorPages();
-
 app.Run();
 

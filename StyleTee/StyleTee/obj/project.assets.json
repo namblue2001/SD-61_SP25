@@ -856,6 +856,19 @@
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
         }
       },
+      "Portable.BouncyCastle/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -2698,6 +2711,21 @@
         "mono.texttemplating.nuspec"
       ]
     },
+    "Portable.BouncyCastle/1.9.0": {
+      "sha512": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.9.0.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
     "SQLitePCLRaw.bundle_e_sqlite3/2.1.4": {
       "sha512": "EWI1olKDjFEBMJu0+3wuxwziIAdWDVMYLhuZ3Qs84rrz+DHwD00RzWPZCa+bLnHCf3oJwuFZIRsHT5p236QXww==",
       "type": "package",
@@ -3735,7 +3763,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.18",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.18",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.18",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.18"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.18",
+      "Portable.BouncyCastle >= 1.9.0"
     ]
   },
   "packageFolders": {
@@ -3745,9 +3774,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vanhi\\Source\\Repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
+      "projectUniqueName": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
       "projectName": "StyleTee",
-      "projectPath": "C:\\Users\\vanhi\\Source\\Repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
+      "projectPath": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
       "packagesPath": "C:\\Users\\vanhi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vanhi\\Source\\Repos\\SD-61_SP25\\StyleTee\\StyleTee\\obj\\",
       "projectStyle": "PackageReference",
@@ -3821,6 +3850,10 @@
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
             "version": "[7.0.18, )"
+          },
+          "Portable.BouncyCastle": {
+            "target": "Package",
+            "version": "[1.9.0, )"
           }
         },
         "imports": [

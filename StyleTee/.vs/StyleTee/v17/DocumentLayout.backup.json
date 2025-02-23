@@ -1,0 +1,401 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\service\\iservice\\itaikhoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\service\\iservice\\itaikhoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\repository\\allrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\repository\\allrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\models\\taikhoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\models\\sanpham.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\models\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\models\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\areas\\quanly\\views\\shared\\_layoutquanly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\areas\\quanly\\views\\shared\\_layoutquanly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|c:\\users\\vanhi\\source\\repos\\sd-61_sp25\\styletee\\styletee\\areas\\nhanvien\\views\\shared\\_layoutnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F4BA4AB5-12E5-426F-8965-C094128C55CC}|StyleTee\\StyleTee.csproj|solutionrelative:styletee\\areas\\nhanvien\\views\\shared\\_layoutnhanvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "StyleTee\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "StyleTee\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-22T14:14:39.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Program.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Program.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Program.cs",
+              "RelativeToolTip": "StyleTee\\Program.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:55:47.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T13:55:28.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T13:55:18.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\appsettings.json",
+              "RelativeDocumentMoniker": "StyleTee\\appsettings.json",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\appsettings.json",
+              "RelativeToolTip": "StyleTee\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-21T11:10:41.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T13:55:14.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T13:54:55.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-22T13:54:36.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ITaiKhoanService.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Service\\IService\\ITaiKhoanService.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Service\\IService\\ITaiKhoanService.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Service\\IService\\ITaiKhoanService.cs",
+              "RelativeToolTip": "StyleTee\\Service\\IService\\ITaiKhoanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:53:25.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaiKhoan.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\TaiKhoan.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Models\\TaiKhoan.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\TaiKhoan.cs",
+              "RelativeToolTip": "StyleTee\\Models\\TaiKhoan.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:17:22.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAGkCAAAAAAAAAAAQwIkCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T13:10:13.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SanPham.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\SanPham.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Models\\SanPham.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\SanPham.cs",
+              "RelativeToolTip": "StyleTee\\Models\\SanPham.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:17:27.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AllRepositories.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Repository\\AllRepositories.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Repository\\AllRepositories.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Repository\\AllRepositories.cs",
+              "RelativeToolTip": "StyleTee\\Repository\\AllRepositories.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:12:44.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "StyleTee\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:52:02.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\ViewModel\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Models\\ViewModel\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Models\\ViewModel\\RegisterViewModel.cs",
+              "RelativeToolTip": "StyleTee\\Models\\ViewModel\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:51:38.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "StyleTee\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:50:56.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StyleTee\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:50:18.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "StyleTee\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "StyleTee\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAkwCMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T13:15:53.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "StyleTee\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Properties\\launchSettings.json",
+              "RelativeToolTip": "StyleTee\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-22T13:48:09.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAADAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T13:40:11.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "StyleTee\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T13:44:44.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_LayoutNhanVien.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Areas\\NhanVien\\Views\\Shared\\_LayoutNhanVien.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Areas\\NhanVien\\Views\\Shared\\_LayoutNhanVien.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Areas\\NhanVien\\Views\\Shared\\_LayoutNhanVien.cshtml",
+              "RelativeToolTip": "StyleTee\\Areas\\NhanVien\\Views\\Shared\\_LayoutNhanVien.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T13:11:20.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_LayoutQuanLy.cshtml",
+              "DocumentMoniker": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Areas\\QuanLy\\Views\\Shared\\_LayoutQuanLy.cshtml",
+              "RelativeDocumentMoniker": "StyleTee\\Areas\\QuanLy\\Views\\Shared\\_LayoutQuanLy.cshtml",
+              "ToolTip": "C:\\Users\\vanhi\\source\\repos\\SD-61_SP25\\StyleTee\\StyleTee\\Areas\\QuanLy\\Views\\Shared\\_LayoutQuanLy.cshtml",
+              "RelativeToolTip": "StyleTee\\Areas\\QuanLy\\Views\\Shared\\_LayoutQuanLy.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAlwEgAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-21T13:10:43.077Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

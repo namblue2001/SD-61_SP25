@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5wNEiHZgtSU=",
+  "dgSpecHash": "88hkAxEtRTI=",
   "success": true,
   "projectFilePath": "C:\\Users\\vanhi\\Source\\Repos\\SD-61_SP25\\StyleTee\\StyleTee\\StyleTee.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\vanhi\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\vanhi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\vanhi\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\vanhi\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\vanhi\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.4\\sqlitepclraw.bundle_e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\vanhi\\.nuget\\packages\\sqlitepclraw.core\\2.1.4\\sqlitepclraw.core.2.1.4.nupkg.sha512",
     "C:\\Users\\vanhi\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.4\\sqlitepclraw.lib.e_sqlite3.2.1.4.nupkg.sha512",

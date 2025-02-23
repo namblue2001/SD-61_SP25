@@ -1,0 +1,80 @@
+@model IEnumerable<StyleTee.Models.SanPham>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+    Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                    <h6>Danh sách sản phẩm</h6>
+                    <a asp-action="Create" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i> Thêm sản phẩm mới
+                    </a>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sản phẩm</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mô tả</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Giá gốc</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Trạng thái</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    @if (item.HinhAnh != null && item.HinhAnh.Any())
+                                                    {
+                                                        <img src="@item.HinhAnh.First().url_hinhAnh" class="avatar avatar-sm me-3" alt="@item.tenSanPham">
+                                                    }
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.tenSanPham</h6>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs text-secondary mb-0">@item.moTa</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.giaGoc.ToString("N0") VNĐ</p>
+                                        </td>
+                                        <td class="align-middle text-center text-sm">
+                                            @if (item.trangThai)
+                                            {
+                                                <span class="badge badge-sm bg-gradient-success">Hoạt động</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-sm bg-gradient-secondary">Không hoạt động</span>
+                                            }
+                                        </td>
+                                        <td class="align-middle">
+                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user">
+                                                <i class="fas fa-edit"></i> Sửa
+                                            </a>
+                                            <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete user">
+                                                <i class="fas fa-trash"></i> Xóa
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
