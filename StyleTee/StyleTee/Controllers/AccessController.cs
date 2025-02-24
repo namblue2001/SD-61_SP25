@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StyleTee.Data;
 using StyleTee.Models;
-using StyleTee.Models.ViewModel;
 using StyleTee.Service;
 using StyleTee.Service.IService;
 
@@ -17,7 +16,7 @@ namespace StyleTee.Controllers
     {
         private readonly ITaiKhoanService _tkservice;
         private readonly ApplicationDbContext _context;
-        public AccessController(ITaiKhoanService tkservice , ApplicationDbContext context)
+        public AccessController(ITaiKhoanService tkservice, ApplicationDbContext context)
         {
             _tkservice = tkservice;
             _context = context;
@@ -30,31 +29,38 @@ namespace StyleTee.Controllers
 
 
         [HttpPost]
-        public IActionResult DangKy(RegisterViewModel model)
+        public async Task<IActionResult> DangKy(string hoTen, string email, string soDienThoai, DateTime ngaySinh, string gioiTinh, string taiKhoan, string matKhau)
+
         {
-            if (ModelState.IsValid)
+            //var userexist = _context.TaiKhoan.FirstOrDefault(x=>x.taiKhoan ==  taiKhoan);
+            //if (userexist == null)
+            //{
+            //    TempData["ErrorMessage"] = "Tên đăng nhập đã tồn tại";
+            //}
+            var taikhoan = new TaiKhoan()
             {
-                var vaitro = _context.VaiTro.FirstOrDefault(v => v.tenVaiTro == "KhachHang");
-                if(vaitro != null)
-                {
-                    vaitro = new VaiTro { ID_VaiTro = Guid.NewGuid(), tenVaiTro = "KhachHang" };
-                    _context.VaiTro.Add(vaitro);
-                    _context.SaveChanges();
-                }
-      
-                var user = new TaiKhoan()
-                {
-                    ID_TaiKhoan = Guid.NewGuid(),
-                    taiKhoan = model.tenDangNhap,
-                    matKhau = model.matKhau,
-                    ID_VaiTro = vaitro.ID_VaiTro
-                };
-                var registerUer = _tkservice.Register(user);
-                return RedirectToAction("DangNhap");
+                hoTen = hoTen,
+                email = email,
+                soDienThoai = soDienThoai,
+                ngaySinh = ngaySinh,
+                gioiTinh = gioiTinh,
+                taiKhoan = taiKhoan,
+                matKhau = matKhau
+            };
+            try
+            {
+                taikhoan.ID_TaiKhoan = Guid.NewGuid();
+                taikhoan.trangThai = "Hoạt động";
+                taikhoan.tenVaiTro = "Khách hàng"; 
+                _context.TaiKhoan.Add(taikhoan);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("DangNhap", "Access");
             }
-            else
+            catch (Exception ex)
             {
-                return View(model);
+                Console.WriteLine(ex.Message);
+                TempData["lỗi"] = "Thông tin bạn nhập không đúng. Vui lòng kiểm tra lại";
+                return View(taikhoan);
             }
         }
         public IActionResult DangNhap(string taiKhoan, string matKhau)
