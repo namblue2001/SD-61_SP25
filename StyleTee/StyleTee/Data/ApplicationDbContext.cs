@@ -24,7 +24,6 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<TaiKhoan>().HasOne(x => x.VaiTro).WithOne(y => y.TaiKhoan).HasForeignKey<TaiKhoan>(p => p.ID_VaiTro);
         builder.Entity<HinhAnh>().HasOne(h => h.SanPham).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPham).OnDelete(DeleteBehavior.Restrict);
         builder.Entity<HinhAnh>().HasOne(h => h.SanPhamChiTiet).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPhamChiTiet).OnDelete(DeleteBehavior.Restrict);
 
