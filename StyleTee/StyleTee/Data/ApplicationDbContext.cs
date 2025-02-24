@@ -20,7 +20,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<SanPhamChiTiet> SanPhamChiTiet { get; set; }
     public DbSet<TaiKhoan> TaiKhoan { get; set; }
     public DbSet<ThuongHieu> ThuongHieu { get; set; }
-    public DbSet<VaiTro> VaiTro { get; set; }
     public DbSet<XuatXu> XuatXu { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
