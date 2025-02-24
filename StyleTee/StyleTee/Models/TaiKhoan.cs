@@ -34,8 +34,8 @@ namespace StyleTee.Models
 
         [RegularExpression("^(Nam|Nu)$", ErrorMessage = "Giới tính chỉ có thể là 'Nam' hoặc 'Nữ'.")]
         public string? gioiTinh { get; set; }
-
-		public DateTime? ngaySinh { get; set; }
+        [Required(ErrorMessage = "Ngày sinh là bắt buộc.")]
+        public DateTime ngaySinh { get; set; }
 
         [Required(ErrorMessage = "Trạn thái là bắt buộc.")]
         [RegularExpression("^(Hoạt động|Ngừng hoạt động)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]

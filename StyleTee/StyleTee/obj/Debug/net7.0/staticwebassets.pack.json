@@ -1,0 +1,3145 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\StyleTee.bundle.scp.css",
+      "PackagePath": "staticwebassets\\StyleTee.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\ISSUE_TEMPLATE.md",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\ISSUE_TEMPLATE.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\LICENSE",
+      "PackagePath": "staticwebassets\\LayoutAdmin"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\README.md",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\css\\nucleo-icons.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\nucleo-icons.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\css\\nucleo-svg.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\nucleo-svg.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.css.map",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.min.css",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\css\\soft-ui-dashboard.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo-icons.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo-icons.eot"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo-icons.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo-icons.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo-icons.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo-icons.ttf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo-icons.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo-icons.woff"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo-icons.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo-icons.woff2"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo.eot",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo.eot"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo.ttf",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo.ttf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo.woff",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo.woff"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\fonts\\nucleo.woff2",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\fonts\\nucleo.woff2"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\apple-icon.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\apple-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\bruce-mars.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\bruce-mars.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\curved0.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\curved0.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\curved1.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\curved1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\curved14.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\curved14.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\curved6.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\curved6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\curved8.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\curved8.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\curved-images\\white-curved.jpeg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\curved-images\\white-curved.jpeg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\down-arrow-dark.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\down-arrow-dark.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\down-arrow.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\down-arrow.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\home-decor-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\home-decor-1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\home-decor-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\home-decor-2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\home-decor-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\home-decor-3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\illustrations\\rocket-white.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\illustrations\\rocket-white.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\ivana-square.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\ivana-square.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\ivancik.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\ivancik.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\kal-visuals-square.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\kal-visuals-square.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\logo-ct.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\logo-ct.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\logos\\mastercard.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\logos\\mastercard.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\logos\\visa.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\logos\\visa.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\marie.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\marie.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\shapes\\waves-white.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\shapes\\waves-white.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\icon-sun-cloud.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\icon-sun-cloud.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-atlassian.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-atlassian.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-invision.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-invision.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-jira.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-jira.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-slack.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-slack.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-spotify.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-spotify.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-webdev.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-webdev.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\small-logos\\logo-xd.svg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\small-logos\\logo-xd.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\team-1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\team-2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\team-3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\team-4.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\team-4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\img\\vr-bg.jpg",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\img\\vr-bg.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\core\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\core\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\core\\popper.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\core\\popper.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\Chart.extension.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\Chart.extension.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\bootstrap-notify.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\bootstrap-notify.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\chartjs.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\chartjs.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\choices.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\choices.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\plugins\\smooth-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\plugins\\smooth-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.js.map",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.min.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\js\\soft-ui-dashboard.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_accordion.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_alert.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_alert.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_avatars.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_avatars.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_backgrounds.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_backgrounds.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_badge.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_badge.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_breadcrumbs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_breadcrumbs.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_cards-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_cards-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_cards.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_cards.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_components.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_components.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropdown-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropdown-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropup.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_dropup.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_fixed-plugin.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_fixed-plugin.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_floating-elements.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_floating-elements.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_footer.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_footer.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_forms.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_forms.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_gradients.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_header.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_header.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_info-areas.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_info-areas.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_list-check.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_list-check.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_misc-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_misc-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_misc.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_misc.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_nav.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_nav.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar-vertical.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_popovers.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_popovers.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_progress.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_progress.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_rtl-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_rtl-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_rtl.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_rtl.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_social-buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tilt.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tilt.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_timeline.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_timeline.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tooltips.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_tooltips.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_typography.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_typography.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_utilities-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_utilities-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_variables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\_variables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-circle.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-circle.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-dot.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-dot.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-floating.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge-floating.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\badges\\_badge.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_accordion.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_accordion.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_alert.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_alert.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_badge.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_badge.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_button-group.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_button-group.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_card.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_card.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_carousel.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_carousel.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_close.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_close.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_containers.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_containers.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_dropdown.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_forms.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_forms.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_functions.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_functions.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_grid.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_grid.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_helpers.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_helpers.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_images.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_images.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_list-group.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_mixins.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_modal.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_modal.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_nav.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_nav.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_navbar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_offcanvas.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_popover.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_popover.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_progress.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_progress.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_reboot.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_reboot.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_root.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_root.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_spinners.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_spinners.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_toasts.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_toasts.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_tooltip.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_transitions.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_transitions.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_type.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_type.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_variables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\_variables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\bootstrap.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\forms\\_validation.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_position.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_container.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_image.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\utilities\\_api.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\bootstrap\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-background.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-background.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-blog.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-blog.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-horizontal.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-horizontal.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-pricing.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-pricing.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-profile.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\cards\\card-profile.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\custom\\_styles.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\custom\\_styles.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\custom\\_variables.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\custom\\_variables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-switch.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_form-switch.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_forms.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_forms.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_inputs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_inputs.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\forms\\_labels.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_badge.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_badge.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_colored-shadows.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_colored-shadows.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_hover.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_hover.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\_social-buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\mixins.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\mixins\\mixins.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_flatpickr.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_flatpickr.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_nouislider.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_nouislider.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_perfect-scrollbar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_perfect-scrollbar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_prism.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\_prism.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\plugins.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\free\\plugins.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_carousel-slick.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_carousel-slick.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_choices.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_choices.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_datatable-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_datatable-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_datatable.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_datatable.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_dragula.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_dragula.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_dropzone.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_dropzone.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_fullcalendar-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_fullcalendar-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_fullcalendar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_fullcalendar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_glidejs.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_glidejs.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_highlight.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_highlight.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_kanban.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_kanban.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_leaflet.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_leaflet.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_list-check.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_list-check.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_photoswipe.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_photoswipe.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_quill.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_quill.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_rating-widget.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_rating-widget.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_sweetalert2-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_sweetalert2-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_sweetalert2.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\_sweetalert2.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\multi-step.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\multi-step.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\plugins-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\plugins\\pro\\plugins-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\theme-pro.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\theme-pro.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\theme.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\theme.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_animations.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_animations.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_avatars.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_avatars.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_badge.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_badge.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_breadcrumb.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_cards-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_cards-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_cards.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_cards.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_choices.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_choices.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_dropdowns.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_dropdowns.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_fixed-plugin.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_fixed-plugin.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_form-switch.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_form-switch.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_full-calendar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_full-calendar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_header.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_header.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_info-areas.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_info-areas.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_misc-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_misc-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_misc.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_misc.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar-vertical.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar-vertical.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_navbar.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_pagination.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_pagination.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_rtl.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_rtl.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_social-buttons.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_social-buttons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_table.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_table.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_timeline.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_timeline.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities-extend.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities-extend.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_utilities.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\assets\\scss\\soft-ui-dashboard\\variables\\_virtual-reality.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\docs\\documentation.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\docs\\documentation.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\gulpfile.js",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\gulpfile.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-intro.gif",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-intro.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-screen-billing.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-screen-billing.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-screen-login.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-screen-login.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-screen-profile.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-screen-profile.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-screen-rtl.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-screen-rtl.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\media\\soft-ui-dashboard-screen.png",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\media\\soft-ui-dashboard-screen.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\package.json",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\package.json"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\billing.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\billing.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\dashboard.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\dashboard.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\profile.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\profile.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\rtl.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\rtl.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\sign-in.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\sign-in.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\sign-up.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\sign-up.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\tables.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\tables.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutAdmin\\pages\\virtual-reality.html",
+      "PackagePath": "staticwebassets\\LayoutAdmin\\pages\\virtual-reality.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\Banner1.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\Banner1.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\Banner2.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\Banner2.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\Banner3.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\Banner3.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\Bx_Slider_Control.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\Bx_Slider_Control.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\CART.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\CART.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\_psd\\CHECKOUT.psd",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\_psd\\CHECKOUT.psd"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\custom.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\custom.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\style-responsive.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\style-responsive.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\style.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\style.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\blue.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\blue.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\gray.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\gray.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\green.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\green.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\orange.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\orange.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\red.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\red.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\turquoise.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\css\\themes\\turquoise.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\blockquote-corner-another-color.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\blockquote-corner-another-color.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\blockquote-corner.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\blockquote-corner.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angle-brands.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angle-brands.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angle-down-langs.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angle-down-langs.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angles.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\fa-angles.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icon-color-close.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icon-color-close.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icon-color.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icon-color.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\add-goods.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\add-goods.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\del-goods.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\del-goods.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\search-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\search-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\shop-cart-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\shop-cart-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\sidebar-toggle-icons.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\sidebar-toggle-icons.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\toggler.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\toggler.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\top-search-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\icons\\top-search-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\layerslider-arrows.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\layerslider-arrows.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-blue-small.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-blue-small.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-blue.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-blue.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-green.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-green.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-orange.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\0logo-orange.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-blue.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-blue.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-green.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-green.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-orange.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-orange.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-turquoise.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-corp-turquoise.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-blue.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-blue.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-green.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-green.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-orange.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-orange.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-turquoise.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\logo-shop-turquoise.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\shop-logo-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\logos\\shop-logo-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\new.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\new.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\MasterCard.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\MasterCard.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\PayPal.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\PayPal.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\american-express.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\american-express.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\fa-angle-right-info.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\fa-angle-right-info.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\visa.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\visa.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\western-union.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\payments\\western-union.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\sale.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\sale.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\step3-angle-right.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\step3-angle-right.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\syncfusion-icons-white.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\syncfusion-icons-white.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\syncfusion-icons.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\syncfusion-icons.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\img\\up.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\img\\up.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\scripts\\back-to-top.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\scripts\\back-to-top.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\corporate\\scripts\\layout.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\corporate\\scripts\\layout.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\animate.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\components.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\components.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\gallery.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\gallery.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\portfolio.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\portfolio.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\slider.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\slider.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\css\\style-shop.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\css\\style-shop.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\canon.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\canon.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\esprit.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\esprit.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\gap.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\gap.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\next.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\next.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\puma.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\puma.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\zara.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\brands\\zara.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\careers\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\careers\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\careers\\careers.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\careers\\careers.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\cart-img.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\cart-img.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_1.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_1.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_1_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_1_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_2.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_2.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_2_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_2_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_3.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_3.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_3_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_3_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_4.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_4.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_4_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_4_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_5.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_5.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_5_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_5_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_6.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_6.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_6_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_6_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_7.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_7.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_7_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_7_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_8.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_8.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_8_gray.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\clients\\client_8_gray.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\fa-angle-brands.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\fa-angle-brands.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\fa-angles.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\fa-angles.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg1_BK.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg1_BK.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg2_BK.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg2_BK.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg8.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg8.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg9.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg9.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg9_BK.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\bg9_BK.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-blue.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-blue.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-green.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-green.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-orange.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-orange.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint1-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-blue.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-blue.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-green.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-green.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-orange.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-orange.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\hint2-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\ipad.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\ipad.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\ipadmini.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\ipadmini.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_large.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_large.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_left.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_left.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_right.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\iphone_right.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\mac.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\mac.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\macbook.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\macbook.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb6.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb7.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\frontend-slider\\thumbs\\thumb7.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icon-color-close.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icon-color-close.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icon-color.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icon-color.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\add-goods.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\add-goods.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\del-goods.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\del-goods.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\search-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\search-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\shop-cart-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\shop-cart-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\sidebar-toggle-icons.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\sidebar-toggle-icons.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\toggler.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\toggler.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\top-search-icon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\icons\\top-search-icon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\img1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\img1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\img3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\img3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\index-sliders\\slide3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\new.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\new.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img1-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img1-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img1-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img1-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img2-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img2-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img2-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img2-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img3-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img3-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img3-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img3-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img4-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img4-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img4-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img4-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img5-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img5-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img5-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img5-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img6-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img6-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img6-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img6-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img7-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img7-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img7-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img7-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img8-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img8-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img8-small.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\people\\img8-small.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img6.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\photos\\img6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img1-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img1-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img1-medium.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img1-medium.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-large.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-large.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-large_bk.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-large_bk.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-medium.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-medium.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-medium_bk.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\pics\\img2-medium_bk.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\posts\\img3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\product1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\product1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\product1big.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\product1big.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\k4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model6.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model7.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\model7.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p6.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p7.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\products\\p7.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\sale.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\sale.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide1\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide1\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide1\\bg.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide1\\bg.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\bg.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\bg.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\price.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide2\\price.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide3\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide3\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide3\\bg.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide3\\bg.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\bg.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\bg.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\buy.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\buy.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\price.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\price.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\title.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\shop-slider\\slide4\\title.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\aboutme.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\aboutme.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\amazon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\amazon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\behance.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\behance.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\blogger.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\blogger.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\deviantart.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\deviantart.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\dribbble.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\dribbble.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\dropbox.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\dropbox.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\evernote.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\evernote.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\facebook.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\facebook.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\flickr.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\flickr.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\forrst.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\forrst.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\foursquare.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\foursquare.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\github.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\github.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\googleplus.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\googleplus.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\gravatar.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\gravatar.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\instagram.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\instagram.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\jolicloud.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\jolicloud.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\klout.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\klout.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\last-fm.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\last-fm.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\linkedin.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\linkedin.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\myspace.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\myspace.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\picasa.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\picasa.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\pintrest.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\pintrest.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\quora.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\quora.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\reddit.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\reddit.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\rss.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\rss.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\skype.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\skype.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\spotify.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\spotify.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\stumbleupon.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\stumbleupon.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\tumblr.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\tumblr.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\twitter.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\twitter.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\vimeo.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\vimeo.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\vk.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\vk.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\wordpress.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\wordpress.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\xing.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\xing.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\yahoo.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\yahoo.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\youtube.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\social\\youtube.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\step3-angle-right.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\step3-angle-right.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\man.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\man.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\woman.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\title-bg\\woman.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\Thumbs.db",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\Thumbs.db"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img1.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img1.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img2.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img2.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img3.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img3.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img4.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img4.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img5.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img5.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img6.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\img\\works\\img6.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\bs-carousel.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\bs-carousel.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\checkout.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\checkout.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\contact-us.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\contact-us.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\portfolio.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\pages\\scripts\\portfolio.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\LICENSE.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap-touchspin\\bootstrap.touchspin.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\fonts\\glyphicons-halflings-regular.woff2"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\npm.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\bootstrap\\js\\npm.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\excanvas.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\excanvas.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\CHANGELOG.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\CHANGELOG.txt",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\CHANGELOG.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\README.txt",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\README.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\1_b.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\1_b.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\1_s.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\1_s.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\2_b.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\2_b.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\2_s.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\2_s.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\3_b.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\3_b.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\3_s.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\3_s.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\4_b.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\4_b.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\4_s.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\4_s.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\5_b.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\5_b.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\5_s.jpg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\5_s.jpg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\ajax.txt",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\ajax.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\iframe.html",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\iframe.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\index.html",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\demo\\index.html"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\lib\\jquery-1.8.2.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\lib\\jquery-1.8.2.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\lib\\jquery.mousewheel-3.0.6.pack.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\lib\\jquery.mousewheel-3.0.6.pack.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\blank.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\blank.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_loading.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_loading.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_overlay.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_overlay.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_sprite.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\fancybox_sprite.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\fancybox_buttons.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\fancybox_buttons.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-buttons.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-buttons.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-buttons.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-buttons.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-media.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-media.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\helpers\\jquery.fancybox-thumbs.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.pack.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\fancybox\\source\\jquery.fancybox.pack.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\animated.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\animated.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\core.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\core.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\fixed-width.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\font-awesome.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\icons.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\icons.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\larger.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\larger.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\list.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\list.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\mixins.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\path.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\path.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\stacked.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\variables.less",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\less\\variables.less"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_path.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\font-awesome\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\gmaps.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\gmaps.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\gmaps.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\gmaps\\gmaps.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\holder.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\holder.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-migrate.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-migrate.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\bower.json",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\bower.json"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\jquery.mixitup.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\jquery.mixitup.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\mixitup.jquery.json",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-mixitup\\mixitup.jquery.json"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\jquery.slimscroll.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\jquery.slimscroll.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\jquery.slimscroll.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\jquery.slimscroll.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\slimScroll.jquery.json",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery-slimscroll\\slimScroll.jquery.json"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.blockui.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.blockui.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.cokie.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.cokie.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.easing.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.easing.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.min.map",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.parallax.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.parallax.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.scrollTo.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\jquery.scrollTo.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\moment.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\moment.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\owl.carousel.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\owl.carousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-black.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-black.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-red.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-red.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-yellow.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna-yellow.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\antenna.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\bigstars.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\bigstars.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-black32.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-black32.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-gold32.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-gold32.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-red32.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-red32.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-white32.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star-white32.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_2.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_2.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_3.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_3.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_4.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\content\\star_4.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\example.htm",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\example.htm"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\rateit.aspx",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\rateit.aspx"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushCSharp.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushCSharp.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushCss.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushCss.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushJScript.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushJScript.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushXml.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shBrushXml.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCore.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCore.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCore.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCore.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCoreDefault.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\example\\sh\\shCoreDefault.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\delete.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\delete.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.min.js.map",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\jquery.rateit.min.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\rateit.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\rateit.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\star.gif",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\rateit\\src\\star.gif"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\respond.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\respond.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\License.txt",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\License.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\Readme.txt",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\Readme.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.dev.svg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.dev.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.eot",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.eot"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.svg",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.svg"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.ttf",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.ttf"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.woff",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\fonts\\Simple-Line-Icons.woff"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\icons-lte-ie7.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\icons-lte-ie7.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\simple-line-icons.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\simple-line-icons.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\simple-line-icons.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\simple-line-icons\\simple-line-icons.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\smooth-scroll\\smooth-scroll.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\smooth-scroll\\smooth-scroll.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\README.md",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\README.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.min.css",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.scss",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\css\\uniform.default.scss"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\bg-input-focus.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\bg-input-focus.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\bg-input.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\bg-input.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\sprite.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\sprite.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\sprite_original.png",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\images\\sprite_original.png"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\jquery.uniform.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\jquery.uniform.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\jquery.uniform.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\uniform\\jquery.uniform.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\zoom\\jquery.zoom.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\zoom\\jquery.zoom.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\LayoutKhachHang\\theme\\assets\\plugins\\zoom\\jquery.zoom.min.js",
+      "PackagePath": "staticwebassets\\LayoutKhachHang\\theme\\assets\\plugins\\zoom\\jquery.zoom.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\fall2025\\2402_2\\StyleTee\\StyleTee\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.StyleTee.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.StyleTee.props",
+      "PackagePath": "build\\StyleTee.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.StyleTee.props",
+      "PackagePath": "buildMultiTargeting\\StyleTee.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.StyleTee.props",
+      "PackagePath": "buildTransitive\\StyleTee.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
