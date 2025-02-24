@@ -11,11 +11,19 @@
             <div class="card mb-4">
                 <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                     <h6>Danh sách sản phẩm</h6>
-                    <a asp-action="Create" class="btn btn-primary btn-sm">
-                        <i class="fas fa-plus"></i> Thêm sản phẩm mới
-                    </a>
+                    <div class="d-flex align-items-center">
+                        <form asp-action="Index" method="get" class="d-flex me-2">
+                            <input type="text" name="searchString" class="form-control form-control-sm" placeholder="Tìm kiếm sản phẩm..." value="@ViewBag.SearchString" />
+                            <button type="submit" class="btn btn-outline-primary btn-sm ms-2">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                        <a asp-action="Create" class="btn btn-primary btn-sm">
+                            <i class="fas fa-plus"></i> Thêm sản phẩm mới
+                        </a>
+                    </div>
                 </div>
-                <div class="card-body px-0 pt-0 pb-2">
+                <div id="productList" class="card-body px-0 pt-0 pb-2">
                     <div class="table-responsive p-0">
                         <table class="table align-items-center mb-0">
                             <thead>
@@ -27,18 +35,12 @@
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="productTableBody">
                                 @foreach (var item in Model)
                                 {
                                     <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <div>
-                                                    @if (item.HinhAnh != null && item.HinhAnh.Any())
-                                                    {
-                                                        <img src="@item.HinhAnh.First().url_hinhAnh" class="avatar avatar-sm me-3" alt="@item.tenSanPham">
-                                                    }
-                                                </div>
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">@item.tenSanPham</h6>
                                                 </div>
@@ -61,7 +63,7 @@
                                             }
                                         </td>
                                         <td class="align-middle">
-                                            <a href="javascript:;" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user">
+                                            <a asp-action="Edit" asp-route-id="@item.ID_SanPham" class="text-secondary font-weight-bold text-xs me-2" data-toggle="tooltip" data-original-title="Edit user">
                                                 <i class="fas fa-edit"></i> Sửa
                                             </a>
                                             <a href="javascript:;" class="text-danger font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete user">
@@ -77,4 +79,25 @@
             </div>
         </div>
     </div>
-</div> 
+</div>
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchInput = document.querySelector("input[name='searchString']");
+            const rows = document.querySelectorAll("#productTableBody tr");
+
+            searchInput.addEventListener("input", function () {
+                const searchText = searchInput.value.toLowerCase();
+
+                rows.forEach(row => {
+                    const productName = row.querySelector("td:first-child h6").textContent.toLowerCase();
+                    if (productName.includes(searchText)) {
+                        row.style.display = "";
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
+}
