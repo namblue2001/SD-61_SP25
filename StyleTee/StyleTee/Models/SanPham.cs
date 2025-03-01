@@ -13,6 +13,7 @@ namespace StyleTee.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal giaGoc { get; set; }
         public bool trangThai { get; set; }
-        public List<HinhAnh>   HinhAnh { get; set; }
+        public ICollection<HinhAnh>   HinhAnh { get; set; }
+        public ICollection<SanPhamChiTiet> SanPhamChiTiet { get; set; }
     }
 }

@@ -27,6 +27,7 @@ namespace StyleTee.Models
         public string trangThai { get; set; }
 
 		public TaiKhoan TaiKhoan { get; set; }
+        
 	}
 }
 
