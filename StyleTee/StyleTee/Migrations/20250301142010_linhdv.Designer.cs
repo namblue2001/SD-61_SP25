@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StyleTee.Data;
 
@@ -11,9 +12,11 @@ using StyleTee.Data;
 namespace StyleTee.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250301142010_linhdv")]
+    partial class linhdv
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -67,9 +70,6 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_TaiKhoan")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("TaiKhoanID_TaiKhoan")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("huyen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -92,7 +92,7 @@ namespace StyleTee.Migrations
 
                     b.HasKey("ID_DiaChi");
 
-                    b.HasIndex("TaiKhoanID_TaiKhoan");
+                    b.HasIndex("ID_TaiKhoan");
 
                     b.ToTable("DiaChi");
                 });
@@ -109,21 +109,15 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_SanPhamChiTiet")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("SanPhamChiTietID_SanPhamChiTiet")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SanPhamID_SanPham")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("url_hinhAnh")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID_HinhAnh");
 
-                    b.HasIndex("SanPhamChiTietID_SanPhamChiTiet");
+                    b.HasIndex("ID_SanPham");
 
-                    b.HasIndex("SanPhamID_SanPham");
+                    b.HasIndex("ID_SanPhamChiTiet");
 
                     b.ToTable("HinhAnh");
                 });
@@ -199,12 +193,6 @@ namespace StyleTee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ChatLieuID_ChatLieu")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DanhMucID_DanhMuc")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<decimal>("Gia")
                         .HasColumnType("decimal(18,2)");
 
@@ -229,36 +217,21 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_XuatXu")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("KichThuocID_KichThuoc")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("MauSacID_MauSac")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SanPhamID_SanPham")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ThuongHieuID_ThuongHieu")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("XuatXuID_XuatXu")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("ID_SanPhamChiTiet");
 
-                    b.HasIndex("ChatLieuID_ChatLieu");
+                    b.HasIndex("ID_ChatLieu");
 
-                    b.HasIndex("DanhMucID_DanhMuc");
+                    b.HasIndex("ID_DanhMuc");
 
-                    b.HasIndex("KichThuocID_KichThuoc");
+                    b.HasIndex("ID_Mau");
 
-                    b.HasIndex("MauSacID_MauSac");
+                    b.HasIndex("ID_SanPham");
 
-                    b.HasIndex("SanPhamID_SanPham");
+                    b.HasIndex("ID_Size");
 
-                    b.HasIndex("ThuongHieuID_ThuongHieu");
+                    b.HasIndex("ID_ThuongHieu");
 
-                    b.HasIndex("XuatXuID_XuatXu");
+                    b.HasIndex("ID_XuatXu");
 
                     b.ToTable("SanPhamChiTiet");
                 });
@@ -354,7 +327,7 @@ namespace StyleTee.Migrations
                 {
                     b.HasOne("StyleTee.Models.TaiKhoan", "TaiKhoan")
                         .WithMany("DiaChis")
-                        .HasForeignKey("TaiKhoanID_TaiKhoan")
+                        .HasForeignKey("ID_TaiKhoan")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -363,15 +336,15 @@ namespace StyleTee.Migrations
 
             modelBuilder.Entity("StyleTee.Models.HinhAnh", b =>
                 {
-                    b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
+                    b.HasOne("StyleTee.Models.SanPham", "SanPham")
                         .WithMany("HinhAnh")
-                        .HasForeignKey("SanPhamChiTietID_SanPhamChiTiet")
+                        .HasForeignKey("ID_SanPham")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("StyleTee.Models.SanPham", "SanPham")
+                    b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
                         .WithMany("HinhAnh")
-                        .HasForeignKey("SanPhamID_SanPham")
+                        .HasForeignKey("ID_SanPhamChiTiet")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -384,43 +357,43 @@ namespace StyleTee.Migrations
                 {
                     b.HasOne("StyleTee.Models.ChatLieu", "ChatLieu")
                         .WithMany("SanPhamChiTiet")
-                        .HasForeignKey("ChatLieuID_ChatLieu")
+                        .HasForeignKey("ID_ChatLieu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.DanhMuc", "DanhMuc")
                         .WithMany("SanPhamChiTiet")
-                        .HasForeignKey("DanhMucID_DanhMuc")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StyleTee.Models.KichThuoc", "KichThuoc")
-                        .WithMany("SanPhamChiTiet")
-                        .HasForeignKey("KichThuocID_KichThuoc")
+                        .HasForeignKey("ID_DanhMuc")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.MauSac", "MauSac")
                         .WithMany("SanPhamChiTiets")
-                        .HasForeignKey("MauSacID_MauSac")
+                        .HasForeignKey("ID_Mau")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.SanPham", "SanPham")
                         .WithMany("SanPhamChiTiet")
-                        .HasForeignKey("SanPhamID_SanPham")
+                        .HasForeignKey("ID_SanPham")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StyleTee.Models.KichThuoc", "KichThuoc")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_Size")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.ThuongHieu", "ThuongHieu")
                         .WithMany("SanPhamChiTiet")
-                        .HasForeignKey("ThuongHieuID_ThuongHieu")
+                        .HasForeignKey("ID_ThuongHieu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.XuatXu", "XuatXu")
                         .WithMany("SanPhamChiTiets")
-                        .HasForeignKey("XuatXuID_XuatXu")
+                        .HasForeignKey("ID_XuatXu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
