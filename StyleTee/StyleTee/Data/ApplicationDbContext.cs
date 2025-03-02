@@ -24,9 +24,16 @@ public class ApplicationDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        builder.Entity<HinhAnh>().HasOne(h => h.SanPham).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPham).OnDelete(DeleteBehavior.Restrict);
-        builder.Entity<HinhAnh>().HasOne(h => h.SanPhamChiTiet).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPhamChiTiet).OnDelete(DeleteBehavior.Restrict);
-
+        builder.Entity<HinhAnh>().HasOne(h => h.SanPham).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPham);
+        builder.Entity<HinhAnh>().HasOne(h => h.SanPhamChiTiet).WithMany(s => s.HinhAnh).HasForeignKey(p => p.ID_SanPhamChiTiet);
+        builder.Entity<DiaChi>().HasOne(d => d.TaiKhoan).WithMany(t => t.DiaChis).HasForeignKey(d => d.ID_TaiKhoan);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.SanPham).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_SanPham);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.MauSac).WithMany(p => p.SanPhamChiTiets).HasForeignKey(x => x.ID_Mau);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.XuatXu).WithMany(p => p.SanPhamChiTiets).HasForeignKey(x => x.ID_XuatXu);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.ThuongHieu).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_ThuongHieu);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.DanhMuc).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_DanhMuc);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.KichThuoc).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_Size);
+        builder.Entity<SanPhamChiTiet>().HasOne(x => x.ChatLieu).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_ChatLieu);
     }
 }
 

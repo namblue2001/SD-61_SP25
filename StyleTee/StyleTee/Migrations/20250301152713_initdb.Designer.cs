@@ -12,8 +12,8 @@ using StyleTee.Data;
 namespace StyleTee.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250224173830_capnhatdb")]
-    partial class capnhatdb
+    [Migration("20250301152713_initdb")]
+    partial class initdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -70,9 +70,6 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_TaiKhoan")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("TaiKhoanID_TaiKhoan")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("huyen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -95,7 +92,7 @@ namespace StyleTee.Migrations
 
                     b.HasKey("ID_DiaChi");
 
-                    b.HasIndex("TaiKhoanID_TaiKhoan");
+                    b.HasIndex("ID_TaiKhoan");
 
                     b.ToTable("DiaChi");
                 });
@@ -196,12 +193,6 @@ namespace StyleTee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ChatLieuID_ChatLieu")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("DanhMucID_DanhMuc")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<decimal>("Gia")
                         .HasColumnType("decimal(18,2)");
 
@@ -226,36 +217,21 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_XuatXu")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("KichThuocID_KichThuoc")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("MauSacID_MauSac")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("SanPhamID_SanPham")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ThuongHieuID_ThuongHieu")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("XuatXuID_XuatXu")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("ID_SanPhamChiTiet");
 
-                    b.HasIndex("ChatLieuID_ChatLieu");
+                    b.HasIndex("ID_ChatLieu");
 
-                    b.HasIndex("DanhMucID_DanhMuc");
+                    b.HasIndex("ID_DanhMuc");
 
-                    b.HasIndex("KichThuocID_KichThuoc");
+                    b.HasIndex("ID_Mau");
 
-                    b.HasIndex("MauSacID_MauSac");
+                    b.HasIndex("ID_SanPham");
 
-                    b.HasIndex("SanPhamID_SanPham");
+                    b.HasIndex("ID_Size");
 
-                    b.HasIndex("ThuongHieuID_ThuongHieu");
+                    b.HasIndex("ID_ThuongHieu");
 
-                    b.HasIndex("XuatXuID_XuatXu");
+                    b.HasIndex("ID_XuatXu");
 
                     b.ToTable("SanPhamChiTiet");
                 });
@@ -350,8 +326,8 @@ namespace StyleTee.Migrations
             modelBuilder.Entity("StyleTee.Models.DiaChi", b =>
                 {
                     b.HasOne("StyleTee.Models.TaiKhoan", "TaiKhoan")
-                        .WithMany()
-                        .HasForeignKey("TaiKhoanID_TaiKhoan")
+                        .WithMany("DiaChis")
+                        .HasForeignKey("ID_TaiKhoan")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -363,13 +339,13 @@ namespace StyleTee.Migrations
                     b.HasOne("StyleTee.Models.SanPham", "SanPham")
                         .WithMany("HinhAnh")
                         .HasForeignKey("ID_SanPham")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
                         .WithMany("HinhAnh")
                         .HasForeignKey("ID_SanPhamChiTiet")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("SanPham");
@@ -380,44 +356,44 @@ namespace StyleTee.Migrations
             modelBuilder.Entity("StyleTee.Models.SanPhamChiTiet", b =>
                 {
                     b.HasOne("StyleTee.Models.ChatLieu", "ChatLieu")
-                        .WithMany("SanPham")
-                        .HasForeignKey("ChatLieuID_ChatLieu")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_ChatLieu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.DanhMuc", "DanhMuc")
-                        .WithMany("SanPham")
-                        .HasForeignKey("DanhMucID_DanhMuc")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StyleTee.Models.KichThuoc", "KichThuoc")
-                        .WithMany("SanPham")
-                        .HasForeignKey("KichThuocID_KichThuoc")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_DanhMuc")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.MauSac", "MauSac")
-                        .WithMany("SanPham")
-                        .HasForeignKey("MauSacID_MauSac")
+                        .WithMany("SanPhamChiTiets")
+                        .HasForeignKey("ID_Mau")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.SanPham", "SanPham")
-                        .WithMany()
-                        .HasForeignKey("SanPhamID_SanPham")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_SanPham")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StyleTee.Models.KichThuoc", "KichThuoc")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_Size")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.ThuongHieu", "ThuongHieu")
-                        .WithMany("SanPham")
-                        .HasForeignKey("ThuongHieuID_ThuongHieu")
+                        .WithMany("SanPhamChiTiet")
+                        .HasForeignKey("ID_ThuongHieu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StyleTee.Models.XuatXu", "XuatXu")
-                        .WithMany("SanPham")
-                        .HasForeignKey("XuatXuID_XuatXu")
+                        .WithMany("SanPhamChiTiets")
+                        .HasForeignKey("ID_XuatXu")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -438,27 +414,29 @@ namespace StyleTee.Migrations
 
             modelBuilder.Entity("StyleTee.Models.ChatLieu", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiet");
                 });
 
             modelBuilder.Entity("StyleTee.Models.DanhMuc", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiet");
                 });
 
             modelBuilder.Entity("StyleTee.Models.KichThuoc", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiet");
                 });
 
             modelBuilder.Entity("StyleTee.Models.MauSac", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiets");
                 });
 
             modelBuilder.Entity("StyleTee.Models.SanPham", b =>
                 {
                     b.Navigation("HinhAnh");
+
+                    b.Navigation("SanPhamChiTiet");
                 });
 
             modelBuilder.Entity("StyleTee.Models.SanPhamChiTiet", b =>
@@ -466,14 +444,19 @@ namespace StyleTee.Migrations
                     b.Navigation("HinhAnh");
                 });
 
+            modelBuilder.Entity("StyleTee.Models.TaiKhoan", b =>
+                {
+                    b.Navigation("DiaChis");
+                });
+
             modelBuilder.Entity("StyleTee.Models.ThuongHieu", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiet");
                 });
 
             modelBuilder.Entity("StyleTee.Models.XuatXu", b =>
                 {
-                    b.Navigation("SanPham");
+                    b.Navigation("SanPhamChiTiets");
                 });
 #pragma warning restore 612, 618
         }

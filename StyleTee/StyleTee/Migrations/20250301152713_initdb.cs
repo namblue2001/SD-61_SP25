@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StyleTee.Migrations
 {
     /// <inheritdoc />
-    public partial class linh : Migration
+    public partial class initdb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -80,6 +80,27 @@ namespace StyleTee.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TaiKhoan",
+                columns: table => new
+                {
+                    ID_TaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    taiKhoan = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    matKhau = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    hoTen = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    soDienThoai = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    anhDaiDien = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    gioiTinh = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ngaySinh = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    trangThai = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    tenVaiTro = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TaiKhoan", x => x.ID_TaiKhoan);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ThuongHieu",
                 columns: table => new
                 {
@@ -90,19 +111,6 @@ namespace StyleTee.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ThuongHieu", x => x.ID_ThuongHieu);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "VaiTro",
-                columns: table => new
-                {
-                    ID_VaiTro = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ID_TaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    tenVaiTro = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_VaiTro", x => x.ID_VaiTro);
                 });
 
             migrationBuilder.CreateTable(
@@ -119,29 +127,25 @@ namespace StyleTee.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TaiKhoan",
+                name: "DiaChi",
                 columns: table => new
                 {
+                    ID_DiaChi = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ID_TaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    taiKhoan = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    matKhau = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    hoTen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    soDienThoai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    anhDaiDien = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    gioiTinh = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ngaySinh = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    trangThai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ID_VaiTro = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    soNha = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    xa = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    huyen = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    tinhThanhPho = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    trangThai = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TaiKhoan", x => x.ID_TaiKhoan);
+                    table.PrimaryKey("PK_DiaChi", x => x.ID_DiaChi);
                     table.ForeignKey(
-                        name: "FK_TaiKhoan_VaiTro_ID_VaiTro",
-                        column: x => x.ID_VaiTro,
-                        principalTable: "VaiTro",
-                        principalColumn: "ID_VaiTro",
+                        name: "FK_DiaChi_TaiKhoan_ID_TaiKhoan",
+                        column: x => x.ID_TaiKhoan,
+                        principalTable: "TaiKhoan",
+                        principalColumn: "ID_TaiKhoan",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -157,83 +161,52 @@ namespace StyleTee.Migrations
                     ID_Size = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ID_DanhMuc = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ID_ChatLieu = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Gia = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    ChatLieuID_ChatLieu = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    DanhMucID_DanhMuc = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    KichThuocID_KichThuoc = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    MauSacID_MauSac = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    SanPhamID_SanPham = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ThuongHieuID_ThuongHieu = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    XuatXuID_XuatXu = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Gia = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SanPhamChiTiet", x => x.ID_SanPhamChiTiet);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_ChatLieu_ChatLieuID_ChatLieu",
-                        column: x => x.ChatLieuID_ChatLieu,
+                        name: "FK_SanPhamChiTiet_ChatLieu_ID_ChatLieu",
+                        column: x => x.ID_ChatLieu,
                         principalTable: "ChatLieu",
                         principalColumn: "ID_ChatLieu",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_DanhMuc_DanhMucID_DanhMuc",
-                        column: x => x.DanhMucID_DanhMuc,
+                        name: "FK_SanPhamChiTiet_DanhMuc_ID_DanhMuc",
+                        column: x => x.ID_DanhMuc,
                         principalTable: "DanhMuc",
                         principalColumn: "ID_DanhMuc",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_KichThuoc_KichThuocID_KichThuoc",
-                        column: x => x.KichThuocID_KichThuoc,
+                        name: "FK_SanPhamChiTiet_KichThuoc_ID_Size",
+                        column: x => x.ID_Size,
                         principalTable: "KichThuoc",
                         principalColumn: "ID_KichThuoc",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_MauSac_MauSacID_MauSac",
-                        column: x => x.MauSacID_MauSac,
+                        name: "FK_SanPhamChiTiet_MauSac_ID_Mau",
+                        column: x => x.ID_Mau,
                         principalTable: "MauSac",
                         principalColumn: "ID_MauSac",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_SanPham_SanPhamID_SanPham",
-                        column: x => x.SanPhamID_SanPham,
+                        name: "FK_SanPhamChiTiet_SanPham_ID_SanPham",
+                        column: x => x.ID_SanPham,
                         principalTable: "SanPham",
                         principalColumn: "ID_SanPham",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_ThuongHieu_ThuongHieuID_ThuongHieu",
-                        column: x => x.ThuongHieuID_ThuongHieu,
+                        name: "FK_SanPhamChiTiet_ThuongHieu_ID_ThuongHieu",
+                        column: x => x.ID_ThuongHieu,
                         principalTable: "ThuongHieu",
                         principalColumn: "ID_ThuongHieu",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_SanPhamChiTiet_XuatXu_XuatXuID_XuatXu",
-                        column: x => x.XuatXuID_XuatXu,
+                        name: "FK_SanPhamChiTiet_XuatXu_ID_XuatXu",
+                        column: x => x.ID_XuatXu,
                         principalTable: "XuatXu",
                         principalColumn: "ID_XuatXu",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "DiaChi",
-                columns: table => new
-                {
-                    ID_DiaChi = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ID_TaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    soNha = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    xa = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    huyen = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    tinhThanhPho = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    trangThai = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TaiKhoanID_TaiKhoan = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DiaChi", x => x.ID_DiaChi);
-                    table.ForeignKey(
-                        name: "FK_DiaChi_TaiKhoan_TaiKhoanID_TaiKhoan",
-                        column: x => x.TaiKhoanID_TaiKhoan,
-                        principalTable: "TaiKhoan",
-                        principalColumn: "ID_TaiKhoan",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -253,20 +226,18 @@ namespace StyleTee.Migrations
                         name: "FK_HinhAnh_SanPhamChiTiet_ID_SanPhamChiTiet",
                         column: x => x.ID_SanPhamChiTiet,
                         principalTable: "SanPhamChiTiet",
-                        principalColumn: "ID_SanPhamChiTiet",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "ID_SanPhamChiTiet");
                     table.ForeignKey(
                         name: "FK_HinhAnh_SanPham_ID_SanPham",
                         column: x => x.ID_SanPham,
                         principalTable: "SanPham",
-                        principalColumn: "ID_SanPham",
-                        onDelete: ReferentialAction.Restrict);
+                        principalColumn: "ID_SanPham");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_DiaChi_TaiKhoanID_TaiKhoan",
+                name: "IX_DiaChi_ID_TaiKhoan",
                 table: "DiaChi",
-                column: "TaiKhoanID_TaiKhoan");
+                column: "ID_TaiKhoan");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HinhAnh_ID_SanPham",
@@ -279,45 +250,39 @@ namespace StyleTee.Migrations
                 column: "ID_SanPhamChiTiet");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_ChatLieuID_ChatLieu",
+                name: "IX_SanPhamChiTiet_ID_ChatLieu",
                 table: "SanPhamChiTiet",
-                column: "ChatLieuID_ChatLieu");
+                column: "ID_ChatLieu");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_DanhMucID_DanhMuc",
+                name: "IX_SanPhamChiTiet_ID_DanhMuc",
                 table: "SanPhamChiTiet",
-                column: "DanhMucID_DanhMuc");
+                column: "ID_DanhMuc");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_KichThuocID_KichThuoc",
+                name: "IX_SanPhamChiTiet_ID_Mau",
                 table: "SanPhamChiTiet",
-                column: "KichThuocID_KichThuoc");
+                column: "ID_Mau");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_MauSacID_MauSac",
+                name: "IX_SanPhamChiTiet_ID_SanPham",
                 table: "SanPhamChiTiet",
-                column: "MauSacID_MauSac");
+                column: "ID_SanPham");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_SanPhamID_SanPham",
+                name: "IX_SanPhamChiTiet_ID_Size",
                 table: "SanPhamChiTiet",
-                column: "SanPhamID_SanPham");
+                column: "ID_Size");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_ThuongHieuID_ThuongHieu",
+                name: "IX_SanPhamChiTiet_ID_ThuongHieu",
                 table: "SanPhamChiTiet",
-                column: "ThuongHieuID_ThuongHieu");
+                column: "ID_ThuongHieu");
 
             migrationBuilder.CreateIndex(
-                name: "IX_SanPhamChiTiet_XuatXuID_XuatXu",
+                name: "IX_SanPhamChiTiet_ID_XuatXu",
                 table: "SanPhamChiTiet",
-                column: "XuatXuID_XuatXu");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TaiKhoan_ID_VaiTro",
-                table: "TaiKhoan",
-                column: "ID_VaiTro",
-                unique: true);
+                column: "ID_XuatXu");
         }
 
         /// <inheritdoc />
@@ -334,9 +299,6 @@ namespace StyleTee.Migrations
 
             migrationBuilder.DropTable(
                 name: "SanPhamChiTiet");
-
-            migrationBuilder.DropTable(
-                name: "VaiTro");
 
             migrationBuilder.DropTable(
                 name: "ChatLieu");
