@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
-using StyleTee.Repository.IRepoitory;
 using System.ComponentModel.DataAnnotations;
 
 namespace StyleTee.Controllers
