@@ -16,14 +16,14 @@ namespace StyleTee.Models
         public Guid ID_ThuongHieu { get; set; }
         [Required(ErrorMessage = "ID size là bắt buộc.")]
         public Guid ID_Size { get; set; }
-        [Required(ErrorMessage = "ID danh mục là bắt buộc.")]
-        public Guid ID_DanhMuc { get; set; }
+        [Required(ErrorMessage = "ID Kiểu dáng là bắt buộc.")]
+        public Guid ID_KieuDang { get; set; }
         [Required(ErrorMessage = "ID chất liệu là bắt buộc.")]
         public Guid ID_ChatLieu { get; set; }
         [Required(ErrorMessage = "Gía là bắt buộc.")]
         public decimal Gia { get; set; }
         public ChatLieu ChatLieu { get; set; }
-        public DanhMuc  DanhMuc { get; set; }
+        public KieuDang  KieuDang { get; set; }
         public List<HinhAnh> HinhAnh { get; set; }
         public KichThuoc KichThuoc { get; set; }
         public MauSac MauSac { get; set; }
