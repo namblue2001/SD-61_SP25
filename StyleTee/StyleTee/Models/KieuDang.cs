@@ -2,14 +2,15 @@
 
 namespace StyleTee.Models
 {
-    public class DanhMuc
+    public class KieuDang
     {
+
         [Key]
-        public Guid ID_DanhMuc { get; set; }
-        [Required(ErrorMessage = "Tên danh mục là bắt buộc.")]
-        public string tenDanhMuc { get; set; }
+        public Guid ID_KieuDang { get; set; }
+        [Required(ErrorMessage = "Tên kiểu dáng là bắt buộc.")]
+        public string tenKieuDang { get; set; }
         [RegularExpression("^(Hoạt động|Ngừng hoạt động)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]
         public bool trangThai { get; set; }
-        public ICollection<SanPham> SanPham { get; set; }
+        public ICollection<SanPhamChiTiet> SanPhamChiTiet { get; set; }
     }
 }
