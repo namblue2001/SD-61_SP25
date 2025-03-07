@@ -22,6 +22,8 @@ public class ApplicationDbContext : DbContext
     public DbSet<TaiKhoan> TaiKhoan { get; set; }
     public DbSet<ThuongHieu> ThuongHieu { get; set; }
     public DbSet<XuatXu> XuatXu { get; set; }
+    public DbSet<GioHang> GioHang { get; set; }
+    public DbSet<GioHangChiTiet> GioHangChiTiet { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -36,6 +38,9 @@ public class ApplicationDbContext : DbContext
         builder.Entity<SanPhamChiTiet>().HasOne(x => x.KichThuoc).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_Size);
         builder.Entity<SanPhamChiTiet>().HasOne(x => x.ChatLieu).WithMany(p => p.SanPhamChiTiet).HasForeignKey(x => x.ID_ChatLieu);
         builder.Entity<SanPham>().HasOne(x => x.DanhMuc).WithMany(p => p.SanPham).HasForeignKey(x => x.ID_DanhMuc);
+        builder.Entity<GioHang>().HasOne(x => x.TaiKhoan).WithMany(p => p.GioHang).HasForeignKey(x => x.ID_TaiKhoan);
+        builder.Entity<GioHangChiTiet>().HasOne(x => x.SanPhamChiTiet).WithMany(p => p.GioHangChiTiets).HasForeignKey(x => x.ID_SanPhamChiTiet);
+        builder.Entity<GioHangChiTiet>().HasOne(x => x.GioHang).WithMany(p => p.GioHangChiTiet).HasForeignKey(x => x.ID_GioHang);
     }
 }
 
