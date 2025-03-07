@@ -6,19 +6,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StyleTee.Data;
 using StyleTee.Models;
-using StyleTee.Service;
-using StyleTee.Service.IService;
+
 
 
 namespace StyleTee.Controllers
 {
     public class AccessController : Controller
     {
-        private readonly ITaiKhoanService _tkservice;
+      
         private readonly ApplicationDbContext _context;
-        public AccessController(ITaiKhoanService tkservice, ApplicationDbContext context)
+        public AccessController( ApplicationDbContext context)
         {
-            _tkservice = tkservice;
+           
             _context = context;
         }
 

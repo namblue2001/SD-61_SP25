@@ -10,6 +10,6 @@ namespace StyleTee.Models
         public string tenDanhMuc { get; set; }
         [RegularExpression("^(true|false)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]
         public bool trangThai { get; set; }
-        public ICollection<SanPhamChiTiet> SanPhamChiTiet { get; set; }
+        public ICollection<SanPham> SanPham { get; set; }
     }
 }
