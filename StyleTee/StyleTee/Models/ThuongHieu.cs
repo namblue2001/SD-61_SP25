@@ -11,5 +11,6 @@ namespace StyleTee.Models
         [RegularExpression("^(Hoạt động|Ngừng hoạt động)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]
         public bool trangThai { get; set; }
         public List<SanPhamChiTiet> SanPhamChiTiet { get; set; }
+        public string anhDaiDien {get;set;}
     }
 }
