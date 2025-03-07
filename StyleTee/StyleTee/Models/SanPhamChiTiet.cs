@@ -21,7 +21,11 @@ namespace StyleTee.Models
         [Required(ErrorMessage = "ID chất liệu là bắt buộc.")]
         public Guid ID_ChatLieu { get; set; }
         [Required(ErrorMessage = "Gía là bắt buộc.")]
-        public decimal Gia { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal giaBan { get; set; }
+        public string anhDaiDien {get;set;}
+        public DateTime ngayTao {get;set;}
+        public int soLuongTon {get;set;}
         public ChatLieu ChatLieu { get; set; }
         public KieuDang  KieuDang { get; set; }
         public List<HinhAnh> HinhAnh { get; set; }
@@ -30,6 +34,7 @@ namespace StyleTee.Models
         public SanPham SanPham { get; set; }
         public ThuongHieu ThuongHieu { get; set; }
         public XuatXu XuatXu { get; set; }
+        public ICollection<GioHangChiTiet> GioHangChiTiets { get; set; }
 
     }
 }
