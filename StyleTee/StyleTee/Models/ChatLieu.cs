@@ -8,7 +8,7 @@ namespace StyleTee.Models
         public Guid ID_ChatLieu { get; set; }
         [Required(ErrorMessage = "Tên chất liệu là bắt buộc.")]
         public string tenChatLieu { get; set; }
-        [RegularExpression("^(Hoạt động|Ngừng hoạt động)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]
+        [RegularExpression("^(true|false)$", ErrorMessage = "Trạng thái chỉ có thể là 'Hoạt động' hoặc 'Ngừng hoạt động'.")]
         public bool trangThai { get; set; }
         public ICollection<SanPhamChiTiet> SanPhamChiTiet { get; set; }
 
