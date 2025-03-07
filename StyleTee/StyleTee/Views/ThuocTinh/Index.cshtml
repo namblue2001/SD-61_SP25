@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Thuộc tính sản phẩm";
+    Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+<style>
+    .card {
+        border-radius: 8px;
+        box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .card-header {
+        text-align: center;
+        font-weight: bold;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: white;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .active-card {
+        border: 2px solid #ff4b2b;
+    }
+
+    .table-responsive {
+        margin-top: 20px;
+    }
+
+    .category-cards-container {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="category-cards-container">
+        <div class="card text-center p-3 category-card" data-type="ChatLieu">
+            <div class="card-header">Quản lý Chất liệu</div>
+        </div>
+        <div class="card text-center p-3 category-card" data-type="MauSac">
+            <div class="card-header">Quản lý Màu sắc</div>
+        </div>
+        <div class="card text-center p-3 category-card" data-type="XuatXu">
+            <div class="card-header">Quản lý Xuất xứ</div>
+        </div>
+        <div class="card text-center p-3 category-card" data-type="DanhMuc">
+            <div class="card-header">Quản lý Danh mục</div>
+        </div>
+        <div class="card text-center p-3 category-card" data-type="ThuongHieu">
+            <div class="card-header">Quản lý Thương hiệu</div>
+        </div>
+        <div class="card text-center p-3 category-card" data-type="KichThuoc">
+            <div class="card-header">Quản lý Kích thước</div>
+        </div>
+    </div>
+
+    <div id="danhSachSanPham"><h4 class="text-center text-muted">Chọn danh mục để hiển thị dữ liệu</h4></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".category-card").click(function () {
+            var type = $(this).data("type");
+            var title = $(this).find(".card-header").text().replace("Quản lý ", "");
+            $(".category-card").removeClass("active-card");
+            $(this).addClass("active-card");
+
+            $.ajax({
+                url: "/ThuocTinh/Index",
+                type: "GET",
+                data: { 
+                    type: type,
+                    title: title
+                },
+                success: function (data) {
+                    $("#danhSachSanPham").html(data);
+                },
+                error: function () {
+                    alert("Lỗi tải dữ liệu!");
+                }
+            });
+        });
+    });
+</script>
