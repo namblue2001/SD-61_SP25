@@ -15,7 +15,7 @@ namespace StyleTee.Models
         public decimal giaGoc { get; set; }
         public bool trangThai { get; set; }
         public DanhMuc DanhMuc { get; set; }
-        public ICollection<HinhAnh>   HinhAnh { get; set; }
+        public DateTime ngayTao {get;set;}
         public ICollection<SanPhamChiTiet> SanPhamChiTiet { get; set; }
     }
 }
