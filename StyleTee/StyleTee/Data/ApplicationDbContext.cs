@@ -24,6 +24,9 @@ public class ApplicationDbContext : DbContext
     public DbSet<XuatXu> XuatXu { get; set; }
     public DbSet<GioHang> GioHang { get; set; }
     public DbSet<GioHangChiTiet> GioHangChiTiet { get; set; }
+    public DbSet<PhieuGiamGia> PhieuGiamGia { get; set; }
+    public DbSet<KhuyenMai> KhuyenMai { get; set; }
+    
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -41,6 +44,9 @@ public class ApplicationDbContext : DbContext
         builder.Entity<GioHang>().HasOne(x => x.TaiKhoan).WithMany(p => p.GioHang).HasForeignKey(x => x.ID_TaiKhoan);
         builder.Entity<GioHangChiTiet>().HasOne(x => x.SanPhamChiTiet).WithMany(p => p.GioHangChiTiets).HasForeignKey(x => x.ID_SanPhamChiTiet);
         builder.Entity<GioHangChiTiet>().HasOne(x => x.GioHang).WithMany(p => p.GioHangChiTiet).HasForeignKey(x => x.ID_GioHang);
+
+        builder.Entity<PhieuGiamGia>().HasIndex(k => k.TenPhieuGiamGia).IsUnique().HasDatabaseName("UQ_TenPhieuGiamGia");
+        builder.Entity<KhuyenMai>().HasIndex(k => new { k.TyLeKhuyenMai, k.NgayBatDau }).IsUnique().HasDatabaseName("UQ_TyLeKhuyenMai");
     }
 }
 
