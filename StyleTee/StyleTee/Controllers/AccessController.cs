@@ -62,35 +62,45 @@ namespace StyleTee.Controllers
                 return View(taikhoan);
             }
         }
-        public IActionResult DangNhap(string taiKhoan, string matKhau)
+        public IActionResult DangNhap()
         {
-            if (HttpContext.Request.Method == "POST")
+            HttpContext.Session.Remove("id_taikhoan");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult DangNhap(string taikhoan, string matkhau)
+        {
+            var taikhoandangnhap = _context.TaiKhoan.FirstOrDefault(a => a.taiKhoan == taikhoan && a.matKhau == matkhau);
+            if (taikhoandangnhap != null)
             {
-                // Kiểm tra tài khoản và mật khẩu
-                if (IsValidUser(taiKhoan, matKhau))
+                HttpContext.Session.SetString("id_taikhoan" , taikhoandangnhap.ID_TaiKhoan.ToString());
+                if (taikhoandangnhap.tenVaiTro == "Quản lý" && taikhoandangnhap.trangThai == "Hoạt động")
                 {
-                    // Đăng nhập thành công
-                    ViewData["SuccessMessage"] = "Đăng nhập thành công!";
+                    TempData["Thành công"] = "Chào mừng! Bạn đã đăng nhập thành công.";
                     return RedirectToAction("Index", "Home");
                 }
-
-                // Thêm thông báo lỗi
-                ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không hợp lệ.");
-                ViewData["ShowError"] = true;
+                else if (taikhoandangnhap.tenVaiTro == "Nhân viên" && taikhoandangnhap.trangThai == "Hoạt động")
+                {
+                    return RedirectToAction("NhanVien", "Home");
+                }
+                else if (taikhoandangnhap.tenVaiTro == "Khách hàng" && taikhoandangnhap.trangThai == "Hoạt động")
+                {
+                    return RedirectToAction("Privacy", "Home");
+                }
+                else if(taikhoandangnhap.trangThai == "Ngừng hoạt động")
+                {
+                    TempData["Lỗi"] = "Tài khoản đã ngừng hoạt động. Vui lòng liên hệ quản trị viên để biết thêm chi tiết.";
+                }
+                else
+                {
+                    TempData["Lỗi"] = "Thông tin bạn nhập không đúng.Vui lòng kiểm tra lại!";
+                }
             }
-
-            return View(); // Trả về view
-        }
-
-        // Hàm kiểm tra tài khoản và mật khẩu
-        private bool IsValidUser(string taiKhoan, string matKhau)
-        {
-            var taiKhoanDb = _context.TaiKhoan.FirstOrDefault(u => u.taiKhoan == taiKhoan);
-            if (taiKhoanDb != null)
+            else
             {
-                return taiKhoanDb.matKhau == matKhau;
+                TempData["Lỗi"] = "Thông tin bạn nhập không đúng.Vui lòng kiểm tra lại!";
             }
-            return false;
+            return View();
         }
     }
 }
