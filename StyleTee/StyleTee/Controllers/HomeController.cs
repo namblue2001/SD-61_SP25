@@ -13,6 +13,14 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    public IActionResult HoSoQuanLy()
+    {
+        var id_taikhoan = HttpContext.Session.GetString("id_taikhoan");
+        var quanly = _context.TaiKhoanDangNhap.FirstOrDefault(a => a.ID_TaiKhoan == Guid.Parse(id_taikhoan));
+        TempData["Trang"] = "Hồ sơ";
+        return View(quanly);
+    }
+    
     public IActionResult Index()
     {
         return View();
