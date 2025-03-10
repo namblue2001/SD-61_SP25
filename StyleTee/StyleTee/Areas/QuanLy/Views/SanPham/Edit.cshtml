@@ -1,1 +1,116 @@
+@model StyleTee.Models.SanPhamVaThuocTinh.SanPham
+
+@{
+    ViewData["Title"] = "Edit";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", "jpeg" };
+}
+
+<div class="row my-4">
+    <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="row">
+                    <div class="col-lg-6 col-7">
+                        <h6><i class=""></i> Chi tiết sản phẩm</h6>
+                    </div>
+                    <div class="col-lg-6 col-5 my-auto text-end">
+                        <div class="dropdown float-lg-end">
+                            <a class="btn btn-primary" asp-action="Index"><i class="fas fa-list"></i> Trở về danh sách</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body px-0 pb-2">
+                <div class="table-responsive container">
+                    <dl class="row">
+                        <div class="row">
+                            <dt class="col-sm-3 fw-bold">Mã sản phẩm</dt>
+                            <dd class="col-sm-9 small">@Model.ID_SanPham</dd>
+
+                            <dt class="col-sm-3 fw-bold">Tên sản phẩm</dt>
+                            <dd class="col-sm-9 small">@Model.TenSanPham</dd>
+
+                            <dt class="col-sm-3 fw-bold">Mô tả sản phẩm</dt>
+                            <dd class="col-sm-9 small">@Model.MoTa</dd>
+
+                            <dt class="col-sm-3 fw-bold">Trạng thái</dt>
+                            <dd class="col-sm-9 small">@Model.TrangThai</dd>
+
+                            <dt class="col-sm-3 fw-bold">Ảnh sản phẩm</dt>
+                            <dd class="col-sm-9 small">
+                                @{
+                                    var extension = System.IO.Path.GetExtension(Model.AnhDaiDien);
+                                }
+                                @if (@extensions.Contains(extension))
+                                {
+                                    <img src="~/LayoutAdmin/img/SanPham/@Model.AnhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                }
+                            </dd>
+
+                            <dt class="col-sm-3 fw-bold">Danh mục</dt>
+                            <dd class="col-sm-9 small">@Model.DanhMuc.TenDanhMuc</dd>
+
+                            <dt class="col-sm-3 fw-bold">Ngày tạo</dt>
+                            <dd class="col-sm-9 small">@Model.NgayTao</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+        <div class="card h-100">
+            <div class="card-header pb-0">
+                <h6><i class=""></i> Sửa thông tin sản phẩm</h6>
+            </div>
+            <div class="card-body p-3">
+                <div class="table-responsive">
+                    <form asp-action="Edit" method="post" class="container">
+                        <div asp-validation-summary="ModelOnly" class="text-sm text-danger"></div>
+                        <input type="hidden" asp-for="ID_SanPham" />
+                        <input type="hidden" asp-for="NgayTao" />
+                        <input type="hidden" asp-for="AnhDaiDien" />
+
+                        <div class="form-group">
+                            <label class="control-label"><i class=""></i> Tên sản phẩm<span>*</span></label>
+                            <input asp-for="TenSanPham" class="form-control" placeholder="Nhập tên sản phẩm" autofocus />
+                            <span asp-validation-for="TenSanPham" class="text-sm text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><i class=""></i> Mô tả sản phẩm<span>*</span></label>
+                            <textarea asp-for="MoTa" class="form-control" rows="4" placeholder="Nhập mô tả về sản phẩm" autofocus></textarea>
+                            <span asp-validation-for="MoTa" class="text-sm text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><i class=""></i><i class=""></i> Trạng thái<span>*</span></label>
+                            <div>
+                                <label>
+                                    <input type="radio" asp-for="TrangThai" value="Hoạt động" /> Hoạt động
+                                </label>
+                                <label>
+                                    <input type="radio" asp-for="TrangThai" value="Ngừng hoạt động" /> Không hoạt động
+                                </label>
+                                <span asp-validation-for="TrangThai" class="text-sm text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><i class=""></i> Ảnh đại diện<span>*</span></label>
+                            <input type="file" name="formFile" value="@Model.AnhDaiDien" asp-for="AnhDaiDien" class="form-control" autofocus />
+                            <span asp-validation-for="AnhDaiDien" class="text-sm text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"><i class=""></i> Danh mục<span>*</span></label>
+                            <select asp-for="ID_DanhMuc" class="form-control" asp-items="ViewBag.ID_DanhMuc" autofocus></select>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Lưu" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
