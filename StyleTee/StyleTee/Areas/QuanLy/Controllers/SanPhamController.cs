@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
-using StyleTee.Models.SanPhamVaThuocTinh;
 
 namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
 {
@@ -116,7 +115,10 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
 
         }
 
-
+        public void Trang()
+        {
+        
+        }
     }
 
 }
