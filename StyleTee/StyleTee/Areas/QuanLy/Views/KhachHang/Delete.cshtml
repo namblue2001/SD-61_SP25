@@ -1,0 +1,7 @@
+﻿@model StyleTee.Models.TaiKhoan
+<h2>Xóa khách hàng</h2>
+<p>Bạn có chắc chắn muốn xóa khách hàng <strong>@Model.hoTen</strong> không?</p>
+<form method="post" action="/KhachHang/Delete/@Model.ID_TaiKhoan">
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a href="/KhachHang" class="btn btn-secondary">Hủy</a>
+</form>

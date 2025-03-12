@@ -1,0 +1,22 @@
+﻿@model StyleTee.Models.TaiKhoan
+<h2>Chỉnh sửa khách hàng</h2>
+<form method="post">
+    <input type="hidden" name="ID_TaiKhoan" value="@Model.ID_TaiKhoan" />
+
+    <label>Họ tên:</label>
+    <input type="text" name="hoTen" class="form-control" value="@Model.hoTen" required />
+
+    <label>Email:</label>
+    <input type="email" name="email" class="form-control" value="@Model.email" required />
+
+    <label>Số điện thoại:</label>
+    <input type="text" name="soDienThoai" class="form-control" value="@Model.soDienThoai" required />
+
+    <label>Trạng thái:</label>
+    <select name="trangThai" class="form-control">
+        <option value="Hoạt động" @(Model.trangThai == "Hoạt động" ? "selected" : "")>Hoạt động</option>
+        <option value="Ngừng hoạt động" @(Model.trangThai == "Ngừng hoạt động" ? "selected" : "")>Ngừng hoạt động</option>
+    </select>
+
+    <button type="submit" class="btn btn-success mt-3">Lưu</button>
+</form>

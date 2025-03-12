@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using MimeKit;
 using StyleTee.Data;
 using StyleTee.Models;
 using StyleTee.Service;
 using StyleTee.Service.IService;
-
 
 namespace StyleTee.Controllers
 {
@@ -16,10 +18,12 @@ namespace StyleTee.Controllers
     {
         private readonly ITaiKhoanService _tkservice;
         private readonly ApplicationDbContext _context;
-        public AccessController(ITaiKhoanService tkservice, ApplicationDbContext context)
+        private readonly IConfiguration _config;
+        public AccessController(ITaiKhoanService tkservice, ApplicationDbContext context, IConfiguration config)
         {
             _tkservice = tkservice;
             _context = context;
+            _config = config;
         }
 
         public IActionResult DangKy()
@@ -93,6 +97,54 @@ namespace StyleTee.Controllers
             }
             return false;
         }
+
+        // Hiển thị form quên mật khẩu
+        [HttpGet]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        // Xử lý quên mật khẩu
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string email)
+        {
+            var user = await _context.TaiKhoan.FirstOrDefaultAsync(u => u.email == email);
+            if (user == null)
+            {
+                ViewBag.Message = "Email không tồn tại!";
+                return View();
+            }
+
+            // Giả sử mật khẩu chưa hash
+            string oldPassword = user.matKhau;
+
+            await SendEmail(email, oldPassword);
+
+            ViewBag.Message = "Mật khẩu đã được gửi vào email của bạn!";
+            return View();
+        }
+
+
+        // Gửi email
+        private async Task SendEmail(string email, string oldPassword)
+        {
+            var message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Style Tee", _config["Smtp:Username"]));
+            message.To.Add(new MailboxAddress("", email));
+            message.Subject = "Mật khẩu tài khoản của bạn";
+            message.Body = new TextPart("html")
+            {
+                Text = $"<p>Mật khẩu của bạn là: <strong>{oldPassword}</strong></p>"
+            };
+
+            using var client = new SmtpClient();
+            await client.ConnectAsync(_config["Smtp:Host"], int.Parse(_config["Smtp:Port"]), false);
+            await client.AuthenticateAsync(_config["Smtp:Username"], _config["Smtp:Password"]);
+            await client.SendAsync(message);
+            await client.DisconnectAsync(true);
+        }
+
     }
 }
 
