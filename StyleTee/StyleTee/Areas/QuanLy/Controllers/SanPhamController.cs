@@ -36,8 +36,8 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
         public async Task<IActionResult> Index(string ten)
         {
             Trang();
-            return _context.SanPham.Where(n => n.TenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.TenSanPham) != null ?
-                          View(await _context.SanPham.Where(n => n.TenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.TenSanPham).ToListAsync()) :
+            return _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.TenSanPham) != null ?
+                          View(await _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.tenSanPham).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.SanPham'  is null.");
         }
 
