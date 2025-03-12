@@ -1,4 +1,4 @@
-@model StyleTee.Models.SanPhamVaThuocTinh.SanPham
+@model StyleTee.Models.SanPham
 
 @{
     ViewData["Title"] = "Edit";
@@ -28,13 +28,13 @@
                             <dd class="col-sm-9 small">@Model.ID_SanPham</dd>
 
                             <dt class="col-sm-3 fw-bold">Tên sản phẩm</dt>
-                            <dd class="col-sm-9 small">@Model.TenSanPham</dd>
+                            <dd class="col-sm-9 small">@Model.tenSanPham</dd>
 
                             <dt class="col-sm-3 fw-bold">Mô tả sản phẩm</dt>
-                            <dd class="col-sm-9 small">@Model.MoTa</dd>
+                            <dd class="col-sm-9 small">@Model.moTa</dd>
 
                             <dt class="col-sm-3 fw-bold">Trạng thái</dt>
-                            <dd class="col-sm-9 small">@Model.TrangThai</dd>
+                            <dd class="col-sm-9 small">@Model.trangThai</dd>
 
                             <dt class="col-sm-3 fw-bold">Ảnh sản phẩm</dt>
                             <dd class="col-sm-9 small">
@@ -74,24 +74,24 @@
 
                         <div class="form-group">
                             <label class="control-label"><i class=""></i> Tên sản phẩm<span>*</span></label>
-                            <input asp-for="TenSanPham" class="form-control" placeholder="Nhập tên sản phẩm" autofocus />
-                            <span asp-validation-for="TenSanPham" class="text-sm text-danger"></span>
+                            <input asp-for="tenSanPham" class="form-control" placeholder="Nhập tên sản phẩm" autofocus />
+                            <span asp-validation-for="tenSanPham" class="text-sm text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label"><i class=""></i> Mô tả sản phẩm<span>*</span></label>
-                            <textarea asp-for="MoTa" class="form-control" rows="4" placeholder="Nhập mô tả về sản phẩm" autofocus></textarea>
-                            <span asp-validation-for="MoTa" class="text-sm text-danger"></span>
+                            <textarea asp-for="moTa" class="form-control" rows="4" placeholder="Nhập mô tả về sản phẩm" autofocus></textarea>
+                            <span asp-validation-for="moTa" class="text-sm text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label"><i class=""></i><i class=""></i> Trạng thái<span>*</span></label>
                             <div>
                                 <label>
-                                    <input type="radio" asp-for="TrangThai" value="Hoạt động" /> Hoạt động
+                                    <input type="radio" asp-for="trangThai" value="Hoạt động" /> Hoạt động
                                 </label>
                                 <label>
-                                    <input type="radio" asp-for="TrangThai" value="Ngừng hoạt động" /> Không hoạt động
+                                    <input type="radio" asp-for="trangThai" value="Ngừng hoạt động" /> Không hoạt động
                                 </label>
-                                <span asp-validation-for="TrangThai" class="text-sm text-danger"></span>
+                                <span asp-validation-for="trangThai" class="text-sm text-danger"></span>
                             </div>
                         </div>
                         <div class="form-group">
