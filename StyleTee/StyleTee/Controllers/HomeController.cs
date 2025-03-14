@@ -16,7 +16,7 @@ public class HomeController : Controller
     public IActionResult HoSoQuanLy()
     {
         var id_taikhoan = HttpContext.Session.GetString("id_taikhoan");
-        var quanly = _context.TaiKhoanDangNhap.FirstOrDefault(a => a.ID_TaiKhoan == Guid.Parse(id_taikhoan));
+        var quanly = _context.TaiKhoan.FirstOrDefault(a => a.ID_TaiKhoan == Guid.Parse(id_taikhoan));
         TempData["Trang"] = "Hồ sơ";
         return View(quanly);
     }
