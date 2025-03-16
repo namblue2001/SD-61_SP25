@@ -13,7 +13,7 @@ namespace StyleTee.Models
         public string moTa { get; set; }
         [Column(TypeName = "decimal(18,2)")]
         public decimal giaGoc { get; set; }
-        public bool trangThai { get; set; }
+        public string trangThai { get; set; }
         public DanhMuc DanhMuc { get; set; }
         public DateTime ngayTao {get;set;}
         public string anhDaiDien {get;set;}
