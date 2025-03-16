@@ -3774,11 +3774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\fall2025\\ĩ\\StyleTee\\StyleTee\\StyleTee.csproj",
+      "projectUniqueName": "D:\\fall2025\\oklolo\\StyleTee\\StyleTee\\StyleTee.csproj",
       "projectName": "StyleTee",
-      "projectPath": "D:\\fall2025\\ĩ\\StyleTee\\StyleTee\\StyleTee.csproj",
+      "projectPath": "D:\\fall2025\\oklolo\\StyleTee\\StyleTee\\StyleTee.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\fall2025\\ĩ\\StyleTee\\StyleTee\\obj\\",
+      "outputPath": "D:\\fall2025\\oklolo\\StyleTee\\StyleTee\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
