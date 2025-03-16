@@ -39,19 +39,19 @@
                             <dt class="col-sm-3 fw-bold">Ảnh sản phẩm</dt>
                             <dd class="col-sm-9 small">
                                 @{
-                                    var extension = System.IO.Path.GetExtension(Model.AnhDaiDien);
+                                    var extension = System.IO.Path.GetExtension(Model.anhDaiDien);
                                 }
                                 @if (@extensions.Contains(extension))
                                 {
-                                    <img src="~/LayoutAdmin/img/SanPham/@Model.AnhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                    <img src="~/LayoutAdmin/img/SanPham/@Model.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
                                 }
                             </dd>
 
                             <dt class="col-sm-3 fw-bold">Danh mục</dt>
-                            <dd class="col-sm-9 small">@Model.DanhMuc.TenDanhMuc</dd>
+                            <dd class="col-sm-9 small">@Model.DanhMuc.tenDanhMuc</dd>
 
                             <dt class="col-sm-3 fw-bold">Ngày tạo</dt>
-                            <dd class="col-sm-9 small">@Model.NgayTao</dd>
+                            <dd class="col-sm-9 small">@Model.ngayTao</dd>
                         </div>
                     </dl>
                 </div>
@@ -69,8 +69,8 @@
                     <form asp-action="Edit" method="post" class="container">
                         <div asp-validation-summary="ModelOnly" class="text-sm text-danger"></div>
                         <input type="hidden" asp-for="ID_SanPham" />
-                        <input type="hidden" asp-for="NgayTao" />
-                        <input type="hidden" asp-for="AnhDaiDien" />
+                        <input type="hidden" asp-for="ngayTao" />
+                        <input type="hidden" asp-for="anhDaiDien" />
 
                         <div class="form-group">
                             <label class="control-label"><i class=""></i> Tên sản phẩm<span>*</span></label>
@@ -96,8 +96,8 @@
                         </div>
                         <div class="form-group">
                             <label class="control-label"><i class=""></i> Ảnh đại diện<span>*</span></label>
-                            <input type="file" name="formFile" value="@Model.AnhDaiDien" asp-for="AnhDaiDien" class="form-control" autofocus />
-                            <span asp-validation-for="AnhDaiDien" class="text-sm text-danger"></span>
+                            <input type="file" name="formFile" value="@Model.anhDaiDien" asp-for="anhDaiDien" class="form-control" autofocus />
+                            <span asp-validation-for="anhDaiDien" class="text-sm text-danger"></span>
                         </div>
                         <div class="form-group">
                             <label class="control-label"><i class=""></i> Danh mục<span>*</span></label>
