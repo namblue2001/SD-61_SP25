@@ -3,18 +3,21 @@ using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
 
-namespace StyleTee.Controllers
+namespace StyleTee.Areas.QuanLy.Controllers
 {
-
+    [Area("QuanLy")]
+    [Route("QuanLy")]
+    [Route("QuanLy/ThuocTinh")]
     public class ThuocTinhController : Controller
     {
+       
         private readonly ApplicationDbContext _context;
 
         public ThuocTinhController(ApplicationDbContext context)
         {
             _context = context;
         }
-
+        [Route("Index")]
         public IActionResult Index(string? type, string? title)
         {
             try
@@ -189,17 +192,17 @@ namespace StyleTee.Controllers
                     var chatLieu = await _context.ChatLieu.FindAsync(id);
                     if (chatLieu == null) return NotFound();
                     return View("EditChatLieu", chatLieu);
-                
+
                 case "MauSac":
                     var mauSac = await _context.MauSac.FindAsync(id);
                     if (mauSac == null) return NotFound();
                     return View("EditMauSac", mauSac);
-                
+
                 case "XuatXu":
                     var xuatXu = await _context.XuatXu.FindAsync(id);
                     if (xuatXu == null) return NotFound();
                     return View("EditXuatXu", xuatXu);
-                
+
                 default:
                     return NotFound();
             }
@@ -219,19 +222,19 @@ namespace StyleTee.Controllers
                         if (id != chatLieu.ID_ChatLieu) return NotFound();
                         _context.Update(chatLieu);
                         break;
-                    
+
                     case "MauSac":
                         var mauSac = (MauSac)model;
                         if (id != mauSac.ID_MauSac) return NotFound();
                         _context.Update(mauSac);
                         break;
-                    
+
                     case "XuatXu":
                         var xuatXu = (XuatXu)model;
                         if (id != xuatXu.ID_XuatXu) return NotFound();
                         _context.Update(xuatXu);
                         break;
-                    
+
                     default:
                         return NotFound();
                 }
