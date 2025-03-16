@@ -81,7 +81,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
         public async Task<IActionResult> Edit(Guid id)
         {
             Trang();
-            var sanPham = _context.SanPham.FirstOrDefault(a => a.ID_SanPham == id);
+            var sanPham = _context.SanPham.Include(a => a.DanhMuc).FirstOrDefault(a => a.ID_SanPham == id);
             ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "tenDanhMuc", sanPham.ID_DanhMuc);
             return View(sanPham);
         }
