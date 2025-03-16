@@ -45,7 +45,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
         public IActionResult Create()
         {
             Trang();
-            ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "TenDanhMuc");
+            ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "tenDanhMuc");
             SanPham sanpham = new SanPham();
             return View(sanpham);
         }
@@ -72,7 +72,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
             }
             catch (Exception)
             {
-                ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "TenDanhMuc", sanPham.ID_DanhMuc);
+                ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "tenDanhMuc", sanPham.ID_DanhMuc);
                 return View(sanPham);
             }
         }
@@ -82,7 +82,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
         {
             Trang();
             var sanPham = _context.SanPham.FirstOrDefault(a => a.ID_SanPham == id);
-            ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "TenDanhMuc", sanPham.ID_DanhMuc);
+            ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "tenDanhMuc", sanPham.ID_DanhMuc);
             return View(sanPham);
         }
 
@@ -109,7 +109,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
             }
             catch (Exception)
             {
-                ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "TenDanhMuc", sanPham.ID_DanhMuc);
+                ViewData["ID_DanhMuc"] = new SelectList(_context.DanhMuc, "ID_DanhMuc", "tenDanhMuc", sanPham.ID_DanhMuc);
                 return View(sanPham);
             }
 
