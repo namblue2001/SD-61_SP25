@@ -36,8 +36,8 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
         public async Task<IActionResult> Index(string ten)
         {
             Trang();
-            return _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.TenSanPham) != null ?
-                          View(await _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.tenSanPham).ToListAsync()) :
+            return _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.tenSanPham) != null ?
+                          View(await _context.SanPham.Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.tenSanPham).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.SanPham'  is null.");
         }
 
@@ -61,8 +61,8 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
             {
                 formFile.CopyTo(stream);
             }
-            sanPham.TrangThai = "Hoạt động";
-            sanPham.AnhDaiDien = formFile.FileName;
+            sanPham.trangThai = "Hoạt động";
+            sanPham.anhDaiDien = formFile.FileName;
             try
             {
                 sanPham.ID_SanPham = Guid.NewGuid();
@@ -99,7 +99,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
                 {
                     formFile.CopyTo(stream);
                 }
-                sanPham.AnhDaiDien = formFile.FileName;
+                sanPham.anhDaiDien = formFile.FileName;
             }
             try
             {
