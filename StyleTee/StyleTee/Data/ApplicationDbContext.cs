@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Models;
+using StyleTee.Models.PhieuGiamGiaVaKhuyenMai;
 
 namespace StyleTee.Data;
 
