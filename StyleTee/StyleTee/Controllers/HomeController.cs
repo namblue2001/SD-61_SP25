@@ -26,6 +26,7 @@ public class HomeController : Controller
     
     public IActionResult Index()
     {
+        TempData["Trang"] = "Bảng điều khiển";
         return View();
     }
 
@@ -34,11 +35,33 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult NhanVien()
+    {
+        TempData["Trang"] = "Xem báo cáo hiệu suất";
+        return View(); 
+    }
+  
     public IActionResult GioHang()
     {
+        var trangthai = HttpContext.Session.GetString("id_taikhoan");
+        TempData["TrangThai"] = trangthai == null ? "Đăng nhập" : "Đăng xuất";
         return View();
     }
 
+    public IActionResult SanPham()
+    {
+        var trangthai = HttpContext.Session.GetString("id_taikhoan");
+        TempData["TrangThai"] = trangthai == null ? "Đăng nhập" : "Đăng xuất";
+        return View();
+    }
+
+    public IActionResult ThanhToan()
+    {
+        var trangthai = HttpContext.Session.GetString("id_taikhoan");
+        TempData["TrangThai"] = trangthai == null ? "Đăng nhập" : "Đăng xuất";
+        return View();
+    }
+    
     public IActionResult ChiTietSanPham()
     {
         return View();
