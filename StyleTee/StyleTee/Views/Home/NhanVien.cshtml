@@ -3,37 +3,6 @@
     Layout = "~/Areas/NhanVien/Views/Shared/_LayoutNhanVien.cshtml";
 }
 
-@if (TempData["Thành công"] != null)
-{
-    <script type="text/javascript">
-        window.onload = function () {
-            var sound = new Audio('@Url.Content("~/LayoutAdmin/img/thongbao/ok.mp3")');
-            sound.play().then(() => {
-                Swal.fire({
-                    title: 'Thành công!',
-                    icon: 'success',
-                    text: '@Html.Raw(TempData["Thành công"])',
-                    confirmButtonText: 'Được rồi',
-                    customClass: {
-                        title: 'text-danger text-gradient font-weight-bold',
-                        popup: 'rounded custom-popup',
-                        text: 'text-info text-gradient font-weight-bold',
-                        confirmButton: 'btn btn-info'
-                    },
-                    backdrop: `
-                        rgba(255,255,255,0.6)
-                        url('@Url.Content("~/LayoutAdmin/img/thongbao/dog.gif")')
-                        right top
-                        no-repeat
-                    `
-                });
-            }).catch((error) => {
-                console.log('Lỗi khi phát âm thanh:', error);
-            });
-        };
-    </script>
-}
-
 <div class="row">
     <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
         <div class="card">
