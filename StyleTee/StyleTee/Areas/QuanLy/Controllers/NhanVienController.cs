@@ -7,6 +7,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StyleTee.Areas.QuanLy.Controllers
 {
+
+    [Area("QuanLy")]
+    [Route("QuanLy")]
+    [Route("QuanLy/NhanVien")]
     public class NhanVienController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -16,11 +20,14 @@ namespace StyleTee.Areas.QuanLy.Controllers
         {
             _context = context;
         }
+        [Route("Index")]
         public IActionResult Index()
-        {
+        {   
             var nhanvien = _context.TaiKhoan.Where(x => x.tenVaiTro == "Nhân Viên").DefaultIfEmpty();
             return View(nhanvien);
         }
+        [Route("Create")]
+
         public IActionResult Create()
         {
             return View();
@@ -28,34 +35,21 @@ namespace StyleTee.Areas.QuanLy.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult Create(string hoTen, string email, string soDienThoai, DateTime ngaySinh, string gioiTinh, string taiKhoan, string matKhau, IFormFile? imageFile)
+        public IActionResult Create(TaiKhoan nhanvien, IFormFile? imageFile)
         {
             if (ModelState.IsValid)
             {
-                var nhanvien = new TaiKhoan
-                {
-                    hoTen = hoTen,
-                    email = email,
-                    soDienThoai = soDienThoai,
-                    ngaySinh = ngaySinh,
-                    gioiTinh = gioiTinh,
-                    taiKhoan = taiKhoan,
-                    matKhau = matKhau,
-                    ID_TaiKhoan = Guid.NewGuid(),
-                    trangThai = "Hoạt động",
-                    tenVaiTro = "Nhân Viên",
-                };
+                nhanvien.ID_TaiKhoan = Guid.NewGuid();
+                nhanvien.trangThai = "Hoạt động";
+                nhanvien.tenVaiTro = "Nhân Viên";
+
                 if (imageFile != null && imageFile.FileName != null)
                 {
-
-                    // Thực hiện trỏ tới thu mục Root để copy file từ ngoài vào
                     var path = Path.Combine(Directory.GetCurrentDirectory(),
-                        "wwwroot", "Image", imageFile.FileName);
-                    // Kết quả thu được sẽ có dạng ~wwwroot/img/filename
-                    var stream = new FileStream(path, FileMode.Create); // Mode = Create vì ta copy
-                    imageFile.CopyTo(stream); // Copy ảnh vào stream có path là path mình vừa truyền
-                                              // Gán lại thuộc tính imageURL = đường dẫn vào file trong root
+                         "wwwroot", "LayoutAdmin/img/NhanVien", imageFile.FileName);
 
+                    var stream = new FileStream(path, FileMode.Create);
+                    imageFile.CopyTo(stream);
                     nhanvien.anhDaiDien = imageFile.FileName;
                 };
                 try
@@ -73,6 +67,7 @@ namespace StyleTee.Areas.QuanLy.Controllers
             }
             return View();
         }
+        [Route("Edit")]
         [HttpGet]
         public IActionResult Edit(Guid id)
         {
@@ -113,6 +108,7 @@ namespace StyleTee.Areas.QuanLy.Controllers
             return View(nhanvien);
 
         }
+        [Route("Details")]
 
         public async Task<IActionResult> Details(Guid id)
         {

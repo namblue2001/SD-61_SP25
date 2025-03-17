@@ -1,0 +1,113 @@
+﻿@model IEnumerable<StyleTee.Models.SanPhamChiTiet>
+
+@{
+    ViewData["Title"] = "Index";
+    List<string> imageExtension = new List<string>()
+    {
+        ".jpg",".png",".webp",".tiff",".gif",".jpeg",".svg"
+    };
+}
+
+
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                    <h6>Danh sách </h6>
+                    <a asp-action="Create" class="btn btn-primary btn-sm">
+                        <i class="fas fa-plus"></i> Thêm Sản Phẩm Chi Tiết 
+                    </a>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Sản Phẩm</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Avatar</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Giá bán</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Thương hiệu</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Xuất xứ</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Chất liệu</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kiểu dáng</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Size</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Số lượng tồn</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Màu sắc</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ngày tạo</th>
+                                    <th class="text-secondary opacity-7"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.SanPham.tenSanPham</p>
+                                        </td>
+                                        <td>
+                                            @{
+                                                // Lấy đuôi của ảnh để check xem có phải ảnh hay ko?
+                                                var extension = System.IO.Path.GetExtension(item.anhDaiDien);
+                                            }
+                                            @if (imageExtension.Contains(extension)) // Check đuôi ảnh
+                                            {
+                                                <img src="~/LayoutAdmin/img/SanPhamChiTiet/@item.anhDaiDien" height="100px">
+                                                // Gán ảnh
+                                            }
+                                            else // Nếu không đúng ta set 1 ảnh mặc định
+                                            {
+                                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4v_dkWPQi1loWthMLDpIYa587pwZ6KWz9SdQ6FakvnSLrYK03I7MyqWimrkVntTXNxE0&usqp=CAU" height="100">
+                                            }
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.giaBan</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.ThuongHieu.tenThuongHieu</p>
+                                        </td>
+
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.XuatXu.tenXuatXu</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.ChatLieu.tenChatLieu</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.KieuDang.tenKieuDang</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.KichThuoc.tenKichThuoc</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.soLuongTon</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.MauSac.tenMauSac</p>
+                                        </td>
+                                        <td>
+                                            <p class="text-xs font-weight-bold mb-0">@item.ngayTao</p>
+                                        </td>
+                                     
+
+                                        <td class="align-middle">
+                                            <a asp-action="Edit" asp-route-id="@item.ID_SanPhamChiTiet" class="btn btn-green btn-sm text-secondary">
+                                                Sửa
+                                            </a>
+                                            <a asp-action="Details" asp-route-id="@item.ID_SanPhamChiTiet" class="btn btn-yellow btn-sm text-secondary ">
+                                                Chi tiết
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
