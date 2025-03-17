@@ -25,4 +25,10 @@
     <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\LayoutAdmin\img\NhanVien\" />
+    <Folder Include="wwwroot\LayoutAdmin\img\SanPhamChiTiet\" />
+    <Folder Include="wwwroot\LayoutAdmin\img\SanPham\" />
+  </ItemGroup>
+
 </Project>

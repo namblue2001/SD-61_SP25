@@ -1,0 +1,85 @@
+﻿@model StyleTee.Models.SanPhamChiTiet
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>SanPhamChiTiet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID_SanPhamChiTiet" />
+            <div class="form-group">
+                <label asp-for="ID_SanPham" class="control-label"></label>
+                <select asp-for="ID_SanPham" class="form-control" asp-items="ViewBag.ID_SanPham"></select>
+                <span asp-validation-for="ID_SanPham" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Mau" class="control-label"></label>
+                <select asp-for="ID_Mau" class="form-control" asp-items="ViewBag.ID_MauSac"></select>
+                <span asp-validation-for="ID_Mau" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_XuatXu" class="control-label"></label>
+                <select asp-for="ID_XuatXu" class="form-control" asp-items="ViewBag.ID_XuatXu"></select>
+                <span asp-validation-for="ID_XuatXu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_ThuongHieu" class="control-label"></label>
+                <select asp-for="ID_ThuongHieu" class="form-control" asp-items="ViewBag.ID_ThuongHieu"></select>
+                <span asp-validation-for="ID_ThuongHieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_Size" class="control-label"></label>
+                <select asp-for="ID_Size" class="form-control" asp-items="ViewBag.ID_KichThuoc"></select>
+                <span asp-validation-for="ID_Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_KieuDang" class="control-label"></label>
+                <select asp-for="ID_KieuDang" class="form-control" asp-items="ViewBag.ID_KieuDang"></select>
+                <span asp-validation-for="ID_KieuDang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ID_ChatLieu" class="control-label"></label>
+                <select asp-for="ID_ChatLieu" class="form-control" asp-items="ViewBag.ID_ChatLieu"></select>
+                <span asp-validation-for="ID_ChatLieu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="giaBan" class="control-label"></label>
+                <input asp-for="giaBan" class="form-control" />
+                <span asp-validation-for="giaBan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="form-control-label">Ảnh đại diện </label>
+                <input type="file" name="formFile" multiple class="form-control" value="@Model.anhDaiDien" asp-for="anhDaiDien" />
+                <span asp-validation-for="anhDaiDien" class="text-sm text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ngayTao" class="control-label"></label>
+                <input asp-for="ngayTao" class="form-control" />
+                <span asp-validation-for="ngayTao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="soLuongTon" class="control-label"></label>
+                <input asp-for="soLuongTon" class="form-control" />
+                <span asp-validation-for="soLuongTon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
