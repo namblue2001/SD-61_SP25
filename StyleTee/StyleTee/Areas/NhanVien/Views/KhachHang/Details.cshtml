@@ -1,0 +1,121 @@
+@model TaiKhoanDangNhap
+
+@{
+    ViewData["Title"] = "Details";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", ".jpeg" };
+}
+
+<div class="row my-4">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                <h6><i class="fas fa-edit"></i> Thông tin chi tiết khách hàng</h6>
+                <div>
+                    <a class="btn btn-primary" asp-action="Index"><i class="fas fa-list"></i> Trở về danh sách</a>
+                </div>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <dl class="container row">
+                        <div class="col-md-6 border-end">
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Mã khách hàng :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.ID_TaiKhoan)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Tài khoản :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.taiKhoan)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Mật khẩu :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.matKhau)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">E-mail :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.email)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Họ tên :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.hoTen)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Số điện thoại :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.soDienThoai)</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Ảnh đại diện :</dt>
+                                <dd class="col-sm-8">
+                                    @{
+                                        var extension = System.IO.Path.GetExtension(Model.anhDaiDien);
+                                    }
+                                    @if (extensions.Contains(extension))
+                                    {
+                                        <img src="~/LayoutAdmin/img/KhachHang/@Model.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                    }
+                                    else
+                                    {
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXNZL0tK1RVwlcZtKQLxxAro4UKbPH0m_Iw&s" class="avatar avatar-sm me-3" alt="user1">
+                                    }
+                                </dd>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Giới tính :</dt>
+                                <dd class="col-sm-8 small">
+                                    @if (Model.gioiTinh != null)
+                                    {
+                                        @Html.DisplayFor(model => model.gioiTinh)
+                                    }
+                                    else
+                                    {
+                                        <span>Giới tính chưa được cập nhật.</span>
+                                    }
+                                </dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Ngày sinh :</dt>
+                                <dd class="col-sm-8 small">
+                                    @if (Model.ngaySinh != null)
+                                    {
+                                        @Html.DisplayFor(model => model.ngaySinh)
+                                    }
+                                    else
+                                    {
+                                        <span>Ngày sinh chưa được cập nhật.</span>
+                                    }
+                                </dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Trạng thái :</dt>
+                                <dd class="col-sm-8 small">@Html.DisplayFor(model => model.trangThai)</dd>
+                            </div>
+
+                            @if (Model.DiaChi.Count > 0)
+                            {
+                                @foreach (var (diaChi, index) in Model.DiaChi.Select((diaChi, index) => (diaChi, index)))
+                                {
+                                    <div class="row">
+                                        <dt class="col-sm-4 fw-bold">Địa chỉ @(index + 1) :</dt>
+                                        <dd class="col-sm-8 small">
+                                            @diaChi.soNha, @diaChi.xa, @diaChi.huyen, @diaChi.tinhThanhPho
+                                        </dd>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
