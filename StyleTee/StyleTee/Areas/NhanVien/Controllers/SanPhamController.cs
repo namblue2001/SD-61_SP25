@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
-using StyleTee.Models.SanPhamVaThuocTinh;
+using StyleTee.Models;
 
 namespace StyleTee.Areas.NhanVien.Controllers
 {
@@ -26,7 +26,7 @@ namespace StyleTee.Areas.NhanVien.Controllers
         public async Task<IActionResult> Index()
         {
             Trang();
-            var applicationDbContext = _context.SanPham.Include(s => s.DanhMuc).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.NgayTao);
+            var applicationDbContext = _context.SanPham.Include(s => s.DanhMuc).OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.ngayTao);
             return View(await applicationDbContext.ToListAsync());
         }
 
@@ -37,8 +37,8 @@ namespace StyleTee.Areas.NhanVien.Controllers
             Trang();
             if (ten != null)
             {
-                return _context.SanPham.Include(s => s.DanhMuc).Where(n => n.TenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.NgayTao) != null ?
-                              View(await _context.SanPham.Include(s => s.DanhMuc).Where(n => n.TenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.TrangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.NgayTao).ToListAsync()) :
+                return _context.SanPham.Include(s => s.DanhMuc).Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.ngayTao) != null ?
+                              View(await _context.SanPham.Include(s => s.DanhMuc).Where(n => n.tenSanPham.ToLower().Contains(ten.ToLower())).OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).OrderByDescending(n => n.ngayTao).ToListAsync()) :
                               Problem("Entity set 'ApplicationDbContext.SanPham'  is null.");
             }
             else
@@ -53,7 +53,7 @@ namespace StyleTee.Areas.NhanVien.Controllers
             Trang();
             var sanphamchitiet = _context.SanPhamChiTiet.Include(a => a.SanPham).ThenInclude(a => a.DanhMuc).Include(a => a.MauSac).Include(a => a.XuatXu).Include(a => a.ThuongHieu).Include(a => a.KichThuoc).Include(a => a.ChatLieu).Include(a => a.KieuDang).Where(a => a.ID_SanPham == id).OrderBy(a => a.MauSac.tenMauSac).DefaultIfEmpty().ToList();
             var sanpham = _context.SanPham.FirstOrDefault(a => a.ID_SanPham == id);
-            TempData["sanpham"] = sanpham.TenSanPham;
+            TempData["sanpham"] = sanpham.tenSanPham;
             return View(sanphamchitiet);
         }
 
@@ -68,11 +68,6 @@ namespace StyleTee.Areas.NhanVien.Controllers
         public void Trang()
         {
             TempData["Trang"] = "Theo dõi sản phẩm";
-        }
-
-        private bool SanPhamExists(Guid id)
-        {
-          return (_context.SanPham?.Any(e => e.ID_SanPham == id)).GetValueOrDefault();
         }
     }
 }
