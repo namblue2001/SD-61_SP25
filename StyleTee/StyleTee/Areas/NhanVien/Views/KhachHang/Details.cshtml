@@ -100,9 +100,9 @@
                                 <dd class="col-sm-8 small">@Html.DisplayFor(model => model.trangThai)</dd>
                             </div>
 
-                            @if (Model.DiaChi.Count > 0)
+                            @if (Model.DiaChis.Count > 0)
                             {
-                                @foreach (var (diaChi, index) in Model.DiaChi.Select((diaChi, index) => (diaChi, index)))
+                                @foreach (var (diaChi, index) in Model.DiaChis.Select((diaChi, index) => (diaChi, index)))
                                 {
                                     <div class="row">
                                         <dt class="col-sm-4 fw-bold">Địa chỉ @(index + 1) :</dt>
