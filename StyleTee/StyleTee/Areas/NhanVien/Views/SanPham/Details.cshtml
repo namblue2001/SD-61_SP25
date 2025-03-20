@@ -1,4 +1,4 @@
-@model StyleTee.Models.SanPhamVaThuocTinh.SanPhamChiTiet
+@model StyleTee.Models.SanPhamChiTiet
 
 @{
     ViewData["Title"] = "Details";
@@ -10,7 +10,7 @@
             <div class="card-header pb-0">
                 <div class="row">
                     <div class="col-lg-6 col-7">
-                        <h6><i class="fas fa-box"></i> Sản phẩm @Model.SanPham.TenSanPham</h6>
+                        <h6><i class="fas fa-box"></i> Sản phẩm @Model.SanPham.tenSanPham</h6>
                     </div>
                     <div class="col-lg-6 col-5 my-auto text-end">
                         <div class="dropdown float-lg-end">
@@ -28,40 +28,34 @@
                             <dt class="col-sm-4 fw-bold">Mã sản phẩm chi tiết</dt>
                             <dd class="col-sm-8 small">@Model.ID_SanPhamChiTiet</dd>
                             <dt class="col-sm-4 fw-bold">Tên sản phẩm</dt>
-                            <dd class="col-sm-8 small">@Model.SanPham.TenSanPham</dd>
+                            <dd class="col-sm-8 small">@Model.SanPham.tenSanPham</dd>
                             <dt class="col-sm-4 fw-bold">Danh mục</dt>
-                            <dd class="col-sm-8 small">@Model.SanPham.DanhMuc.TenDanhMuc</dd>
+                            <dd class="col-sm-8 small">@Model.SanPham.DanhMuc.tenDanhMuc</dd>
                             <dt class="col-sm-4 fw-bold">Màu sắc</dt>
                             <dd class="col-sm-8 small">@Model.MauSac.tenMauSac</dd>
                             <dt class="col-sm-4 fw-bold">Xuất xứ</dt>
                             <dd class="col-sm-8 small">@Model.XuatXu.tenXuatXu</dd>
                             <dt class="col-sm-4 fw-bold">Thương hiệu</dt>
-                            <dd class="col-sm-8 small">@Model.ThuongHieu.tenThuongHieu <img src="~/LayoutAdmin/img/ThuongHieu/@Model.ThuongHieu.anhDaiDien" class="avatar avatar-lg me-3" alt="user1"></dd>
+                            <dd class="col-sm-8 small">@Model.ThuongHieu.tenThuongHieu</dd>
                             <dt class="col-sm-4 fw-bold">Kích thước</dt>
-                            <dd class="col-sm-8 small">@Model.KichThuoc.tenKichThuoc (@Model.KichThuoc.chieuCaoKhuyenNghi - @Model.KichThuoc.canNangKhuyenNghi)</dd>
+                            <dd class="col-sm-8 small">@Model.KichThuoc.tenKichThuoc</dd>
                             <dt class="col-sm-4 fw-bold">Mô tả kích thước</dt>
-                            <dd class="col-sm-8 small">@Model.KichThuoc.moTaKichThuoc</dd>
+                            <dd class="col-sm-8 small">@Model.KichThuoc.moTa</dd>
                             <dt class="col-sm-4 fw-bold">Ảnh sản phẩm chi tiết</dt>
                             <dd class="col-sm-8 small"><img src="~/LayoutAdmin/img/SanPhamChiTiet/@Model.anhDaiDien" class="avatar avatar-lg me-3" alt="user1"></dd>
                             <dt class="col-sm-4 fw-bold">Chất liệu</dt>
                             <dd class="col-sm-8 small">@Model.ChatLieu.tenChatLieu</dd>
-                            <dt class="col-sm-4 fw-bold">Mô tả chất liệu</dt>
-                            <dd class="col-sm-8 small">@Model.ChatLieu.MoTaChatLieu</dd>
                             @if (Model.GiaBan != null)
                             {
                                 <dt class="col-sm-4 fw-bold">Giá bán</dt>
-                                <dd class="col-sm-8 small">@Model.GiaBan</dd>
+                                <dd class="col-sm-8 small">@Model.giaBan</dd>
                             }
                             <dt class="col-sm-4 fw-bold">Kiểu dáng</dt>
-                            <dd class="col-sm-8 small">@Model.KieuDang.coAo - @Model.KieuDang.tayAo</dd>
-                            <dt class="col-sm-4 fw-bold">Mô tả kiểu dáng</dt>
-                            <dd class="col-sm-8 small">@Model.KieuDang.moTa</dd>
+                            <dd class="col-sm-8 small">@Model.KieuDang.tenKieuDang</dd>
                             <dt class="col-sm-4 fw-bold">Ngày tạo</dt>
-                            <dd class="col-sm-8 small">@Model.NgayTao</dd>
+                            <dd class="col-sm-8 small">@Model.ngayTao</dd>
                             <dt class="col-sm-4 fw-bold">Số lượng tồn</dt>
                             <dd class="col-sm-8 small">@Model.soLuongTon</dd>
-                            <dt class="col-sm-4 fw-bold">Số lượng bán</dt>
-                            <dd class="col-sm-8 small">@Model.soLuongBan</dd>
                         </div>
                     </dl>
                 </div>
