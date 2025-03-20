@@ -1,0 +1,117 @@
+@model StyleTee.Models.PhieuGiamGiaVaKhuyenMai.PhieuGiamGia
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row my-4">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                <h6><i class="fas fa-edit"></i> Sửa phiếu giảm giá</h6>
+                <a class="btn btn-primary" asp-action="Index"><i class="fas fa-list"></i> Trở về danh sách</a>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <form asp-action="Edit" method="post" class="container">
+                        <div asp-validation-summary="ModelOnly" class="text-sm text-danger"></div>
+                        <input type="hidden" asp-for="Ma_PhieuGiamGia"/>
+                        <input type="hidden" asp-for="LoaiGiamGia" />
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-tag"></i> Tên phiếu giảm giá<span>*</span></label>
+                                    <input asp-for="TenPhieuGiamGia" class="form-control" placeholder="Nhập tên phiếu giảm giá" readonly autofocus />
+                                    <span asp-validation-for="TenPhieuGiamGia" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-info-circle"></i> Mô tả phiếu giảm giá<span>*</span></label>
+                                    <textarea asp-for="MoTa" class="form-control" rows="4" placeholder="Nhập mô tả phiếu giảm giá" autofocus></textarea>
+                                    <span asp-validation-for="MoTa" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-percent"></i> Loại phiếu giảm giá<span>*</span></label>
+                                    <div>
+                                        <label>
+                                            <input asp-for="LoaiGiamGia" type="radio" value="Phần trăm" disabled> Phần trăm
+                                        </label>
+                                        <label>
+                                            <input asp-for="LoaiGiamGia" type="radio" value="Số tiền cố định" disabled> Số tiền cố định
+                                        </label>
+                                        <label>
+                                            <input asp-for="LoaiGiamGia" type="radio" value="Miễn phí giao hàng" disabled> Miễn phí giao hàng
+                                        </label>
+                                    </div>
+                                    <span asp-validation-for="LoaiGiamGia" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-money-bill"></i> Giá trị khuyến mãi<span>*</span></label>
+                                    <div class="position-relative">
+                                        <input asp-for="GiaTriKhuyenMai" id="GiaTriKhuyenMai" class="form-control" placeholder="Nhập giá trị phiếu giảm giá" readonly autofocus />
+                                        <div class="position-absolute top-50 end-0 translate-middle-y" style="border: none; background: transparent; border-radius: 2px;">
+                                            <span id="khuyenMaiLabel" class="ml-2" style="margin-right:10px"></span>
+                                        </div>
+                                    </div>
+                                    <span asp-validation-for="GiaTriKhuyenMai" class="text-sm text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-calendar-alt"></i> Ngày hết hạn<span>*</span></label>
+                                    <input asp-for="NgayHetHan" class="form-control" placeholder="Nhập ngày hết hạn phiếu giảm giá" autofocus />
+                                    <span asp-validation-for="NgayHetHan" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-list-alt"></i> Tổng lượng phiếu<span>*</span></label>
+                                    <input asp-for="SoLuongTong" class="form-control" placeholder="Nhập tổng lượng phiếu giảm giá" autofocus />
+                                    <span asp-validation-for="SoLuongTong" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-user-friends"></i> Số phiếu tối thiểu 1 người<span>*</span></label>
+                                    <input asp-for="SoLuongToiDaCho1Nguoi" class="form-control" placeholder="Nhập số phiếu tối thiểu 1 người" autofocus />
+                                    <span asp-validation-for="SoLuongToiDaCho1Nguoi" class="text-sm text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><i class="fas fa-shopping-cart"></i> Giá trị đơn hàng tối thiểu<span>*</span></label>
+                                    <input asp-for="GiaTriDonHangToiThieu" class="form-control" placeholder="Nhập giá trị đơn hàng tối thiểu" autofocus />
+                                    <span asp-validation-for="GiaTriDonHangToiThieu" class="text-sm text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Lưu" class="btn btn-primary" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        function updateKhuyenMaiLabel() {
+            const khuyenMaiLabel = document.getElementById('khuyenMaiLabel');
+            const loaiGiamGia = $('input[name="LoaiGiamGia"]:checked').val();
+
+            if (loaiGiamGia === 'Miễn phí giao hàng') {
+                khuyenMaiLabel.innerText = '% phí giao hàng';
+            }
+            else if (loaiGiamGia === 'Phần trăm') {
+                khuyenMaiLabel.innerText = '% giá trị đơn hàng';
+            }
+            else if (loaiGiamGia === 'Số tiền cố định') {
+                khuyenMaiLabel.innerText = 'VNĐ giá trị đơn hàng';
+            }
+        }
+
+        // Gọi hàm ngay khi tải trang
+        updateKhuyenMaiLabel();
+    });
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

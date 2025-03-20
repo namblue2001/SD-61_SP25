@@ -1,0 +1,76 @@
+@model StyleTee.Models.PhieuGiamGiaVaKhuyenMai.PhieuGiamGia
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row my-4">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                <h6><i class="fas fa-ticket-alt"></i> Thông tin chi tiết phiếu giảm giá</h6>
+                <div>
+                    <a class="btn btn-primary" asp-action="Index"><i class="fas fa-list"></i> Trở về danh sách</a>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@Model.Ma_PhieuGiamGia"><i class="fas fa-edit"></i> Chỉnh sửa phiếu giảm giá</a>
+                </div>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <dl class="container row">
+                        <div class="col-md-12 border-end">
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Mã phiếu giảm giá :</dt>
+                                <dd class="col-sm-8 small">@Model.Ma_PhieuGiamGia</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Tên phiếu giảm giá :</dt>
+                                <dd class="col-sm-8 small">@Model.TenPhieuGiamGia</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Mô tả :</dt>
+                                <dd class="col-sm-8 small">@Model.MoTa</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Loại khuyến mãi :</dt>
+                                <dd class="col-sm-8 small">@Model.LoaiGiamGia</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Giá trị khuyến mãi :</dt>
+                                <dd class="col-sm-8 small">@Model.GiaTriKhuyenMai</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Ngày bắt đầu :</dt>
+                                <dd class="col-sm-8 small">@Model.NgayBatDau</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Ngày kết thúc :</dt>
+                                <dd class="col-sm-8 small">@Model.NgayHetHan</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Số lượng tổng :</dt>
+                                <dd class="col-sm-8 small">@Model.SoLuongTong phiếu</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Số lượng tối da 1 người :</dt>
+                                <dd class="col-sm-8 small">@Model.SoLuongToiDaCho1Nguoi phiếu</dd>
+                            </div>
+
+                            <div class="row">
+                                <dt class="col-sm-4 fw-bold">Giá trị đơn hàng tối thiểu :</dt>
+                                <dd class="col-sm-8 small">@Model.GiaTriDonHangToiThieu</dd>
+                            </div>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
