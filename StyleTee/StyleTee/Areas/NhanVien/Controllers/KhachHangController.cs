@@ -39,7 +39,7 @@ namespace StyleTee.Areas.NhanVien.Controllers
             if (ten != null)
             {
                 return _context.TaiKhoan.Where(n => n.hoTen.ToLower().Contains(ten.ToLower()) && n.tenVaiTro == "Khách hàng").OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.hoTen) != null ?
-                              View(await _context.TaiKhoanDangNhap.Where(n => n.hoTen.ToLower().Contains(ten.ToLower()) && n.tenVaiTro == "Khách hàng").OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.hoTen).ToListAsync()) :
+                              View(await _context.TaiKhoan.Where(n => n.hoTen.ToLower().Contains(ten.ToLower()) && n.tenVaiTro == "Khách hàng").OrderBy(a => a.trangThai == "Hoạt động" ? 0 : 1).ThenBy(a => a.hoTen).ToListAsync()) :
                               Problem("Entity set 'ApplicationDbContext.NhaCungCap'  is null.");
             }
             else
@@ -52,7 +52,7 @@ namespace StyleTee.Areas.NhanVien.Controllers
         public async Task<IActionResult> Details(Guid id)
         {
             Trang();
-            var taiKhoan = await _context.TaiKhoan.Include(a => a.DiaChi).FirstOrDefaultAsync(m => m.ID_TaiKhoan == id);
+            var taiKhoan = await _context.TaiKhoan.Include(a => a.DiaChis).FirstOrDefaultAsync(m => m.ID_TaiKhoan == id);
 
             return View(taiKhoan);
         }
