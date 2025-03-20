@@ -1,4 +1,4 @@
-@model IEnumerable<StyleTee.Models.SanPhamVaThuocTinh.SanPham>
+@model IEnumerable<StyleTee.Models.SanPham>
 
 @{
     ViewData["Title"] = "Index";
@@ -55,31 +55,31 @@
                                         <div class="d-flex px-2 py-1">
                                             <div>
                                                 @{
-                                                    var extension = System.IO.Path.GetExtension(item.AnhDaiDien);
+                                                    var extension = System.IO.Path.GetExtension(item.anhDaiDien);
                                                 }
                                                 @if (@extensions.Contains(extension))
                                                 {
-                                                    <img src="~/LayoutAdmin/img/SanPham/@item.AnhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                                    <img src="~/LayoutAdmin/img/SanPham/@item.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
                                                 }
                                             </div>
                                             <div class="d-flex flex-column justify-content-center">
-                                                <h6 class="mb-0 text-sm">@item.TenSanPham</h6>
-                                                <p class="text-xs text-secondary mb-0">@item.DanhMuc.TenDanhMuc</p>
+                                                <h6 class="mb-0 text-sm">@item.tenSanPham</h6>
+                                                <p class="text-xs text-secondary mb-0">@item.DanhMuc.tenDanhMuc</p>
                                             </div>
                                         </div>
                                     </td>
                                     <td class="align-middle text-center text-sm">
-                                        @if (item.TrangThai == "Hoạt động")
+                                        @if (item.trangThai == "Hoạt động")
                                         {
-                                            <span class="badge bg-gradient-success">@item.TrangThai</span>
+                                            <span class="badge bg-gradient-success">@item.trangThai</span>
                                         }
                                         else
                                         {
-                                            <span class="badge bg-gradient-secondary">@item.TrangThai</span>
+                                            <span class="badge bg-gradient-secondary">@item.trangThai</span>
                                         }
                                     </td>
                                     <td class="text-sm align-middle text-center">
-                                        @Html.DisplayFor(modelItem => item.NgayTao)
+                                        @Html.DisplayFor(modelItem => item.ngayTao)
                                     </td>
                                     <td class="align-middle text-center">
                                         <a class="badge badge-sm bg-gradient-info text-light font-weight-bold text-xs" asp-action="SanPhamChiTiet" asp-route-id="@item.ID_SanPham"><i class="fas fa-info-circle"></i> Sản phẩm chi tiết</a>
