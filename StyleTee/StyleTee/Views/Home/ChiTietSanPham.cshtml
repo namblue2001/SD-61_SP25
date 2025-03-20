@@ -1,79 +1,48 @@
-﻿@{
+﻿@model StyleTee.Models.SanPham
+@{
     ViewData["Title"] = "ChiTietSanPham";
     Layout = "~/Views/Shared/_LayoutTrangChuKhachHang.cshtml";
+
+    var popularProducts = ViewBag.PopularProducts as IEnumerable<StyleTee.Models.SanPham> ?? Enumerable.Empty<StyleTee.Models.SanPham>();
 }
 
 <div class="main">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Store</a></li>
-            <li class="active">Cool green dress with red bell</li>
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("Privacy", "Home")">Store</a></li>
+            <li class="active">@Model.tenSanPham</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
         <div class="row margin-bottom-40">
             <!-- BEGIN SIDEBAR -->
             <div class="sidebar col-md-3 col-sm-5">
                 <ul class="list-group margin-bottom-25 sidebar-menu">
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Ladies</a></li>
-                    <li class="list-group-item clearfix dropdown active">
-                        <a href="shop-product-list.html" class="collapsed">
-                            <i class="fa fa-angle-right"></i>
-                            Mens
-
-                        </a>
-                        <ul class="dropdown-menu" style="display:block;">
-                            <li class="list-group-item dropdown clearfix active">
-                                <a href="shop-product-list.html" class="collapsed"><i class="fa fa-angle-right"></i> Shoes </a>
-                                <ul class="dropdown-menu" style="display:block;">
-                                    <li class="list-group-item dropdown clearfix">
-                                        <a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic </a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 1</a></li>
-                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Classic 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="list-group-item dropdown clearfix active">
-                                        <a href="shop-product-list.html" class="collapsed"><i class="fa fa-angle-right"></i> Sport  </a>
-                                        <ul class="dropdown-menu" style="display:block;">
-                                            <li class="active"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 1</a></li>
-                                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sport 2</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Trainers</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Jeans</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Chinos</a></li>
-                            <li><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> T-Shirts</a></li>
-                        </ul>
-                    </li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Kids</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Accessories</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Sports</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Brands</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Electronics</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Home &amp; Garden</a></li>
-                    <li class="list-group-item clearfix"><a href="shop-product-list.html"><i class="fa fa-angle-right"></i> Custom Link</a></li>
+                    @if (Model.DanhMuc != null)
+                    {
+                        <li class="list-group-item clearfix">
+                            <a href="@Url.Action("Privacy", "Home", new { categoryId = Model.DanhMuc.ID_DanhMuc })">
+                                <i class="fa fa-angle-right"></i> @Model.DanhMuc.tenDanhMuc
+                            </a>
+                        </li>
+                    }
                 </ul>
 
                 <div class="sidebar-products clearfix">
                     <h2>Bestsellers</h2>
-                    <div class="item">
-                        <a href="shop-item.html"><img src="../LayoutKhachHang/theme/assets/pages/img/products/k1.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                        <div class="price">$31.00</div>
-                    </div>
-                    <div class="item">
-                        <a href="shop-item.html"><img src="../LayoutKhachHang/theme/assets/pages/img/products/k4.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                        <div class="price">$23.00</div>
-                    </div>
-                    <div class="item">
-                        <a href="shop-item.html"><img src="../LayoutKhachHang/theme/assets/pages/img/products/k3.jpg" alt="Some Shoes in Animal with Cut Out"></a>
-                        <h3><a href="shop-item.html">Some Shoes in Animal with Cut Out</a></h3>
-                        <div class="price">$86.00</div>
-                    </div>
+                    @foreach (var product in popularProducts.Take(3))
+                    {
+                        <div class="item">
+                            <a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">
+                                <img src="@(!string.IsNullOrEmpty(product.anhDaiDien) ? Url.Content(product.anhDaiDien) : Url.Content("~/LayoutKhachHang/theme/assets/pages/img/products/k1.jpg"))"
+                                     alt="@product.tenSanPham">
+                            </a>
+                            <h3>
+                                <a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">@product.tenSanPham</a>
+                            </h3>
+                            <div class="price">@product.giaGoc.ToString("N0") đ</div>
+                        </div>
+                    }
                 </div>
             </div>
             <!-- END SIDEBAR -->
@@ -83,7 +52,9 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="product-main-image">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/model7.jpg" alt="Cool green dress with red bell" class="img-responsive" data-BigImgsrc="../LayoutKhachHang/theme/assets/pages/img/products/model7.jpg">
+                                <img src="@(!string.IsNullOrEmpty(Model.anhDaiDien) ? Url.Content(Model.anhDaiDien) : Url.Content("~/LayoutKhachHang/theme/assets/pages/img/products/model7.jpg"))"
+                                     alt="@Model.tenSanPham" class="img-responsive"
+                                     data-BigImgsrc="@(!string.IsNullOrEmpty(Model.anhDaiDien) ? Url.Content(Model.anhDaiDien) : Url.Content("~/LayoutKhachHang/theme/assets/pages/img/products/model7.jpg"))">
                             </div>
                             <div class="product-other-images">
                                 <a href="../LayoutKhachHang/theme/assets/pages/img/products/model3.jpg" class="fancybox-button" rel="photos-lib"><img alt="Berry Lace Dress" src="../LayoutKhachHang/theme/assets/pages/img/products/model3.jpg"></a>
@@ -92,39 +63,43 @@
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
-                            <h1>Cool green dress with red bell</h1>
+                            <h1>@Model.tenSanPham</h1>
                             <div class="price-availability-block clearfix">
                                 <div class="price">
-                                    <strong><span>$</span>47.00</strong>
-                                    <em>$<span>62.00</span></em>
+                                    <strong><span>₫</span>@Model.giaGoc.ToString("N0")</strong>
                                 </div>
                                 <div class="availability">
-                                    Availability: <strong>In Stock</strong>
+                                    Availability: <strong>@(Model.trangThai == "Hoạt động" ? "In Stock" : "Out of Stock")</strong>
                                 </div>
                             </div>
                             <div class="description">
-                                <p>
-                                    Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed nonumy nibh sed euismod laoreet dolore magna aliquarm erat volutpat
-                                    Nostrud duis molestie at dolore.
-                                </p>
+                                <p>@Model.moTa</p>
                             </div>
                             <div class="product-page-options">
-                                <div class="pull-left">
-                                    <label class="control-label">Size:</label>
-                                    <select class="form-control input-sm">
-                                        <option>L</option>
-                                        <option>M</option>
-                                        <option>XL</option>
-                                    </select>
-                                </div>
-                                <div class="pull-left">
-                                    <label class="control-label">Color:</label>
-                                    <select class="form-control input-sm">
-                                        <option>Red</option>
-                                        <option>Blue</option>
-                                        <option>Black</option>
-                                    </select>
-                                </div>
+                                @if (Model.SanPhamChiTiet != null)
+                                {
+                                    <div class="pull-left" style="margin-right: 10px;">
+                                        <label class="control-label">Size:</label>
+                                        <select class="form-control input-sm" id="sizeSelect">
+                                            <option value="">Chọn size</option>
+                                            @foreach (var spct in Model.SanPhamChiTiet.Where(x => x.KichThuoc != null).Select(x => x.KichThuoc).Distinct())
+                                            {
+                                                <option value="@spct.ID_KichThuoc">@spct.tenKichThuoc</option>
+                                            }
+                                        </select>
+                                    </div>
+
+                                    <div class="pull-left">
+                                        <label class="control-label">Color:</label>
+                                        <select class="form-control input-sm" id="colorSelect">
+                                            <option value="">Chọn màu</option>
+                                            @foreach (var spct in Model.SanPhamChiTiet.Where(x => x.MauSac != null).Select(x => x.MauSac).Distinct())
+                                            {
+                                                <option value="@spct.ID_MauSac">@spct.tenMauSac</option>
+                                            }
+                                        </select>
+                                    </div>
+                                }
                             </div>
                             <div class="product-page-cart">
                                 <div class="product-quantity">
@@ -149,42 +124,54 @@
 
                         <div class="product-page-content">
                             <ul id="myTab" class="nav nav-tabs">
-                                <li><a href="#Description" data-toggle="tab">Description</a></li>
+                                <li class="active"><a href="#Description" data-toggle="tab">Description</a></li>
                                 <li><a href="#Information" data-toggle="tab">Information</a></li>
-                                <li class="active"><a href="#Reviews" data-toggle="tab">Reviews (2)</a></li>
+                                <li><a href="#Reviews" data-toggle="tab">Reviews (2)</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade" id="Description">
-                                    <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed sit nonumy nibh sed euismod laoreet dolore magna aliquarm erat sit volutpat Nostrud duis molestie at dolore. Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed sit nonumy nibh sed euismod laoreet dolore magna aliquarm erat sit volutpat Nostrud duis molestie at dolore. Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed sit nonumy nibh sed euismod laoreet dolore magna aliquarm erat sit volutpat Nostrud duis molestie at dolore. </p>
+                                <div class="tab-pane fade in active" id="Description">
+                                    <p>@Model.moTa</p>
                                 </div>
                                 <div class="tab-pane fade" id="Information">
                                     <table class="datasheet">
                                         <tr>
                                             <th colspan="2">Additional features</th>
                                         </tr>
-                                        <tr>
-                                            <td class="datasheet-features-type">Value 1</td>
-                                            <td>21 cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="datasheet-features-type">Value 2</td>
-                                            <td>700 gr.</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="datasheet-features-type">Value 3</td>
-                                            <td>10 person</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="datasheet-features-type">Value 4</td>
-                                            <td>14 cm</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="datasheet-features-type">Value 5</td>
-                                            <td>plastic</td>
-                                        </tr>
+                                        @if (Model.SanPhamChiTiet != null && Model.SanPhamChiTiet.Any())
+                                        {
+                                            var spct = Model.SanPhamChiTiet.First();
+                                            if (spct.ChatLieu != null)
+                                            {
+                                                <tr>
+                                                    <td class="datasheet-features-type">Material</td>
+                                                    <td>@spct.ChatLieu.tenChatLieu</td>
+                                                </tr>
+                                            }
+                                            if (spct.KieuDang != null)
+                                            {
+                                                <tr>
+                                                    <td class="datasheet-features-type">Style</td>
+                                                    <td>@spct.KieuDang.tenKieuDang</td>
+                                                </tr>
+                                            }
+                                            if (spct.ThuongHieu != null)
+                                            {
+                                                <tr>
+                                                    <td class="datasheet-features-type">Brand</td>
+                                                    <td>@spct.ThuongHieu.tenThuongHieu</td>
+                                                </tr>
+                                            }
+                                            if (spct.XuatXu != null)
+                                            {
+                                                <tr>
+                                                    <td class="datasheet-features-type">Origin</td>
+                                                    <td>@spct.XuatXu.tenXuatXu</td>
+                                                </tr>
+                                            }
+                                        }
                                     </table>
                                 </div>
-                                <div class="tab-pane fade in active" id="Reviews">
+                                <div class="tab-pane fade" id="Reviews">
                                     <!--<p>There are no reviews for this product.</p>-->
                                     <div class="review-item clearfix">
                                         <div class="review-item-submitted">
@@ -249,92 +236,27 @@
             <div class="col-md-12 col-sm-12">
                 <h2>Most popular products</h2>
                 <div class="owl-carousel owl-carousel4">
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                    @foreach (var product in popularProducts)
+                    {
+                        <div>
+                            <div class="product-item">
+                                <div class="pi-img-wrapper">
+                                    <img src="@(!string.IsNullOrEmpty(product.anhDaiDien) ? Url.Content(product.anhDaiDien) : Url.Content("~/LayoutKhachHang/theme/assets/pages/img/products/k1.jpg"))"
+                                         class="img-responsive" alt="@product.tenSanPham">
+                                    <div>
+                                        <a href="@(!string.IsNullOrEmpty(product.anhDaiDien) ? Url.Content(product.anhDaiDien) : Url.Content("~/LayoutKhachHang/theme/assets/pages/img/products/k1.jpg"))"
+                                           class="btn btn-default fancybox-button">Zoom</a>
+                                        <a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })"
+                                           class="btn btn-default fancybox-fast-view">View</a>
+                                    </div>
                                 </div>
+                                <h3><a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">@product.tenSanPham</a></h3>
+                                <div class="pi-price">@product.giaGoc.ToString("N0") đ</div>
+                                <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                                <div class="sticker sticker-new"></div>
                             </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                            <div class="sticker sticker-new"></div>
                         </div>
-                    </div>
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress2</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k3.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress3</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress4</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                            <div class="sticker sticker-sale"></div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress5</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="product-item">
-                            <div class="pi-img-wrapper">
-                                <img src="../LayoutKhachHang/theme/assets/pages/img/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
-                                <div>
-                                    <a href="../LayoutKhachHang/theme/assets/pages/img/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
-                                    <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
-                                </div>
-                            </div>
-                            <h3><a href="shop-item.html">Berry Lace Dress6</a></h3>
-                            <div class="pi-price">$29.00</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
         </div>

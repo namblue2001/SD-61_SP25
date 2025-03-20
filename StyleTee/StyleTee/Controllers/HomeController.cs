@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using StyleTee.Models;
 using StyleTee.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace StyleTee.Controllers;
 
@@ -32,7 +33,25 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        return View();
+        try
+        {
+            var products = _context.SanPham
+                .Include(p => p.DanhMuc)
+                .Where(p => p.trangThai == "Hoạt động" && p.DanhMuc != null)
+                .ToList();
+
+            if (products == null || !products.Any())
+            {
+                products = new List<SanPham>();
+            }
+
+            return View(products);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error loading products in Privacy action");
+            return View(new List<SanPham>());
+        }
     }
 
     public IActionResult NhanVien()
@@ -62,9 +81,47 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult ChiTietSanPham()
+    public async Task<IActionResult> ChiTietSanPham(Guid id)
     {
-        return View();
+        var sanPham = await _context.SanPham
+            .Include(s => s.DanhMuc)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.MauSac)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.KichThuoc)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.ChatLieu)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.KieuDang)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.ThuongHieu)
+            .Include(s => s.SanPhamChiTiet)
+                .ThenInclude(spct => spct.XuatXu)
+            .AsNoTracking()
+            .FirstOrDefaultAsync(s => s.ID_SanPham == id);
+
+        if (sanPham == null)
+        {
+            return NotFound();
+        }
+
+        // Get popular products (for now, just get 6 random products excluding the current one)
+        var popularProducts = await _context.SanPham
+            .Include(s => s.DanhMuc)
+            .Where(s => s.ID_SanPham != id && s.trangThai == "Hoạt động")
+            .Take(6)
+            .ToListAsync();
+
+        ViewBag.PopularProducts = popularProducts;
+
+        if (sanPham.SanPhamChiTiet != null)
+        {
+            _logger.LogInformation($"Số lượng chi tiết sản phẩm: {sanPham.SanPhamChiTiet.Count}");
+            _logger.LogInformation($"Số lượng màu sắc: {sanPham.SanPhamChiTiet.Count(x => x.MauSac != null)}");
+            _logger.LogInformation($"Số lượng kích thước: {sanPham.SanPhamChiTiet.Count(x => x.KichThuoc != null)}");
+        }
+
+        return View(sanPham);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
