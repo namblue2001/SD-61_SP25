@@ -1,4 +1,4 @@
-﻿@model IEnumerable<StyleTee.Models.SanPhamVaThuocTinh.SanPhamChiTiet>
+﻿@model IEnumerable<StyleTee.Models.SanPhamChiTiet>
 
 @{
     ViewData["Title"] = "Index";
@@ -50,25 +50,17 @@
                                                     }
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <h6 class="mb-0 text-sm">@item.SanPham.TenSanPham - Chất liệu :@item.ChatLieu.tenChatLieu</h6>
+                                                    <h6 class="mb-0 text-sm">@item.SanPham.tenSanPham - Chất liệu :@item.ChatLieu.tenChatLieu</h6>
                                                     <p class="text-xs text-secondary mb-0">Kích cỡ :@item.KichThuoc.tenKichThuoc - Màu :@item.MauSac.tenMauSac</p>
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
                                             <div class="d-flex px-2 py-1">
-                                                <div>
-                                                    @{
-                                                        var extensio = System.IO.Path.GetExtension(item.ThuongHieu.anhDaiDien);
-                                                    }
-                                                    @if (@extensions.Contains(extensio))
-                                                    {
-                                                        <img src="~/LayoutAdmin/img/ThuongHieu/@item.ThuongHieu.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
-                                                    }
-                                                </div>
+                    
                                                 <div class="d-flex flex-column justify-content-center">
                                                     <h6 class="mb-0 text-sm">Thương hiệu :@item.ThuongHieu.tenThuongHieu - Xuất xứ :@item.XuatXu.tenXuatXu</h6>
-                                                    <p class="text-xs text-secondary mb-0">Kiểu dáng :@item.KieuDang.coAo - @item.KieuDang.tayAo</p>
+                                                    <p class="text-xs text-secondary mb-0">Kiểu dáng :@item.KieuDang.tenKieuDang</p>
                                                 </div>
                                             </div>
                                         </td>
