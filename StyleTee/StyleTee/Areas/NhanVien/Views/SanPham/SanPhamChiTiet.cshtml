@@ -1,0 +1,87 @@
+﻿@model IEnumerable<StyleTee.Models.SanPhamVaThuocTinh.SanPhamChiTiet>
+
+@{
+    ViewData["Title"] = "Index";
+    List<string> extensions = new List<string>() { ".jpg", ".png", ".tiff", ".gif", "jpeg" };
+}
+
+<div class="row my-4">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header pb-0">
+                <div class="row">
+                    <div class="col-lg-6 col-7">
+                        <h6><i class="fas fa-list"></i> Danh sách @TempData["sanpham"]</h6>
+                    </div>
+                    <div class="col-lg-6 col-5 my-auto text-end">
+                        <div class="dropdown float-lg-end">
+                            <a class="btn btn-primary" asp-action="Index"><i class="fas fa-list"></i> Trở về danh sách</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body px-0 pt-0 pb-2">
+                <div class="table-responsive p-0">
+                    <table class="table table-hover align-items-center mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-center">STT</th>
+                                <th scope="col" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sản phẩm chi tiết</th>
+                                <th scope="col" class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Thông tin sản phẩm chi tiết</th>
+                                <th scope="col" class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var (item, indexs) in Model.Select((item, indexs) => (item, indexs)))
+                            {
+                                @if (item != null)
+                                {
+                                    <tr>
+                                        <td scope="row" class="text-sm text-center">@(indexs + 1)</td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    @{
+                                                        var extension = System.IO.Path.GetExtension(item.anhDaiDien);
+                                                    }
+                                                    @if (@extensions.Contains(extension))
+                                                    {
+                                                        <img src="~/LayoutAdmin/img/SanPhamChiTiet/@item.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                                    }
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">@item.SanPham.TenSanPham - Chất liệu :@item.ChatLieu.tenChatLieu</h6>
+                                                    <p class="text-xs text-secondary mb-0">Kích cỡ :@item.KichThuoc.tenKichThuoc - Màu :@item.MauSac.tenMauSac</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex px-2 py-1">
+                                                <div>
+                                                    @{
+                                                        var extensio = System.IO.Path.GetExtension(item.ThuongHieu.anhDaiDien);
+                                                    }
+                                                    @if (@extensions.Contains(extensio))
+                                                    {
+                                                        <img src="~/LayoutAdmin/img/ThuongHieu/@item.ThuongHieu.anhDaiDien" class="avatar avatar-lg me-3" alt="user1">
+                                                    }
+                                                </div>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <h6 class="mb-0 text-sm">Thương hiệu :@item.ThuongHieu.tenThuongHieu - Xuất xứ :@item.XuatXu.tenXuatXu</h6>
+                                                    <p class="text-xs text-secondary mb-0">Kiểu dáng :@item.KieuDang.coAo - @item.KieuDang.tayAo</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <a class="badge badge-sm bg-gradient-info me-2 text-light font-weight-bold text-xs" asp-action="Details" asp-route-id="@item.ID_SanPhamChiTiet"><i class="fas fa-info-circle"></i> Chi tiết</a>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
