@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using StyleTee.Models;
 
 namespace StyleTee.Models.PhieuGiamGiaVaKhuyenMai
 {
