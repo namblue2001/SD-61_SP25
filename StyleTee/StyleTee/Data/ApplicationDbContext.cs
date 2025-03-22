@@ -48,6 +48,7 @@ public class ApplicationDbContext : DbContext
 
         builder.Entity<PhieuGiamGia>().HasIndex(k => k.TenPhieuGiamGia).IsUnique().HasDatabaseName("UQ_TenPhieuGiamGia");
         builder.Entity<KhuyenMai>().HasIndex(k => new { k.TyLeKhuyenMai, k.NgayBatDau }).IsUnique().HasDatabaseName("UQ_TyLeKhuyenMai");
+        builder.Entity<KhuyenMai>().HasOne(x => x.SanPhamChiTiet).WithMany().HasForeignKey(x => x.ID_SanPhamChiTiet);
     }
 }
 
