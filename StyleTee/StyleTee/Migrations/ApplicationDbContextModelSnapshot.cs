@@ -224,6 +224,9 @@ namespace StyleTee.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("ID_SanPhamChiTiet")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("NgayBatDau")
                         .HasColumnType("datetime2");
 
@@ -234,6 +237,8 @@ namespace StyleTee.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("ID_KhuyenMai");
+
+                    b.HasIndex("ID_SanPhamChiTiet");
 
                     b.HasIndex("TyLeKhuyenMai", "NgayBatDau")
                         .IsUnique()
@@ -522,6 +527,17 @@ namespace StyleTee.Migrations
                 {
                     b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
                         .WithMany("HinhAnh")
+                        .HasForeignKey("ID_SanPhamChiTiet")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SanPhamChiTiet");
+                });
+
+            modelBuilder.Entity("StyleTee.Models.PhieuGiamGiaVaKhuyenMai.KhuyenMai", b =>
+                {
+                    b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
+                        .WithMany()
                         .HasForeignKey("ID_SanPhamChiTiet")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
