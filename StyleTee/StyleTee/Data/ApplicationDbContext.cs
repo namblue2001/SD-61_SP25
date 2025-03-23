@@ -5,7 +5,7 @@ using StyleTee.Models.PhieuGiamGiaVaKhuyenMai;
 
 namespace StyleTee.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -27,6 +27,9 @@ public class ApplicationDbContext : DbContext
     public DbSet<GioHangChiTiet> GioHangChiTiet { get; set; }
     public DbSet<PhieuGiamGia> PhieuGiamGia { get; set; }
     public DbSet<KhuyenMai> KhuyenMai { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderDetail> OrderDetails { get; set; }
+    public DbSet<OrderStatusHistory> OrderStatusHistories { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {

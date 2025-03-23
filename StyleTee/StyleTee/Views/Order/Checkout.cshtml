@@ -1,0 +1,80 @@
+@model StyleTee.Models.GioHang
+
+@{
+    ViewData["Title"] = "Thanh toán";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Thông tin giao hàng</h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="CreateOrder" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">Địa chỉ giao hàng</label>
+                            <textarea name="shippingAddress" class="form-control" rows="3" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phương thức thanh toán</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" value="COD" checked>
+                                <label class="form-check-label">
+                                    Thanh toán khi nhận hàng (COD)
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" value="BankTransfer">
+                                <label class="form-check-label">
+                                    Chuyển khoản ngân hàng
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Đặt hàng</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Đơn hàng</h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.GioHangChiTiet)
+                                {
+                                    <tr>
+                                        <td>@item.SanPhamChiTiet.SanPham.tenSanPham</td>
+                                        <td>@item.soLuong</td>
+                                        <td>@((item.soLuong * item.SanPhamChiTiet.giaBan).ToString("N0")) đ</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" class="text-end"><strong>Tổng cộng:</strong></td>
+                                    <td><strong>@Model.GioHangChiTiet.Sum(ci => ci.soLuong * ci.SanPhamChiTiet.giaBan).ToString("N0") đ</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,183 @@
+@model StyleTee.Models.Order
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng #" + Model.OrderId;
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Chi tiết đơn hàng #@Model.OrderId</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5>Thông tin đơn hàng</h5>
+                            <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm")</p>
+                            <p><strong>Trạng thái:</strong>
+                                @switch (Model.OrderStatus)
+                                {
+                                    case "Pending":
+                                        <span class="badge bg-warning">Chờ xử lý</span>
+                                        break;
+                                    case "Processing":
+                                        <span class="badge bg-info">Đang xử lý</span>
+                                        break;
+                                    case "Shipped":
+                                        <span class="badge bg-primary">Đã gửi hàng</span>
+                                        break;
+                                    case "Delivered":
+                                        <span class="badge bg-success">Đã giao hàng</span>
+                                        break;
+                                    case "Cancelled":
+                                        <span class="badge bg-danger">Đã hủy</span>
+                                        break;
+                                }
+                            </p>
+                            <p><strong>Thanh toán:</strong>
+                                @switch (Model.PaymentStatus)
+                                {
+                                    case "Pending":
+                                        <span class="badge bg-warning">Chờ thanh toán</span>
+                                        break;
+                                    case "Paid":
+                                        <span class="badge bg-success">Đã thanh toán</span>
+                                        break;
+                                    case "Cancelled":
+                                        <span class="badge bg-danger">Đã hủy</span>
+                                        break;
+                                }
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Thông tin giao hàng</h5>
+                            <p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
+                            <p><strong>Phương thức thanh toán:</strong> @Model.PaymentMethod</p>
+                        </div>
+                    </div>
+
+                    <h5>Danh sách sản phẩm</h5>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.OrderDetails)
+                                {
+                                    <tr>
+                                        <td>@item.SanPham.tenSanPham</td>
+                                        <td>@item.UnitPrice.ToString("N0") đ</td>
+                                        <td>@item.Quantity</td>
+                                        <td>@item.Subtotal.ToString("N0") đ</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3" class="text-end"><strong>Tổng cộng:</strong></td>
+                                    <td><strong>@Model.TotalAmount.ToString("N0") đ</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Lịch sử trạng thái</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        @foreach (var history in Model.OrderStatusHistories.OrderByDescending(h => h.StatusDate))
+                        {
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    @history.StatusDate.ToString("dd/MM/yyyy HH:mm")
+                                </div>
+                                <div class="timeline-content">
+                                    <p class="mb-0">@history.Notes</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            @if (Model.OrderStatus == "Pending")
+            {
+                <div class="card mt-3">
+                    <div class="card-body">
+                        <form asp-action="CancelOrder" asp-route-id="@Model.OrderId" method="post">
+                            <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này?')">
+                                <i class="fas fa-times"></i> Hủy đơn hàng
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <style>
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #007bff;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 12px;
+            width: 2px;
+            height: calc(100% + 8px);
+            background: #e9ecef;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+} 
