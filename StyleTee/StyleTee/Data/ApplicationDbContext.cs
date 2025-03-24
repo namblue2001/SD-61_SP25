@@ -5,7 +5,7 @@ using StyleTee.Models.PhieuGiamGiaVaKhuyenMai;
 
 namespace StyleTee.Data;
 
-public class ApplicationDbContext : DbContext
+public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -27,6 +27,9 @@ public class ApplicationDbContext : DbContext
     public DbSet<GioHangChiTiet> GioHangChiTiet { get; set; }
     public DbSet<PhieuGiamGia> PhieuGiamGia { get; set; }
     public DbSet<KhuyenMai> KhuyenMai { get; set; }
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<OrderDetail> OrderDetails { get; set; }
+    public DbSet<OrderStatusHistory> OrderStatusHistories { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -48,6 +51,7 @@ public class ApplicationDbContext : DbContext
 
         builder.Entity<PhieuGiamGia>().HasIndex(k => k.TenPhieuGiamGia).IsUnique().HasDatabaseName("UQ_TenPhieuGiamGia");
         builder.Entity<KhuyenMai>().HasIndex(k => new { k.TyLeKhuyenMai, k.NgayBatDau }).IsUnique().HasDatabaseName("UQ_TyLeKhuyenMai");
+        builder.Entity<KhuyenMai>().HasOne(x => x.SanPhamChiTiet).WithMany().HasForeignKey(x => x.ID_SanPhamChiTiet);
     }
 }
 

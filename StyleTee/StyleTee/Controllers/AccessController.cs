@@ -32,24 +32,32 @@ namespace StyleTee.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> DangKy(string hoTen, string email, string soDienThoai, DateTime ngaySinh, string gioiTinh, string taiKhoan, string matKhau)
+        public async Task<IActionResult> DangKy(TaiKhoan user )
 
         {
-            //var userexist = _context.TaiKhoan.FirstOrDefault(x=>x.taiKhoan ==  taiKhoan);
-            //if (userexist == null)
-            //{
-            //    TempData["ErrorMessage"] = "Tên đăng nhập đã tồn tại";
-            //}
+            var existingUser = await _context.TaiKhoan.FirstOrDefaultAsync(u => u.taiKhoan == user.taiKhoan);
+            if (existingUser != null)
+            {
+                TempData["Error"] = "Tên đăng nhập đã tồn tại";
+                return View();
+            }
+            var existingEmail = await _context.TaiKhoan.FirstOrDefaultAsync(u => u.email == user.email);
+            if (existingEmail != null)
+            {
+                TempData["Error1"] = "Email đã tồn tại";
+                return View();
+            }
             var taikhoan = new TaiKhoan()
             {
-                hoTen = hoTen,
-                email = email,
-                soDienThoai = soDienThoai,
-                ngaySinh = ngaySinh,
-                gioiTinh = gioiTinh,
-                taiKhoan = taiKhoan,
-                matKhau = matKhau
+                hoTen = user.hoTen,
+                email = user.email,
+                soDienThoai = user.soDienThoai,
+                ngaySinh = user.ngaySinh,
+                gioiTinh = user.gioiTinh,
+                taiKhoan = user.taiKhoan,
+                matKhau = user.matKhau
             };
+
             try
             {
                 taikhoan.ID_TaiKhoan = Guid.NewGuid();
@@ -65,6 +73,8 @@ namespace StyleTee.Controllers
                 TempData["lỗi"] = "Thông tin bạn nhập không đúng. Vui lòng kiểm tra lại";
                 return View(taikhoan);
             }
+
+
         }
         public IActionResult DangNhap()
         {

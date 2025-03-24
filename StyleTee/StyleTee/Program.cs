@@ -3,8 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
 
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -17,6 +15,14 @@ builder.Services.AddSession(); // Kích hoạt Session
 builder.Services.AddDistributedMemoryCache(); // Cần thiết để Session hoạt động
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
+
+// Add session configuration
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Set session timeout
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
 app.UseSession(); // Kích hoạt Session Middleware
@@ -39,6 +45,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+// Add session middleware
+app.UseSession();
 
 app.MapControllerRoute(
     name: "areas",

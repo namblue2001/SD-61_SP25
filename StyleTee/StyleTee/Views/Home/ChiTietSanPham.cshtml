@@ -76,26 +76,40 @@
                                 <p>@Model.moTa</p>
                             </div>
                             <div class="product-page-options">
-                                @if (Model.SanPhamChiTiet != null)
+                                @if (Model.SanPhamChiTiet != null && Model.SanPhamChiTiet.Any())
                                 {
                                     <div class="pull-left" style="margin-right: 10px;">
                                         <label class="control-label">Size:</label>
                                         <select class="form-control input-sm" id="sizeSelect">
                                             <option value="">Chọn size</option>
-                                            @foreach (var spct in Model.SanPhamChiTiet.Where(x => x.KichThuoc != null).Select(x => x.KichThuoc).Distinct())
+                                            @{
+                                                var uniqueSizes = Model.SanPhamChiTiet
+                                                    .Where(x => x.KichThuoc != null)
+                                                    .Select(x => x.KichThuoc)
+                                                    .GroupBy(x => x.ID_KichThuoc)
+                                                    .Select(g => g.First());
+                                            }
+                                            @foreach (var size in uniqueSizes)
                                             {
-                                                <option value="@spct.ID_KichThuoc">@spct.tenKichThuoc</option>
+                                                <option value="@size.ID_KichThuoc">@size.tenKichThuoc</option>
                                             }
                                         </select>
                                     </div>
 
                                     <div class="pull-left">
-                                        <label class="control-label">Color:</label>
+                                        <label class="control-label">Màu sắc:</label>
                                         <select class="form-control input-sm" id="colorSelect">
                                             <option value="">Chọn màu</option>
-                                            @foreach (var spct in Model.SanPhamChiTiet.Where(x => x.MauSac != null).Select(x => x.MauSac).Distinct())
+                                            @{
+                                                var uniqueColors = Model.SanPhamChiTiet
+                                                    .Where(x => x.MauSac != null)
+                                                    .Select(x => x.MauSac)
+                                                    .GroupBy(x => x.ID_MauSac)
+                                                    .Select(g => g.First());
+                                            }
+                                            @foreach (var color in uniqueColors)
                                             {
-                                                <option value="@spct.ID_MauSac">@spct.tenMauSac</option>
+                                                <option value="@color.ID_MauSac">@color.tenMauSac</option>
                                             }
                                         </select>
                                     </div>

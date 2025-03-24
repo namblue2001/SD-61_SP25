@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using StyleTee.Models;
 
 namespace StyleTee.Models.PhieuGiamGiaVaKhuyenMai
 {
@@ -20,6 +21,10 @@ namespace StyleTee.Models.PhieuGiamGiaVaKhuyenMai
         [DataType(DataType.DateTime)]
         [CustomValidation(typeof(KhuyenMaiValidator), nameof(KhuyenMaiValidator.ValidateNgayKetThuc))]
         public DateTime NgayKetThuc { get; set; }
+
+	public Guid ID_SanPhamChiTiet { get; set; }
+
+	public SanPhamChiTiet SanPhamChiTiet {get;set;}
     }
 
     public static class KhuyenMaiValidator
