@@ -119,7 +119,12 @@
                                     <input class="form-control" placeholder="email" asp-for="email">
                                     <span asp-validation-for="email" class="text-danger"></span>
                                 </div>
-
+                                @if (TempData["Error1"] != null)
+                                {
+                                    <div class="alert alert-success">
+                                        @TempData["Error1"]
+                                    </div>
+                                }
                                 <div class="mb-3">
                                     <label asp-for="soDienThoai" class="control-label">Số điện thoại</label>
                                     <input class="form-control" placeholder="Số điện thoại" asp-for="soDienThoai">
@@ -143,7 +148,12 @@
                                     <input class="form-control" placeholder="Tên đăng nhập" asp-for="taiKhoan">
                                     <span asp-validation-for="taiKhoan" class="text-danger"></span>
                                 </div>
-                               
+                                @if (TempData["Error"] != null)
+                                {
+                                    <div class="alert alert-success">
+                                        @TempData["Error"]
+                                    </div>
+                                }
                                 <div class="mb-3">
                                     <label for="matKhau" class="control-label">Mật Khẩu</label>
                                     <input class="form-control" placeholder="Mật Khẩu" asp-for="matKhau">
