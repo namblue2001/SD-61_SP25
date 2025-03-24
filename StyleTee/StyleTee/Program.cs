@@ -13,8 +13,13 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectio
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
+builder.Services.AddSession(); // Kích hoạt Session
+builder.Services.AddDistributedMemoryCache(); // Cần thiết để Session hoạt động
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+
 
 var app = builder.Build();
+app.UseSession(); // Kích hoạt Session Middleware
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -34,6 +39,10 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "areas",
+    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
 app.MapControllerRoute(
     name: "default",

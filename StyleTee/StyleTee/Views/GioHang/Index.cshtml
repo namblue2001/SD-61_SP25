@@ -1,0 +1,76 @@
+﻿@model GioHangViewModel
+
+@{
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🛒 Giỏ hàng của bạn</h2>
+
+    @if (!Model.ChiTietGioHang.Any())
+    {
+        <div class="alert alert-warning text-center">
+            <h4>Giỏ hàng của bạn đang trống!</h4>
+            <a href="/" class="btn btn-primary mt-3">Tiếp tục mua sắm</a>
+        </div>
+    }
+    else
+    {
+        <table class="table table-hover shadow-lg p-3 mb-5 bg-white rounded">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Ảnh</th>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ChiTietGioHang)
+                {
+                    <tr>
+                        <td><img src="@item.AnhDaiDien" class="img-thumbnail" width="80"></td>
+                        <td class="align-middle">@item.TenSanPham</td>
+                        <td class="align-middle text-danger font-weight-bold">@item.DonGia.ToString("N0") ₫</td>
+                        <td class="align-middle">
+                            <form method="post" asp-action="UpdateCart" class="d-flex">
+                                <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet" />
+                                <input type="number" name="soLuong" value="@item.SoLuong" class="form-control text-center w-50" min="1" />
+                                <button type="submit" class="btn btn-secondary ml-2">Cập nhật</button>
+                            </form>
+                        </td>
+                        <td class="align-middle text-success font-weight-bold">@item.ThanhTien.ToString("N0") ₫</td>
+                        <td class="align-middle">
+                            <form method="post" asp-action="RemoveFromCart">
+                                <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet" />
+                                <button type="submit" class="btn btn-danger">❌ Xóa</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between align-items-center p-3 bg-light shadow rounded">
+            <h4 class="text-primary">Tổng tiền: <strong>@Model.TongTien.ToString("N0") ₫</strong></h4>
+            <a href="/checkout" class="btn btn-success btn-lg">🛍 Thanh toán ngay</a>
+        </div>
+    }
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .table th, .table td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .img-thumbnail {
+        border-radius: 10px;
+    }
+</style>
