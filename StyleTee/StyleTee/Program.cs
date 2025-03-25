@@ -13,7 +13,7 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddControllersWithViews();
 builder.Services.AddSession(); // Kích hoạt Session
 builder.Services.AddDistributedMemoryCache(); // Cần thiết để Session hoạt động
-builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
+builder.Services.AddSingleton<IConfiguration>(builder.Configuration); // Quên mk
 
 
 // Add session configuration
@@ -55,6 +55,6 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Access}/{action=DangNhap}/{id?}");
 app.Run();
 
