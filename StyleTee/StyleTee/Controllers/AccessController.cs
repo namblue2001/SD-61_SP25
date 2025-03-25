@@ -47,6 +47,12 @@ namespace StyleTee.Controllers
                 TempData["Error1"] = "Email đã tồn tại";
                 return View();
             }
+            var existingSdt = await _context.TaiKhoan.FirstOrDefaultAsync(u => u.soDienThoai == user.soDienThoai);
+            if (existingSdt != null)
+            {
+                TempData["Error1"] = "Số điện thoại đã tồn tại";
+                return View();
+            }
             var taikhoan = new TaiKhoan()
             {
                 hoTen = user.hoTen,
