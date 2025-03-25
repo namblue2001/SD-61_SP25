@@ -11,7 +11,8 @@
         Đăng ký tài khoản
     </title>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Nucleo Icons -->
     <link href="../LayoutAdmin/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../LayoutAdmin/assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -20,6 +21,15 @@
     <link href="../LayoutAdmin/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../LayoutAdmin/assets/css/soft-ui-dashboard.css?v=1.0.3" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card-body, .form-control, .btn, .control-label {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
@@ -169,7 +179,7 @@
                               
                                 <div class="form-check form-check-info text-left">
                                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <label class="control-label" for="flexCheckDefault">
                                         Tôi đồng ý <a href="javascript:;" class="text-dark font-weight-bolder">Điều khoản và điều kiện</a>
                                     </label>
                                 </div>
@@ -178,7 +188,7 @@
                                 </div>
                                 
 
-                                <p class="text-sm mt-3 mb-0">Đã có tài khoản? <a asp-controller="Access" asp-action="DangNhap" class="text-dark font-weight-bolder">Đăng nhập</a></p>
+                                <p class="text-sm mt-3 mb-0 control-label">Đã có tài khoản? <a asp-controller="Access" asp-action="DangNhap" class="text-dark font-weight-bolder">Đăng nhập</a></p>
                             </form>
                         </div>
                     </div>
@@ -192,22 +202,22 @@
             <div class="row">
                 <div class="col-lg-8 mb-4 mx-auto text-center">
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Company
+                        Công Ty
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        About Us
+                        Về Chúng Tôi
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
                         Team
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Products
+                        Sản Phẩm
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
                         Blog
                     </a>
                     <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                        Pricing
+                        Giá
                     </a>
                 </div>
                 <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
