@@ -31,7 +31,7 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult SanPham()
     {
         try
         {
@@ -67,12 +67,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult SanPham()
-    {
-        var trangthai = HttpContext.Session.GetString("id_taikhoan");
-        TempData["TrangThai"] = trangthai == null ? "Đăng nhập" : "Đăng xuất";
-        return View();
-    }
+    //public IActionResult SanPham()
+    //{
+    //    var trangthai = HttpContext.Session.GetString("id_taikhoan");
+    //    TempData["TrangThai"] = trangthai == null ? "Đăng nhập" : "Đăng xuất";
+    //    return View();
+    //}
 
     public IActionResult ThanhToan()
     {
