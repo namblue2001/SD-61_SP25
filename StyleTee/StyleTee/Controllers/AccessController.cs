@@ -105,7 +105,7 @@ namespace StyleTee.Controllers
                 }
                 else if (taikhoandangnhap.tenVaiTro == "Khách hàng" && taikhoandangnhap.trangThai == "Hoạt động")
                 {
-                    return RedirectToAction("Privacy", "Home");
+                    return RedirectToAction("SanPham", "Home");
                 }
                 else if (taikhoandangnhap.trangThai == "Ngừng hoạt động")
                 {
