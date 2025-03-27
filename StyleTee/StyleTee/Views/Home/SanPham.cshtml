@@ -133,7 +133,14 @@
                             </div>
                             <h3><a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">@product.tenSanPham</a></h3>
                             <div class="pi-price">@product.giaGoc.ToString("N0") đ</div>
-                            <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                            <form method="post" asp-action="AddToCart" asp-controller="GioHang">
+                                <input type="hidden" name="idSanPham" value="@product.ID_SanPham" />
+                                <input type="hidden" name="tenSanPham" value="@product.tenSanPham" />
+                                <input type="hidden" name="anhDaiDien" value="@product.anhDaiDien" />
+                                <input type="hidden" name="donGia" value="@product.giaGoc" />
+                                <input type="number" name="soLuong" value="1" min="1" />
+                                <button type="submit" class="btn btn-primary">Thêm vào giỏ hàng</button>
+                            </form>
                         </div>
                     </div>
                 }

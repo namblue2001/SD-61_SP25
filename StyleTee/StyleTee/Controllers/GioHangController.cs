@@ -1,117 +1,66 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using StyleTee.Data;
+using Newtonsoft.Json;
 using StyleTee.Models;
 
-namespace StyleTee.Controllers
+public class GioHangController : Controller
 {
-    public class GioHangController : Controller
+    private const string CartSessionKey = "GioHang";
+
+    // Hiển thị giỏ hàng
+    public IActionResult Index()
     {
-        private readonly ApplicationDbContext _context;
+        var gioHang = GetGioHangFromSession();
+        return View(gioHang);
+    }
 
-        public GioHangController(ApplicationDbContext context)
+    // Thêm sản phẩm vào giỏ hàng
+    [HttpPost]
+    public IActionResult AddToCart(Guid idSanPhamChiTiet, string tenSanPham, string anhDaiDien, decimal donGia, int soLuong)
+    {
+        var gioHang = GetGioHangFromSession();
+
+        var chiTiet = gioHang.ChiTietGioHang.FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
+        if (chiTiet != null)
         {
-            _context = context;
+            chiTiet.SoLuong += soLuong;
+        }
+        else
+        {
+            gioHang.ChiTietGioHang.Add(new GioHangChiTietViewModel
+            {
+                ID_SanPhamChiTiet = idSanPhamChiTiet,
+                TenSanPham = tenSanPham,
+                AnhDaiDien = anhDaiDien,
+                DonGia = donGia,
+                SoLuong = soLuong
+            });
         }
 
-        // Hiển thị giỏ hàng
-        public async Task<IActionResult> Index()
-        {
-            var userId = GetUserIdFromSession();
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .ThenInclude(ct => ct.SanPhamChiTiet)
-                .ThenInclude(sp => sp.SanPham)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == userId);
+        SaveGioHangToSession(gioHang);
+        return RedirectToAction("Index");
+    }
 
-            var gioHangViewModel = new GioHangViewModel
-            {
-                ChiTietGioHang = gioHang?.GioHangChiTiet?.Select(ct => new GioHangChiTietViewModel
-                {
-                    ID_SanPhamChiTiet = ct.ID_SanPhamChiTiet,
-                    TenSanPham = ct.SanPhamChiTiet.SanPham.tenSanPham,
-                    AnhDaiDien = ct.SanPhamChiTiet.anhDaiDien,
-                    DonGia = ct.donGia,
-                    SoLuong = ct.soLuong
-                }).ToList() ?? new List<GioHangChiTietViewModel>()
-            };
+    // Xóa sản phẩm khỏi giỏ hàng
+    [HttpPost]
+    public IActionResult RemoveFromCart(Guid idSanPhamChiTiet)
+    {
+        var gioHang = GetGioHangFromSession();
+        gioHang.ChiTietGioHang.RemoveAll(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
+        SaveGioHangToSession(gioHang);
 
-            return View(gioHangViewModel);
-        }
+        return RedirectToAction("Index");
+    }
 
-        // Thêm sản phẩm vào giỏ hàng
-        [HttpPost]
-        public async Task<IActionResult> AddToCart(Guid idSanPhamChiTiet, int soLuong)
-        {
-            var userId = GetUserIdFromSession();
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == userId);
+    // Lấy giỏ hàng từ Session
+    private GioHangViewModel GetGioHangFromSession()
+    {
+        var gioHangJson = HttpContext.Session.GetString(CartSessionKey);
+        return gioHangJson == null ? new GioHangViewModel() : JsonConvert.DeserializeObject<GioHangViewModel>(gioHangJson);
+    }
 
-            if (gioHang == null)
-            {
-                gioHang = new GioHang
-                {
-                    ID_GioHang = Guid.NewGuid(),
-                    ID_TaiKhoan = userId,
-                    ngayTao = DateTime.UtcNow,
-                    GioHangChiTiet = new List<GioHangChiTiet>()
-                };
-                _context.GioHang.Add(gioHang);
-            }
-
-            var spChiTiet = await _context.SanPhamChiTiet.FindAsync(idSanPhamChiTiet);
-            if (spChiTiet == null || spChiTiet.soLuongTon < soLuong)
-            {
-                TempData["Error"] = "Sản phẩm không đủ số lượng!";
-                return RedirectToAction("Index");
-            }
-
-            var chiTiet = gioHang.GioHangChiTiet.FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-            if (chiTiet != null)
-            {
-                chiTiet.soLuong += soLuong;
-            }
-            else
-            {
-                gioHang.GioHangChiTiet.Add(new GioHangChiTiet
-                {
-                    ID_GioHangChiTiet = Guid.NewGuid(),
-                    ID_GioHang = gioHang.ID_GioHang,
-                    ID_SanPhamChiTiet = idSanPhamChiTiet,
-                    soLuong = soLuong,
-                    donGia = spChiTiet.giaBan
-                });
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
-        }
-
-        // Xóa sản phẩm khỏi giỏ hàng
-        [HttpPost]
-        public async Task<IActionResult> RemoveFromCart(Guid idSanPhamChiTiet)
-        {
-            var userId = GetUserIdFromSession();
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == userId);
-
-            if (gioHang == null) return RedirectToAction("Index");
-
-            var chiTiet = gioHang.GioHangChiTiet.FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-            if (chiTiet != null)
-            {
-                gioHang.GioHangChiTiet.Remove(chiTiet);
-                await _context.SaveChangesAsync();
-            }
-
-            return RedirectToAction("Index");
-        }
-
-        private Guid GetUserIdFromSession()
-        {
-            return Guid.TryParse(HttpContext.Session.GetString("UserId"), out var userId) ? userId : Guid.Empty;
-        }
+    // Lưu giỏ hàng vào Session
+    private void SaveGioHangToSession(GioHangViewModel gioHang)
+    {
+        HttpContext.Session.SetString(CartSessionKey, JsonConvert.SerializeObject(gioHang));
     }
 }

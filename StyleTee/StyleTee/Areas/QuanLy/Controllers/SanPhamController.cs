@@ -64,6 +64,7 @@ namespace StyleTee.Areas.QuanLy.Controllers.SanPhamVaThuocTinh
             sanPham.trangThai = "Hoạt động";
             sanPham.anhDaiDien = formFile.FileName;
             try
+
             {
                 sanPham.ID_SanPham = Guid.NewGuid();
                 _context.Add(sanPham);

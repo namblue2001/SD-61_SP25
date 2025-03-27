@@ -51,7 +51,7 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "areas",
-    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    pattern: "{area:exists}/{controller=Access}/{action=DangNhap}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
