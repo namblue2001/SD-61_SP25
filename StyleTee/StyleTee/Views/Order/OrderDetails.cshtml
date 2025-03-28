@@ -1,7 +1,7 @@
-@model StyleTee.Models.Order
+@model StyleTee.Models.DonHang
 
 @{
-    ViewData["Title"] = "Chi tiết đơn hàng #" + Model.OrderId;
+    ViewData["Title"] = "Chi tiết đơn hàng #" + Model.ID_DonHang;
 }
 
 <div class="container mt-4">
@@ -9,15 +9,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    <h3>Chi tiết đơn hàng #@Model.OrderId</h3>
+                    <h3>Chi tiết đơn hàng #@Model.ID_DonHang</h3>
                 </div>
                 <div class="card-body">
                     <div class="row mb-4">
                         <div class="col-md-6">
                             <h5>Thông tin đơn hàng</h5>
-                            <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy HH:mm")</p>
+                            <p><strong>Ngày đặt:</strong> @Model.ngayDatHang.ToString("dd/MM/yyyy HH:mm")</p>
                             <p><strong>Trạng thái:</strong>
-                                @switch (Model.OrderStatus)
+                                @switch (Model.trangThaiDonHang)
                                 {
                                     case "Pending":
                                         <span class="badge bg-warning">Chờ xử lý</span>
@@ -37,7 +37,7 @@
                                 }
                             </p>
                             <p><strong>Thanh toán:</strong>
-                                @switch (Model.PaymentStatus)
+                                @switch (Model.trangThaiThanhToan)
                                 {
                                     case "Pending":
                                         <span class="badge bg-warning">Chờ thanh toán</span>
@@ -53,8 +53,8 @@
                         </div>
                         <div class="col-md-6">
                             <h5>Thông tin giao hàng</h5>
-                            <p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
-                            <p><strong>Phương thức thanh toán:</strong> @Model.PaymentMethod</p>
+                            <p><strong>Địa chỉ:</strong> @Model.diaChiVanChuyen</p>
+                            <p><strong>Phương thức thanh toán:</strong> @Model.phuongThucThanhToan</p>
                         </div>
                     </div>
 
@@ -70,20 +70,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var item in Model.OrderDetails)
+                                @foreach (var item in Model.ChiTietDonHang)
                                 {
                                     <tr>
-                                        <td>@item.SanPham.tenSanPham</td>
-                                        <td>@item.UnitPrice.ToString("N0") đ</td>
-                                        <td>@item.Quantity</td>
-                                        <td>@item.Subtotal.ToString("N0") đ</td>
+                                        <td>@item.SanPhamChiTiet.SanPham.tenSanPham</td>
+                                        <td>@item.donGia.ToString("N0") đ</td>
+                                        <td>@item.soLuong</td>
+                                        <td>@item.tongTien.ToString("N0") đ</td>
                                     </tr>
                                 }
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="3" class="text-end"><strong>Tổng cộng:</strong></td>
-                                    <td><strong>@Model.TotalAmount.ToString("N0") đ</strong></td>
+                                    <td><strong>@Model.tongTien.ToString("N0") đ</strong></td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -99,14 +99,14 @@
                 </div>
                 <div class="card-body">
                     <div class="timeline">
-                        @foreach (var history in Model.OrderStatusHistories.OrderByDescending(h => h.StatusDate))
+                        @foreach (var history in Model.LichSuDonHang.OrderByDescending(h => h.ngayDatHang))
                         {
                             <div class="timeline-item">
                                 <div class="timeline-date">
-                                    @history.StatusDate.ToString("dd/MM/yyyy HH:mm")
+                                    @history.ngayDatHang.ToString("dd/MM/yyyy HH:mm")
                                 </div>
                                 <div class="timeline-content">
-                                    <p class="mb-0">@history.Notes</p>
+                                    <p class="mb-0">@history.ghiChu</p>
                                 </div>
                             </div>
                         }
@@ -114,11 +114,11 @@
                 </div>
             </div>
 
-            @if (Model.OrderStatus == "Pending")
+            @if (Model.trangThaiDonHang == "Pending")
             {
                 <div class="card mt-3">
                     <div class="card-body">
-                        <form asp-action="CancelOrder" asp-route-id="@Model.OrderId" method="post">
+                        <form asp-action="CancelOrder" asp-route-id="@Model.ID_DonHang" method="post">
                             <button type="submit" class="btn btn-danger w-100" onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng này?')">
                                 <i class="fas fa-times"></i> Hủy đơn hàng
                             </button>

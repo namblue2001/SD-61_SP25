@@ -36,6 +36,7 @@ namespace StyleTee.Models
         public ThuongHieu ThuongHieu { get; set; }
         public XuatXu XuatXu { get; set; }
         public ICollection<GioHangChiTiet> GioHangChiTiets { get; set; }
+        public ICollection<ChiTietDonHang> DonHangChiTiet { get; set; }
 
     }
 }

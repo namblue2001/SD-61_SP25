@@ -47,6 +47,7 @@ namespace StyleTee.Models
         public string tenVaiTro { get; set; }
         public ICollection<DiaChi> DiaChis { get; set; }
         public ICollection<GioHang> GioHang { get; set; }
+        public ICollection<DonHang> DonHang { get; set; }
 
     }
 }
