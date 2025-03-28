@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StyleTee")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c6d1ee4a71106467c2a489be66044d5d02db32c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34e6d016707f0680660cfde69fc3a474c0e1de03")]
 [assembly: System.Reflection.AssemblyProductAttribute("StyleTee")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StyleTee")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
