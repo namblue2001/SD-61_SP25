@@ -3,20 +3,17 @@ using Newtonsoft.Json;
 using StyleTee.Models;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
-using StyleTee.Services;
 
 namespace StyleTee.Controllers
 {
     public class GioHangController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly GHNService _ghnService;
         private const string CartSessionKey = "GioHang";
 
-        public GioHangController(ApplicationDbContext context, GHNService ghnService)
+        public GioHangController(ApplicationDbContext context)
         {
             _context = context;
-            _ghnService = ghnService;
         }
 
         // Hiển thị giỏ hàng
@@ -149,6 +146,9 @@ namespace StyleTee.Controllers
             {
                 return RedirectToAction("DangNhap", "Access");
             }
+
+            // Lấy danh sách địa chỉ của tài khoản
+            ViewBag.DanhSachDiaChi = taiKhoan.DiaChis;
 
             // Lấy địa chỉ mặc định (địa chỉ đầu tiên có trạng thái Hoạt động)
             var diaChiMacDinh = taiKhoan.DiaChis
@@ -393,53 +393,6 @@ namespace StyleTee.Controllers
             }
 
             return RedirectToAction("GioHangDB");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetProvinces()
-        {
-            var provinces = await _ghnService.GetProvinces();
-            return Json(provinces);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetDistricts(int provinceId)
-        {
-            var districts = await _ghnService.GetDistricts(provinceId);
-            return Json(districts);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetWards(int districtId)
-        {
-            var wards = await _ghnService.GetWards(districtId);
-            return Json(wards);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> TinhPhiVanChuyen(string toDistrict, string toWard)
-        {
-            try
-            {
-                // Lấy địa chỉ kho hàng (có thể lưu trong cấu hình)
-                var fromDistrict = "1454"; // Ví dụ: Quận 1, TP.HCM
-                var fromWard = "20109"; // Ví dụ: Phường Bến Nghé
-                var weight = 1000; // Trọng lượng mặc định 1kg
-
-                var shippingFee = await _ghnService.CalculateShippingFee(
-                    fromDistrict,
-                    fromWard,
-                    toDistrict,
-                    toWard,
-                    weight
-                );
-
-                return Json(new { success = true, shippingFee = shippingFee });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = "Có lỗi xảy ra khi tính phí vận chuyển" });
-            }
         }
     }
 }
