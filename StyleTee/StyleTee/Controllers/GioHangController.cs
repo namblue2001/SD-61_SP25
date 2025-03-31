@@ -1,22 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using StyleTee.Models;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
-using StyleTee.Services;
+using Microsoft.Extensions.Logging;
 
 namespace StyleTee.Controllers
 {
     public class GioHangController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly GHNService _ghnService;
-        private const string CartSessionKey = "GioHang";
+        private readonly ILogger<GioHangController> _logger;
 
-        public GioHangController(ApplicationDbContext context, GHNService ghnService)
+        public GioHangController(ApplicationDbContext context, ILogger<GioHangController> logger)
         {
             _context = context;
-            _ghnService = ghnService;
+            _logger = logger;
         }
 
         // Hiển thị giỏ hàng
@@ -60,57 +58,6 @@ namespace StyleTee.Controllers
             return View(gioHang);
         }
 
-        // Thêm sản phẩm vào giỏ hàng
-        [HttpPost]
-        public IActionResult AddToCart(Guid idSanPhamChiTiet, string tenSanPham, string anhDaiDien, decimal donGia, int soLuong)
-        {
-            var gioHang = GetGioHangFromSession();
-
-            var chiTiet = gioHang.ChiTietGioHang.FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-            if (chiTiet != null)
-            {
-                chiTiet.SoLuong += soLuong;
-            }
-            else
-            {
-                gioHang.ChiTietGioHang.Add(new GioHangChiTietViewModel
-                {
-                    ID_SanPhamChiTiet = idSanPhamChiTiet,
-                    TenSanPham = tenSanPham,
-                    AnhDaiDien = anhDaiDien,
-                    DonGia = donGia,
-                    SoLuong = soLuong
-                });
-            }
-
-            SaveGioHangToSession(gioHang);
-            return RedirectToAction("Index");
-        }
-
-        // Xóa sản phẩm khỏi giỏ hàng
-        [HttpPost]
-        public IActionResult RemoveFromCart(Guid idSanPhamChiTiet)
-        {
-            var gioHang = GetGioHangFromSession();
-            gioHang.ChiTietGioHang.RemoveAll(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-            SaveGioHangToSession(gioHang);
-
-            return RedirectToAction("Index");
-        }
-
-        // Lấy giỏ hàng từ Session
-        private GioHangViewModel GetGioHangFromSession()
-        {
-            var gioHangJson = HttpContext.Session.GetString(CartSessionKey);
-            return gioHangJson == null ? new GioHangViewModel() : JsonConvert.DeserializeObject<GioHangViewModel>(gioHangJson);
-        }
-
-        // Lưu giỏ hàng vào Session
-        private void SaveGioHangToSession(GioHangViewModel gioHang)
-        {
-            HttpContext.Session.SetString(CartSessionKey, JsonConvert.SerializeObject(gioHang));
-        }
-
         // Hiển thị trang xác nhận đơn hàng
         public async Task<IActionResult> XacNhanDonHang()
         {
@@ -149,6 +96,9 @@ namespace StyleTee.Controllers
             {
                 return RedirectToAction("DangNhap", "Access");
             }
+
+            // Lấy danh sách địa chỉ của tài khoản
+            ViewBag.DanhSachDiaChi = taiKhoan.DiaChis;
 
             // Lấy địa chỉ mặc định (địa chỉ đầu tiên có trạng thái Hoạt động)
             var diaChiMacDinh = taiKhoan.DiaChis
@@ -191,41 +141,38 @@ namespace StyleTee.Controllers
 
         // Xử lý đặt hàng
         [HttpPost]
-        public async Task<IActionResult> DatHang(DonHang donHang)
+        public async Task<IActionResult> DatHang([FromBody] DonHang donHang)
         {
-            if (!ModelState.IsValid)
-            {
-                return View("XacNhanDonHang", donHang);
-            }
-
-            var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
-            if (string.IsNullOrEmpty(idTaiKhoan))
-            {
-                return RedirectToAction("DangNhap", "Access");
-            }
-
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
-
-            if (gioHang == null || !gioHang.GioHangChiTiet.Any())
-            {
-                return RedirectToAction("Index");
-            }
-
             try
             {
-                // Cập nhật thông tin đơn hàng
+                var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
+                if (string.IsNullOrEmpty(idTaiKhoan))
+                {
+                    return Json(new { success = false, message = "Vui lòng đăng nhập để đặt hàng" });
+                }
+
+                // Lấy giỏ hàng từ database
+                var gioHang = await _context.GioHang
+                    .Include(g => g.GioHangChiTiet)
+                    .FirstOrDefaultAsync(g => g.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
+
+                if (gioHang == null || !gioHang.GioHangChiTiet.Any())
+                {
+                    return Json(new { success = false, message = "Giỏ hàng trống" });
+                }
+
+                // Tạo đơn hàng mới
                 donHang.ID_DonHang = Guid.NewGuid();
                 donHang.ID_TaiKhoan = Guid.Parse(idTaiKhoan);
                 donHang.ngayDatHang = DateTime.Now;
-                donHang.trangThaiDonHang = "Chờ xác nhận";
+                donHang.trangThaiDonHang = "Chờ xử lý";
                 donHang.trangThaiThanhToan = "Chưa thanh toán";
-                donHang.tongTien = gioHang.GioHangChiTiet.Sum(item => item.donGia * item.soLuong);
 
+                // Lưu đơn hàng vào database
                 _context.DonHang.Add(donHang);
+                await _context.SaveChangesAsync();
 
-                // Thêm chi tiết đơn hàng
+                // Lưu chi tiết đơn hàng
                 foreach (var item in gioHang.GioHangChiTiet)
                 {
                     var chiTietDonHang = new ChiTietDonHang
@@ -241,205 +188,86 @@ namespace StyleTee.Controllers
                     _context.ChiTietDonHang.Add(chiTietDonHang);
                 }
 
+                await _context.SaveChangesAsync();
+
                 // Xóa giỏ hàng
                 _context.GioHangChiTiet.RemoveRange(gioHang.GioHangChiTiet);
                 _context.GioHang.Remove(gioHang);
-
-                // Lưu vào database
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction("DatHangThanhCong");
+                return Json(new { success = true, donHangId = donHang.ID_DonHang });
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
-                ModelState.AddModelError("", "Có lỗi xảy ra khi đặt hàng. Vui lòng thử lại.");
-                return View("XacNhanDonHang", donHang);
+                _logger.LogError(ex, "Lỗi khi đặt hàng");
+                return Json(new { success = false, message = "Có lỗi xảy ra khi đặt hàng" });
             }
         }
 
-        // Hiển thị trang đặt hàng thành công
-        public IActionResult DatHangThanhCong()
+        public IActionResult DatHangThanhCong(Guid donHangId)
         {
-            return View();
+            var donHang = _context.DonHang
+                .Include(d => d.ChiTietDonHang)
+                    .ThenInclude(ct => ct.SanPhamChiTiet)
+                        .ThenInclude(spct => spct.SanPham)
+                .FirstOrDefault(d => d.ID_DonHang == donHangId);
+
+            if (donHang == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            return View(donHang);
         }
 
-        // Hiển thị giỏ hàng từ database
-        public async Task<IActionResult> GioHangDB()
+        public IActionResult XemDonHang(Guid id)
         {
             var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
             if (string.IsNullOrEmpty(idTaiKhoan))
             {
                 return RedirectToAction("DangNhap", "Access");
             }
-            
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
+
+            // Kiểm tra xem có đơn hàng nào không
+            var donHangExists = _context.DonHang.Any(d => d.ID_DonHang == id);
+            if (!donHangExists)
+            {
+                _logger.LogWarning($"Không tìm thấy đơn hàng với ID: {id}");
+                return RedirectToAction("Index");
+            }
+
+            // Kiểm tra xem đơn hàng có thuộc về tài khoản này không
+            var donHangBelongsToUser = _context.DonHang.Any(d => 
+                d.ID_DonHang == id && 
+                d.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
+
+            if (!donHangBelongsToUser)
+            {
+                _logger.LogWarning($"Đơn hàng {id} không thuộc về tài khoản {idTaiKhoan}");
+                return RedirectToAction("Index");
+            }
+
+            var donHang = _context.DonHang
+                .Include(d => d.ChiTietDonHang)
                     .ThenInclude(ct => ct.SanPhamChiTiet)
-                        .ThenInclude(sp => sp.SanPham)
-                .Include(g => g.GioHangChiTiet)
+                        .ThenInclude(spct => spct.SanPham)
+                .Include(d => d.ChiTietDonHang)
                     .ThenInclude(ct => ct.SanPhamChiTiet)
-                        .ThenInclude(sp => sp.HinhAnh)
-                .Include(g => g.GioHangChiTiet)
+                        .ThenInclude(spct => spct.KichThuoc)
+                .Include(d => d.ChiTietDonHang)
                     .ThenInclude(ct => ct.SanPhamChiTiet)
-                        .ThenInclude(sp => sp.KichThuoc)
-                .Include(g => g.GioHangChiTiet)
+                        .ThenInclude(spct => spct.MauSac)
+                .Include(d => d.ChiTietDonHang)
                     .ThenInclude(ct => ct.SanPhamChiTiet)
-                        .ThenInclude(sp => sp.MauSac)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
+                        .ThenInclude(spct => spct.HinhAnh)
+                .FirstOrDefault(d => d.ID_DonHang == id && d.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
 
-            if (gioHang == null)
+            if (donHang == null)
             {
-                // Nếu chưa có giỏ hàng, tạo mới
-                gioHang = new GioHang
-                {
-                    ID_GioHang = Guid.NewGuid(),
-                    ID_TaiKhoan = Guid.Parse(idTaiKhoan),
-                    ngayTao = DateTime.Now,
-                    GioHangChiTiet = new List<GioHangChiTiet>()
-                };
-                _context.GioHang.Add(gioHang);
-                await _context.SaveChangesAsync();
+                return RedirectToAction("Index");
             }
 
-            return View(gioHang);
-        }
-
-        // Thêm sản phẩm vào giỏ hàng database
-        [HttpPost]
-        public async Task<IActionResult> AddToCartDB(Guid idSanPhamChiTiet, int soLuong)
-        {
-            var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
-            if (string.IsNullOrEmpty(idTaiKhoan))
-            {
-                return RedirectToAction("DangNhap", "Access");
-            }
-            
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
-
-            if (gioHang == null)
-            {
-                gioHang = new GioHang
-                {
-                    ID_GioHang = Guid.NewGuid(),
-                    ID_TaiKhoan = Guid.Parse(idTaiKhoan),
-                    ngayTao = DateTime.Now,
-                    GioHangChiTiet = new List<GioHangChiTiet>()
-                };
-                _context.GioHang.Add(gioHang);
-            }
-
-            var sanPhamChiTiet = await _context.SanPhamChiTiet
-                .Include(sp => sp.SanPham)
-                .Include(sp => sp.KichThuoc)
-                .Include(sp => sp.MauSac)
-                .Include(sp => sp.HinhAnh)
-                .FirstOrDefaultAsync(sp => sp.ID_SanPhamChiTiet == idSanPhamChiTiet);
-
-            if (sanPhamChiTiet == null)
-            {
-                return NotFound("Sản phẩm không tồn tại");
-            }
-
-            var chiTiet = gioHang.GioHangChiTiet
-                .FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-
-            if (chiTiet != null)
-            {
-                chiTiet.soLuong += soLuong;
-            }
-            else
-            {
-                gioHang.GioHangChiTiet.Add(new GioHangChiTiet
-                {
-                    ID_GioHangChiTiet = Guid.NewGuid(),
-                    ID_GioHang = gioHang.ID_GioHang,
-                    ID_SanPhamChiTiet = idSanPhamChiTiet,
-                    soLuong = soLuong,
-                    donGia = sanPhamChiTiet.giaBan
-                });
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction("GioHangDB");
-        }
-
-        // Xóa sản phẩm khỏi giỏ hàng database
-        [HttpPost]
-        public async Task<IActionResult> RemoveFromCartDB(Guid idSanPhamChiTiet)
-        {
-            var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
-            if (string.IsNullOrEmpty(idTaiKhoan))
-            {
-                return RedirectToAction("DangNhap", "Access");
-            }
-            
-            var gioHang = await _context.GioHang
-                .Include(g => g.GioHangChiTiet)
-                .FirstOrDefaultAsync(g => g.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
-
-            if (gioHang != null)
-            {
-                var chiTiet = gioHang.GioHangChiTiet
-                    .FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
-
-                if (chiTiet != null)
-                {
-                    _context.GioHangChiTiet.Remove(chiTiet);
-                    await _context.SaveChangesAsync();
-                }
-            }
-
-            return RedirectToAction("GioHangDB");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetProvinces()
-        {
-            var provinces = await _ghnService.GetProvinces();
-            return Json(provinces);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetDistricts(int provinceId)
-        {
-            var districts = await _ghnService.GetDistricts(provinceId);
-            return Json(districts);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> GetWards(int districtId)
-        {
-            var wards = await _ghnService.GetWards(districtId);
-            return Json(wards);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> TinhPhiVanChuyen(string toDistrict, string toWard)
-        {
-            try
-            {
-                // Lấy địa chỉ kho hàng (có thể lưu trong cấu hình)
-                var fromDistrict = "1454"; // Ví dụ: Quận 1, TP.HCM
-                var fromWard = "20109"; // Ví dụ: Phường Bến Nghé
-                var weight = 1000; // Trọng lượng mặc định 1kg
-
-                var shippingFee = await _ghnService.CalculateShippingFee(
-                    fromDistrict,
-                    fromWard,
-                    toDistrict,
-                    toWard,
-                    weight
-                );
-
-                return Json(new { success = true, shippingFee = shippingFee });
-            }
-            catch (Exception ex)
-            {
-                return Json(new { success = false, message = "Có lỗi xảy ra khi tính phí vận chuyển" });
-            }
+            return View(donHang);
         }
     }
 }
