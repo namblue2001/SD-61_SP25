@@ -1,7 +1,11 @@
-@model DonHang
+@model StyleTee.Models.DonHang
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">📝 Xác nhận đơn hàng</h2>
+@{
+    ViewData["Title"] = "Xác nhận đơn hàng";
+}
+
+<div class="container mt-4">
+    <h2>Xác nhận đơn hàng</h2>
 
     <div class="row">
         <div class="col-md-8">
@@ -10,55 +14,66 @@
                     <h5 class="mb-0">Thông tin đơn hàng</h5>
                 </div>
                 <div class="card-body">
-                    <form asp-action="DatHang" method="post">
-                        <input type="hidden" asp-for="ID_DonHang" />
-                        <input type="hidden" asp-for="ID_TaiKhoan" />
-                        <input type="hidden" asp-for="ngayDatHang" />
-                        <input type="hidden" asp-for="trangThaiDonHang" />
-                        <input type="hidden" asp-for="trangThaiThanhToan" />
-                        <input type="hidden" asp-for="tongTien" />
-                        <input type="hidden" asp-for="diaChiVanChuyen" />
-                        <input type="hidden" id="phiVanChuyen" name="phiVanChuyen" value="0" />
-
+                    <form id="datHangForm">
                         <div class="mb-3">
-                            <label class="form-label">Địa chỉ nhận hàng</label>
-                            <select asp-for="diaChiVanChuyen" class="form-select" onchange="tinhPhiVanChuyen()">
-                                <option value="">Chọn địa chỉ nhận hàng</option>
+                            <label class="form-label">Địa chỉ giao hàng</label>
+                            <select class="form-select" id="diaChiGiaoHang" name="diaChiVanChuyen" required>
+                                <option value="">Chọn địa chỉ giao hàng</option>
                                 @foreach (var diaChi in ViewBag.DanhSachDiaChi)
                                 {
-                                    var diaChiDayDu = $"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}";
-                                    <option value="@diaChiDayDu" data-tinh="@diaChi.tinhThanhPho" data-huyen="@diaChi.huyen">@diaChiDayDu</option>
+                                    <option value="@($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")"
+                                            data-tinh="@diaChi.tinhThanhPho"
+                                            data-huyen="@diaChi.huyen">
+                                        @($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")
+                                    </option>
                                 }
                             </select>
-                            <button type="button" class="btn btn-outline-primary mt-2" data-bs-toggle="modal" data-bs-target="#addAddressModal">
-                                <i class="fas fa-plus"></i> Thêm địa chỉ mới
+                            <button type="button" class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#themDiaChiModal">
+                                Thêm địa chỉ mới
                             </button>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Phương thức thanh toán</label>
-                            <select asp-for="phuongThucThanhToan" class="form-select">
+                            <select class="form-select" name="phuongThucThanhToan" required>
                                 <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
-                                <option value="Chuyển khoản ngân hàng">Chuyển khoản ngân hàng</option>
-                                <option value="Ví điện tử">Ví điện tử</option>
+                                <option value="Chuyển khoản">Chuyển khoản</option>
                             </select>
                         </div>
 
-                        <div class="d-flex justify-content-between">
-                            <h5>Phí vận chuyển:</h5>
-                            <h5 class="text-primary" id="phiVanChuyenText">0 đ</h5>
-                        </div>
-
-                        <div class="d-flex justify-content-between">
-                            <h5>Tổng tiền:</h5>
-                            <h5 class="text-primary" id="tongTienText">@Model.tongTien.ToString("N0") đ</h5>
-                        </div>
-
-                        <div class="text-end">
-                            <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
-                            <button type="submit" class="btn btn-primary" id="btnDatHang" disabled>Đặt hàng</button>
+                        <div class="mb-3">
+                            <label class="form-label">Ghi chú</label>
+                            <textarea class="form-control" name="ghiChu" rows="3"></textarea>
                         </div>
                     </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Chi tiết sản phẩm</h5>
+                </div>
+                <div class="card-body">
+                    @foreach (var item in Model.ChiTietDonHang)
+                    {
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="@item.SanPhamChiTiet.HinhAnh.FirstOrDefault()?.url_hinhAnh" 
+                                 alt="@item.SanPhamChiTiet.SanPham.tenSanPham"
+                                 class="img-thumbnail me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-1">@item.SanPhamChiTiet.SanPham.tenSanPham</h6>
+                                <p class="mb-1">
+                                    Kích thước: @item.SanPhamChiTiet.KichThuoc.tenKichThuoc |
+                                    Màu sắc: @item.SanPhamChiTiet.MauSac.tenMauSac
+                                </p>
+                                <p class="mb-0">
+                                    Số lượng: @item.soLuong |
+                                    Đơn giá: @item.donGia.ToString("N0")đ |
+                                    Tổng tiền: @item.tongTien.ToString("N0")đ
+                                </p>
+                            </div>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
@@ -66,83 +81,62 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mb-0">Chi tiết đơn hàng</h5>
+                    <h5 class="mb-0">Tổng đơn hàng</h5>
                 </div>
                 <div class="card-body">
-                    @foreach (var item in Model.ChiTietDonHang)
-                    {
-                        <div class="d-flex justify-content-between mb-2">
-                            <div>
-                                <h6 class="mb-0">@item.SanPhamChiTiet.SanPham.tenSanPham</h6>
-                                <small class="text-muted">
-                                    Size: @item.SanPhamChiTiet.KichThuoc.tenKichThuoc |
-                                    Màu: @item.SanPhamChiTiet.MauSac.tenMauSac
-                                </small>
-                                <br>
-                                <small class="text-muted">Số lượng: @item.soLuong</small>
-                            </div>
-                            <div class="text-end">
-                                <div>@item.donGia.ToString("N0") đ</div>
-                                <div class="text-primary">@item.tongTien.ToString("N0") đ</div>
-                            </div>
-                        </div>
-                        <hr>
-                    }
                     <div class="d-flex justify-content-between mb-2">
                         <span>Tạm tính:</span>
-                        <span>@Model.tongTien.ToString("N0") đ</span>
+                        <span>@Model.tongTien.ToString("N0")đ</span>
                     </div>
                     <div class="d-flex justify-content-between mb-2">
                         <span>Phí vận chuyển:</span>
-                        <span id="phiVanChuyen">0 đ</span>
+                        <span id="phiVanChuyen">0đ</span>
                     </div>
-                    <div class="d-flex justify-content-between">
-                        <h5>Tổng tiền:</h5>
-                        <h5 class="text-primary" id="tongTien">@Model.tongTien.ToString("N0") đ</h5>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-3">
+                        <strong>Tổng cộng:</strong>
+                        <strong id="tongCong">@Model.tongTien.ToString("N0")đ</strong>
                     </div>
+                    <button type="button" class="btn btn-primary w-100" id="btnDatHang">
+                        Đặt hàng
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Modal Thêm Địa Chỉ -->
-<div class="modal fade" id="addAddressModal" tabindex="-1" aria-labelledby="addAddressModalLabel" aria-hidden="true">
+<!-- Modal thêm địa chỉ mới -->
+<div class="modal fade" id="themDiaChiModal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="addAddressModalLabel">Thêm địa chỉ mới</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Thêm địa chỉ mới</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form id="addressForm">
+                <form id="themDiaChiForm">
                     <div class="mb-3">
                         <label class="form-label">Số nhà</label>
-                        <input type="text" class="form-control" id="soNha" required>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Tỉnh/Thành phố</label>
-                        <select class="form-select" id="tinhThanhPho" required>
-                            <option value="">Chọn Tỉnh/Thành phố</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Quận/Huyện</label>
-                        <select class="form-select" id="huyen" required>
-                            <option value="">Chọn Quận/Huyện</option>
-                        </select>
+                        <input type="text" class="form-control" name="soNha" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Xã/Phường</label>
-                        <select class="form-select" id="xa" required>
-                            <option value="">Chọn Xã/Phường</option>
-                        </select>
+                        <input type="text" class="form-control" name="xa" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Quận/Huyện</label>
+                        <input type="text" class="form-control" name="huyen" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Tỉnh/Thành phố</label>
+                        <input type="text" class="form-control" name="tinhThanhPho" required>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                <button type="button" class="btn btn-primary" onclick="saveAddress()">Lưu địa chỉ</button>
+                <button type="button" class="btn btn-primary" id="btnLuuDiaChi">Lưu</button>
             </div>
         </div>
     </div>
@@ -151,150 +145,52 @@
 @section Scripts {
     <script>
         $(document).ready(function() {
-            // Load danh sách tỉnh/thành khi modal mở
-            $('#addAddressModal').on('show.bs.modal', function() {
-                loadProvinces();
-            });
-
-            // Xử lý khi chọn tỉnh/thành
-            $('#tinhThanhPho').change(function() {
-                var provinceId = $(this).val();
-                if (provinceId) {
-                    loadDistricts(provinceId);
-                    $('#huyen, #xa').html('<option value="">Chọn...</option>');
-                }
-            });
-
-            // Xử lý khi chọn quận/huyện
-            $('#huyen').change(function() {
-                var districtId = $(this).val();
-                if (districtId) {
-                    loadWards(districtId);
-                    $('#xa').html('<option value="">Chọn...</option>');
-                }
-            });
-
-            // Kiểm tra trạng thái nút đặt hàng khi trang load
-            var diaChi = $('#diaChiVanChuyen').val();
-            if (diaChi) {
-                tinhPhiVanChuyen();
-            }
-        });
-
-        function loadProvinces() {
-            $.get('/GioHang/GetProvinces', function(provinces) {
-                var options = '<option value="">Chọn Tỉnh/Thành phố</option>';
-                provinces.forEach(function(province) {
-                    options += `<option value="${province.ProvinceID}">${province.ProvinceName}</option>`;
-                });
-                $('#tinhThanhPho').html(options);
-            });
-        }
-
-        function loadDistricts(provinceId) {
-            $.get('/GioHang/GetDistricts', { provinceId: provinceId }, function(districts) {
-                var options = '<option value="">Chọn Quận/Huyện</option>';
-                districts.forEach(function(district) {
-                    options += `<option value="${district.DistrictID}">${district.DistrictName}</option>`;
-                });
-                $('#huyen').html(options);
-            });
-        }
-
-        function loadWards(districtId) {
-            $.get('/GioHang/GetWards', { districtId: districtId }, function(wards) {
-                var options = '<option value="">Chọn Xã/Phường</option>';
-                wards.forEach(function(ward) {
-                    options += `<option value="${ward.WardCode}">${ward.WardName}</option>`;
-                });
-                $('#xa').html(options);
-            });
-        }
-
-        function tinhPhiVanChuyen() {
-            var diaChiSelect = $('#diaChiVanChuyen');
-            var diaChi = diaChiSelect.val();
-            if (!diaChi) {
-                $('#phiVanChuyen').text('0 đ');
-                $('#btnDatHang').prop('disabled', true);
-                return;
-            }
-
-            // Hiển thị trạng thái đang xử lý
-            $('#phiVanChuyen').html('<small class="text-muted">Đang tính toán...</small>');
-
-            // Gọi API tính phí vận chuyển
-            $.getJSON('/Shipping/CalculateFee', { diaChi: diaChi })
-                .done(function(data) {
-                    if (data.error) {
-                        $('#phiVanChuyen').html(`<small class="text-danger">${data.error}</small>`);
-                        $('#btnDatHang').prop('disabled', true);
-                        return;
-                    }
-
-                    // Hiển thị phí vận chuyển
-                    $('#phiVanChuyen').text(data.phiVanChuyen.toLocaleString('vi-VN') + ' đ');
-                    $('#phiVanChuyenText').text(data.phiVanChuyen.toLocaleString('vi-VN') + ' đ');
-
-                    // Cập nhật tổng tiền
-                    var tongTien = parseInt($('#tongTien').text().replace(/[^\d]/g, '')) + data.phiVanChuyen;
-                    $('#tongTien').text(tongTien.toLocaleString('vi-VN') + ' đ');
-                    $('#tongTienText').text(tongTien.toLocaleString('vi-VN') + ' đ');
-
-                    // Bật nút đặt hàng
-                    $('#btnDatHang').prop('disabled', false);
-                })
-                .fail(function(jqXHR, textStatus, errorThrown) {
-                    $('#phiVanChuyen').html('<small class="text-danger">Không thể tính phí vận chuyển. Vui lòng thử lại sau.</small>');
-                    $('#btnDatHang').prop('disabled', true);
-                });
-        }
-
-        function saveAddress() {
-            var address = {
-                soNha: $('#soNha').val(),
-                xa: $('#xa').val(),
-                huyen: $('#huyen').val(),
-                tinhThanhPho: $('#tinhThanhPho option:selected').text()
-            };
-
-            // Kiểm tra dữ liệu trước khi gửi
-            if (!address.soNha || !address.xa || !address.huyen || !address.tinhThanhPho) {
-                alert('Vui lòng điền đầy đủ thông tin địa chỉ');
-                return;
-            }
-
-            $.ajax({
-                url: '/TaiKhoan/ThemDiaChi',
-                type: 'POST',
-                data: address,
-                success: function(response) {
+            // Lưu địa chỉ mới
+            $('#btnLuuDiaChi').click(function() {
+                var formData = $('#themDiaChiForm').serialize();
+                $.post('/DiaChi/ThemDiaChi', formData, function(response) {
                     if (response.success) {
-                        var fullAddress = `${address.soNha}, ${address.xa}, ${address.huyen}, ${address.tinhThanhPho}`;
-                        
-                        // Thêm địa chỉ mới vào dropdown
-                        var option = new Option(fullAddress, fullAddress);
-                        option.setAttribute('data-tinh', address.tinhThanhPho);
-                        option.setAttribute('data-huyen', address.huyen);
-                        $('#diaChiVanChuyen').append(option);
-                        
-                        // Chọn địa chỉ mới
-                        $('#diaChiVanChuyen').val(fullAddress);
-                        
-                        // Tính phí vận chuyển
-                        tinhPhiVanChuyen();
-
-                        $('#addAddressModal').modal('hide');
+                        var diaChi = response.diaChi;
+                        var option = new Option(
+                            `${diaChi.soNha}, ${diaChi.xa}, ${diaChi.huyen}, ${diaChi.tinhThanhPho}`,
+                            `${diaChi.soNha}, ${diaChi.xa}, ${diaChi.huyen}, ${diaChi.tinhThanhPho}`,
+                            true,
+                            true
+                        );
+                        $('#diaChiGiaoHang').append(option);
+                        $('#themDiaChiModal').modal('hide');
+                        $('#themDiaChiForm')[0].reset();
                     } else {
-                        alert(response.message || 'Có lỗi xảy ra khi lưu địa chỉ. Vui lòng thử lại.');
+                        alert('Có lỗi xảy ra khi thêm địa chỉ');
                     }
-                },
-                error: function(xhr, status, error) {
-                    console.error('Error:', error);
-                    alert('Có lỗi xảy ra khi thêm địa chỉ. Vui lòng thử lại.');
-                }
+                });
             });
-        }
+
+            // Xử lý đặt hàng
+            $('#btnDatHang').click(function() {
+                var formData = $('#datHangForm').serialize();
+                $.ajax({
+                    url: '/GioHang/DatHang',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        diaChiVanChuyen: $('#diaChiGiaoHang').val(),
+                        phuongThucThanhToan: $('select[name="phuongThucThanhToan"]').val(),
+                        ghiChu: $('textarea[name="ghiChu"]').val()
+                    }),
+                    success: function(response) {
+                        if (response.success) {
+                            window.location.href = `/GioHang/DatHangThanhCong/${response.donHangId}`;
+                        } else {
+                            alert(response.message);
+                        }
+                    },
+                    error: function() {
+                        alert('Có lỗi xảy ra khi đặt hàng');
+                    }
+                });
+            });
+        });
     </script>
 }
 
