@@ -10,7 +10,7 @@
     <div class="container">
         <ul class="breadcrumb">
             <li><a href="@Url.Action("Index", "Home")">Home</a></li>
-            <li><a href="@Url.Action("Privacy", "Home")">Store</a></li>
+            <li><a href="@Url.Action("SanPham", "Home")">Store</a></li>
             <li class="active">@Model.tenSanPham</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
@@ -21,7 +21,7 @@
                     @if (Model.DanhMuc != null)
                     {
                         <li class="list-group-item clearfix">
-                            <a href="@Url.Action("Privacy", "Home", new { categoryId = Model.DanhMuc.ID_DanhMuc })">
+                            <a href="@Url.Action("SanPham", "Home", new { categoryId = Model.DanhMuc.ID_DanhMuc })">
                                 <i class="fa fa-angle-right"></i> @Model.DanhMuc.tenDanhMuc
                             </a>
                         </li>
@@ -84,10 +84,10 @@
                                             <option value="">Chọn size</option>
                                             @{
                                                 var uniqueSizes = Model.SanPhamChiTiet
-                                                    .Where(x => x.KichThuoc != null)
-                                                    .Select(x => x.KichThuoc)
-                                                    .GroupBy(x => x.ID_KichThuoc)
-                                                    .Select(g => g.First());
+                                                .Where(x => x.KichThuoc != null)
+                                                .Select(x => x.KichThuoc)
+                                                .GroupBy(x => x.ID_KichThuoc)
+                                                .Select(g => g.First());
                                             }
                                             @foreach (var size in uniqueSizes)
                                             {
@@ -102,10 +102,10 @@
                                             <option value="">Chọn màu</option>
                                             @{
                                                 var uniqueColors = Model.SanPhamChiTiet
-                                                    .Where(x => x.MauSac != null)
-                                                    .Select(x => x.MauSac)
-                                                    .GroupBy(x => x.ID_MauSac)
-                                                    .Select(g => g.First());
+                                                .Where(x => x.MauSac != null)
+                                                .Select(x => x.MauSac)
+                                                .GroupBy(x => x.ID_MauSac)
+                                                .Select(g => g.First());
                                             }
                                             @foreach (var color in uniqueColors)
                                             {
@@ -117,9 +117,29 @@
                             </div>
                             <div class="product-page-cart">
                                 <div class="product-quantity">
-                                    <input id="product-quantity" type="text" value="1" readonly class="form-control input-sm">
+                                    <input id="product-quantity" type="number" value="1" min="1" class="form-control input-sm">
                                 </div>
-                                <button class="btn btn-primary" type="submit">Add to cart</button>
+
+                                @{
+                                    var sanPhamChiTietId = Model.SanPhamChiTiet?.FirstOrDefault()?.ID_SanPhamChiTiet;
+                                }
+
+                                @if (sanPhamChiTietId != null)
+                                {
+                                    <a href="javascript:;" class="btn btn-primary" onclick="themVaoGio('@sanPhamChiTietId')">Thêm vào giỏ hàng</a>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-secondary" disabled>Hết hàng</button>
+                                }
+
+                                <script>
+                                    function themVaoGio(sanPhamChiTietId) {
+                                        var soLuong = document.getElementById("product-quantity").value;
+                                        window.location.href = '@Url.Action("ThemVaoGio", "GioHang")' + '?sanPhamChiTietId=' + sanPhamChiTietId + '&soLuong=' + soLuong;
+                                    }
+                                </script>
+
                             </div>
                             <div class="review">
                                 <input type="range" value="4" step="0.25" id="backing4">
@@ -266,7 +286,8 @@
                                 </div>
                                 <h3><a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">@product.tenSanPham</a></h3>
                                 <div class="pi-price">@product.giaGoc.ToString("N0") đ</div>
-                                <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                                <a href="@Url.Action("AddToCart", "GioHang", new { productId = Model.ID_SanPham })"
+                                   class="btn btn-primary">Thêm vào giỏ</a>
                                 <div class="sticker sticker-new"></div>
                             </div>
                         </div>

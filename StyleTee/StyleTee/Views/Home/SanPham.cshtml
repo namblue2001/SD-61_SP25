@@ -58,7 +58,7 @@
                     if (category != null && !string.IsNullOrEmpty(category.tenDanhMuc))
                     {
                         <li class="list-group-item clearfix">
-                            <a href="@Url.Action("Privacy", "Home", new { categoryId = category.ID_DanhMuc })">
+                            <a href="@Url.Action("SanPham", "Home", new { categoryId = category.ID_DanhMuc })">
                                 <i class="fa fa-angle-right"></i> @category.tenDanhMuc
                             </a>
                         </li>
@@ -133,7 +133,7 @@
                             </div>
                             <h3><a href="@Url.Action("ChiTietSanPham", "Home", new { id = product.ID_SanPham })">@product.tenSanPham</a></h3>
                             <div class="pi-price">@product.giaGoc.ToString("N0") đ</div>
-                            <form method="post" asp-action="AddToCart" asp-controller="GioHang">
+                            <form method="post" asp-action="ThemVaoGio" asp-controller="GioHang">
                                 <input type="hidden" name="idSanPham" value="@product.ID_SanPham" />
                                 <input type="hidden" name="tenSanPham" value="@product.tenSanPham" />
                                 <input type="hidden" name="anhDaiDien" value="@product.anhDaiDien" />

@@ -144,7 +144,7 @@ namespace StyleTee.Controllers
             }
 
             // Gửi email chứa mật khẩu cũ
-            string subject = "Khôi phục mật khẩu - Shop Online";
+            string subject = "Khôi phục mật khẩu - Shop StyleTee";
             string body = $"Xin chào {user.hoTen},<br><br>Mật khẩu của bạn là: <strong>{user.matKhau}</strong><br><br>Vui lòng đăng nhập và đổi mật khẩu nếu cần!";
 
             bool isSent = SendEmail(email, subject, body);
