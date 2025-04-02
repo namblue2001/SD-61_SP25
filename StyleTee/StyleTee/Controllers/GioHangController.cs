@@ -168,6 +168,9 @@ namespace StyleTee.Controllers
                 donHang.trangThaiDonHang = "Chờ xử lý";
                 donHang.trangThaiThanhToan = "Chưa thanh toán";
 
+                // Tính tổng tiền đơn hàng
+                donHang.tongTien = gioHang.GioHangChiTiet.Sum(item => item.donGia * item.soLuong);
+
                 // Lưu đơn hàng vào database
                 _context.DonHang.Add(donHang);
                 await _context.SaveChangesAsync();
@@ -204,20 +207,44 @@ namespace StyleTee.Controllers
             }
         }
 
-        public IActionResult DatHangThanhCong(Guid donHangId)
+        public async Task<IActionResult> DatHangThanhCong()
         {
-            var donHang = _context.DonHang
-                .Include(d => d.ChiTietDonHang)
-                    .ThenInclude(ct => ct.SanPhamChiTiet)
-                        .ThenInclude(spct => spct.SanPham)
-                .FirstOrDefault(d => d.ID_DonHang == donHangId);
-
-            if (donHang == null)
+            var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
+            if (string.IsNullOrEmpty(idTaiKhoan))
             {
+                return RedirectToAction("DangNhap", "Access");
+            }
+            try
+            {
+                
+                var donHang = await _context.DonHang
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.SanPham)
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.KichThuoc)
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.MauSac)
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.HinhAnh)
+                    .FirstOrDefaultAsync(d => d.ID_TaiKhoan == Guid.Parse(idTaiKhoan));
+
+                if (donHang == null)
+                {
+                    _logger.LogWarning($"Không tìm thấy đơn hàng với ID: {idTaiKhoan}");
+                    return RedirectToAction("Index");
+                }
+
+                return View(donHang);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Lỗi khi tải đơn hàng {idTaiKhoan}");
                 return RedirectToAction("Index");
             }
-
-            return View(donHang);
         }
 
         public IActionResult XemDonHang(Guid id)
