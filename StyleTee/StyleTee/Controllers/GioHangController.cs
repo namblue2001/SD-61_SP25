@@ -1,103 +1,66 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using StyleTee.Data;
 using StyleTee.Models;
 
 public class GioHangController : Controller
 {
-    private readonly ApplicationDbContext _db;
+    private const string CartSessionKey = "GioHang";
 
-    public GioHangController(ApplicationDbContext db)
-    {
-        _db = db;
-    }
-
-    // 📌 **Hàm lấy ID người dùng đang đăng nhập**
-    private Guid? GetUserId()
-    {
-        if (HttpContext.Session.GetString("id_taikhoan") != null)
-        {
-            return Guid.Parse(HttpContext.Session.GetString("id_taikhoan"));
-        }
-        return null;
-    }
-
-    // 📌 **Hiển thị giỏ hàng**
+    // Hiển thị giỏ hàng
     public IActionResult Index()
     {
-        var userId = GetUserId();
-        if (userId == null) return RedirectToAction("DangNhap", "Access");
-
-        var gioHang = _db.GioHang
-            .Where(g => g.ID_TaiKhoan == userId)
-            .SelectMany(g => g.GioHangChiTiet)
-            .Select(c => new GioHangChiTietViewModel
-            {
-                ID_SanPhamChiTiet = c.ID_SanPhamChiTiet,
-                TenSanPham = c.SanPhamChiTiet.SanPham.tenSanPham,
-                AnhDaiDien = c.SanPhamChiTiet.anhDaiDien,
-                DonGia = c.donGia,
-                SoLuong = c.soLuong
-            }).ToList();
-
+        var gioHang = GetGioHangFromSession();
         return View(gioHang);
     }
 
-    // 📌 **Thêm sản phẩm vào giỏ hàng**
-    public IActionResult ThemVaoGio(Guid sanPhamChiTietId, int soLuong)
+    // Thêm sản phẩm vào giỏ hàng
+    [HttpPost]
+    public IActionResult AddToCart(Guid idSanPhamChiTiet, string tenSanPham, string anhDaiDien, decimal donGia, int soLuong)
     {
-        var userId = GetUserId();
-        if (userId == null) return RedirectToAction("DangNhap", "Access");
+        var gioHang = GetGioHangFromSession();
 
-        var gioHang = _db.GioHang.FirstOrDefault(g => g.ID_TaiKhoan == userId);
-        if (gioHang == null)
-        {
-            gioHang = new GioHang { ID_GioHang = Guid.NewGuid(), ID_TaiKhoan = userId.Value };
-            _db.GioHang.Add(gioHang);
-            _db.SaveChanges();
-        }
-
-        var chiTiet = _db.GioHangChiTiet
-            .FirstOrDefault(c => c.ID_GioHang == gioHang.ID_GioHang && c.ID_SanPhamChiTiet == sanPhamChiTietId);
-
+        var chiTiet = gioHang.ChiTietGioHang.FirstOrDefault(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
         if (chiTiet != null)
         {
-            chiTiet.soLuong += soLuong;
+            chiTiet.SoLuong += soLuong;
         }
         else
         {
-            _db.GioHangChiTiet.Add(new GioHangChiTiet
+            gioHang.ChiTietGioHang.Add(new GioHangChiTietViewModel
             {
-                ID_GioHangChiTiet = Guid.NewGuid(),
-                ID_GioHang = gioHang.ID_GioHang,
-                ID_SanPhamChiTiet = sanPhamChiTietId,
-                soLuong = soLuong,
-                donGia = _db.SanPhamChiTiet.Find(sanPhamChiTietId)?.giaBan ?? 0
+                ID_SanPhamChiTiet = idSanPhamChiTiet,
+                TenSanPham = tenSanPham,
+                AnhDaiDien = anhDaiDien,
+                DonGia = donGia,
+                SoLuong = soLuong
             });
         }
 
-        _db.SaveChanges();
+        SaveGioHangToSession(gioHang);
         return RedirectToAction("Index");
     }
 
-    // 📌 **Xóa sản phẩm khỏi giỏ hàng**
-    public IActionResult XoaKhoiGio(Guid sanPhamChiTietId)
+    // Xóa sản phẩm khỏi giỏ hàng
+    [HttpPost]
+    public IActionResult RemoveFromCart(Guid idSanPhamChiTiet)
     {
-        var userId = GetUserId();
-        if (userId == null) return RedirectToAction("Login", "TaiKhoan");
+        var gioHang = GetGioHangFromSession();
+        gioHang.ChiTietGioHang.RemoveAll(c => c.ID_SanPhamChiTiet == idSanPhamChiTiet);
+        SaveGioHangToSession(gioHang);
 
-        var gioHang = _db.GioHang.FirstOrDefault(g => g.ID_TaiKhoan == userId);
-        if (gioHang != null)
-        {
-            var chiTiet = _db.GioHangChiTiet
-                .FirstOrDefault(c => c.ID_GioHang == gioHang.ID_GioHang && c.ID_SanPhamChiTiet == sanPhamChiTietId);
-
-            if (chiTiet != null)
-            {
-                _db.GioHangChiTiet.Remove(chiTiet);
-                _db.SaveChanges();
-            }
-        }
         return RedirectToAction("Index");
+    }
+
+    // Lấy giỏ hàng từ Session
+    private GioHangViewModel GetGioHangFromSession()
+    {
+        var gioHangJson = HttpContext.Session.GetString(CartSessionKey);
+        return gioHangJson == null ? new GioHangViewModel() : JsonConvert.DeserializeObject<GioHangViewModel>(gioHangJson);
+    }
+
+    // Lưu giỏ hàng vào Session
+    private void SaveGioHangToSession(GioHangViewModel gioHang)
+    {
+        HttpContext.Session.SetString(CartSessionKey, JsonConvert.SerializeObject(gioHang));
     }
 }

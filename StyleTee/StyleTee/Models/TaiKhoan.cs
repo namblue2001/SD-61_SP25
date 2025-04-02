@@ -45,7 +45,6 @@ namespace StyleTee.Models
         [Required(ErrorMessage = "Tên vai trò là bắt buộc.")]
         [RegularExpression("^(Quản lý|Nhân viên|Khách hàng)$", ErrorMessage = "Vai trò chỉ có thể là Quản lý , Nhân viên hay Khách hàng .")]
         public string tenVaiTro { get; set; }
-        public DateTime ngayTao { get; set; } = DateTime.Now;
         public ICollection<DiaChi> DiaChis { get; set; }
         public ICollection<GioHang> GioHang { get; set; }
 

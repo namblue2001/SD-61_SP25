@@ -1,112 +1,105 @@
-﻿@model List<GioHangChiTietViewModel>
+﻿@model GioHangViewModel
 
-<div class="container mt-4">
-    <h2 class="mb-4 text-center">🛒 Giỏ Hàng Của Bạn</h2>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🛒 Giỏ hàng của bạn</h2>
 
-    @if (Model != null && Model.Any())
+    @if (Model.ChiTietGioHang.Any())
     {
-        <table class="table table-bordered text-center align-middle">
-            <thead class="table-dark">
-                <tr>
-                    <th><input type="checkbox" id="select-all"></th>
-                    <th>Sản Phẩm</th>
-                    <th>Đơn Giá</th>
-                    <th>Số Lượng</th>
-                    <th>Thành Tiền</th>
-                    <th>Thao Tác</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            <input type="checkbox" class="product-checkbox" data-id="@item.ID_SanPhamChiTiet">
-                        </td>
-                        <td class="d-flex align-items-center">
-                            <img src="~/images/@item.AnhDaiDien" class="img-thumbnail me-2" width="60">
-                            <span>@item.TenSanPham</span>
-                        </td>
-                        <td class="text-danger fw-bold">@item.DonGia.ToString("N0") đ</td>
-                        <td>
-                            <div class="d-flex justify-content-center align-items-center">
-                                <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('@item.ID_SanPhamChiTiet', -1)">-</button>
-                                <input type="text" class="form-control text-center mx-2" value="@item.SoLuong" style="width: 50px;" readonly>
-                                <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('@item.ID_SanPhamChiTiet', 1)">+</button>
-                            </div>
-                        </td>
-                        <td class="fw-bold">@((item.SoLuong * item.DonGia).ToString("N0")) đ</td>
-                        <td>
-                            <a asp-action="XoaKhoiGio" asp-route-sanPhamChiTietId="@item.ID_SanPhamChiTiet" class="btn btn-danger btn-sm">
-                                🗑 Xóa
-                            </a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card shadow-lg p-4 border-0">
+                    <table class="table align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Hình ảnh</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                                <th>Hành động</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.ChiTietGioHang)
+                            {
+                                <tr class="border-bottom">
+                                    <td>
+                                        <img src="@item.AnhDaiDien" class="img-thumbnail" width="60" height="60">
+                                    </td>
+                                    <td><strong>@item.TenSanPham</strong></td>
+                                    <td class="text-primary fw-bold">@item.DonGia.ToString("N0") đ</td>
+                                    <td>
+                                        <form method="post" asp-action="UpdateQuantity" asp-controller="GioHang" class="d-flex align-items-center">
+                                            <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet">
+                                            <input type="number" name="soLuong" value="@item.SoLuong" min="1" class="form-control text-center mx-2" style="width: 70px;">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">✔</button>
+                                        </form>
+                                    </td>
+                                    <td class="text-success fw-bold">@item.ThanhTien.ToString("N0") đ</td>
+                                    <td>
+                                        <form method="post" asp-action="RemoveFromCart" asp-controller="GioHang">
+                                            <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet">
+                                            <button type="submit" class="btn btn-sm btn-danger">🗑</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-            <div>
-                <button class="btn btn-outline-danger btn-sm" onclick="removeSelected()">🗑 Xóa đã chọn</button>
+            <!-- Thông tin tổng tiền -->
+            <div class="col-lg-4">
+                <div class="card shadow-lg border-0 p-4">
+                    <h4 class="text-center">🛍 Thông tin giỏ hàng</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Tổng tiền:
+                            <span class="fw-bold text-danger fs-5">@Model.TongTien.ToString("N0") đ</span>
+                        </li>
+                    </ul>
+                    <div class="text-center mt-3">
+                        <a href="/" class="btn btn-outline-primary w-100">🔙 Tiếp tục mua hàng</a>
+                        <button class="btn btn-success w-100 mt-2">💳 Thanh toán</button>
+                    </div>
+                </div>
             </div>
-            <div class="fw-bold fs-5">
-                Tổng tiền: <span id="tongTien" class="text-danger">0 đ</span>
-            </div>
-            <a asp-controller="ThanhToan" asp-action="Index" class="btn btn-success btn-lg">💳 Thanh Toán</a>
         </div>
     }
     else
     {
         <div class="alert alert-warning text-center">
-            <h5>Giỏ hàng của bạn đang trống! 😢</h5>
-            <a asp-controller="SanPham" asp-action="Index" class="btn btn-primary">🛒 Mua sắm ngay</a>
+            <h5>Giỏ hàng trống 🛒</h5>
+            <a href="/" class="btn btn-primary mt-3">Bắt đầu mua sắm</a>
         </div>
     }
 </div>
 
-<script>
-    function updateQuantity(id, change) {
-        let input = document.querySelector(`[data-id='${id}']`).closest('tr').querySelector("input[type='text']");
-        let newValue = Math.max(1, parseInt(input.value) + change);
-        input.value = newValue;
-        updateTotal();
+<style>
+    body {
+        background-color: #f8f9fa;
     }
 
-    function updateTotal() {
-        let total = 0;
-        document.querySelectorAll("tbody tr").forEach(row => {
-            let isChecked = row.querySelector(".product-checkbox").checked;
-            if (isChecked) {
-                let price = parseInt(row.querySelector(".text-danger").textContent.replace(/\D/g, ""));
-                let quantity = parseInt(row.querySelector("input[type='text']").value);
-                total += price * quantity;
-            }
-        });
-        document.getElementById("tongTien").textContent = total.toLocaleString() + " đ";
+    .table thead tr {
+        background-color: #343a40;
+        color: #fff;
     }
 
-    document.getElementById("select-all").addEventListener("change", function () {
-        let checked = this.checked;
-        document.querySelectorAll(".product-checkbox").forEach(cb => cb.checked = checked);
-        updateTotal();
-    });
+    .img-thumbnail {
+        border-radius: 10px;
+    }
 
-    document.querySelectorAll(".product-checkbox").forEach(cb => {
-        cb.addEventListener("change", updateTotal);
-    });
+    .btn-danger, .btn-success, .btn-primary {
+        border-radius: 30px;
+    }
 
-    function removeSelected() {
-        let selectedItems = document.querySelectorAll(".product-checkbox:checked");
-        if (selectedItems.length === 0) {
-            alert("Vui lòng chọn ít nhất một sản phẩm để xóa!");
-            return;
+        .btn-danger:hover {
+            background-color: #dc3545;
+            opacity: 0.8;
         }
-        if (confirm("Bạn có chắc muốn xóa các sản phẩm đã chọn?")) {
-            selectedItems.forEach(item => {
-                let id = item.dataset.id;
-                window.location.href = `/GioHang/XoaKhoiGio?sanPhamChiTietId=${id}`;
-            });
-        }
+
+    .shadow-lg {
+        border-radius: 12px;
     }
-</script>
+</style>
