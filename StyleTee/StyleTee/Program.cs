@@ -15,7 +15,6 @@ builder.Services.AddSession(); // Kích hoạt Session
 builder.Services.AddDistributedMemoryCache(); // Cần thiết để Session hoạt động
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration); // Quên mk
 
-
 // Add session configuration
 builder.Services.AddSession(options =>
 {

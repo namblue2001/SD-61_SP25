@@ -27,9 +27,9 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<GioHangChiTiet> GioHangChiTiet { get; set; }
     public DbSet<PhieuGiamGia> PhieuGiamGia { get; set; }
     public DbSet<KhuyenMai> KhuyenMai { get; set; }
-    public DbSet<Order> Orders { get; set; }
-    public DbSet<OrderDetail> OrderDetails { get; set; }
-    public DbSet<OrderStatusHistory> OrderStatusHistories { get; set; }
+    public DbSet<DonHang> DonHang { get; set; }
+    public DbSet<ChiTietDonHang> ChiTietDonHang { get; set; }
+    public DbSet<LichSuDonHang> LichSuDonHang { get; set; }
     
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -52,6 +52,13 @@ public class ApplicationDbContext : IdentityDbContext
         builder.Entity<PhieuGiamGia>().HasIndex(k => k.TenPhieuGiamGia).IsUnique().HasDatabaseName("UQ_TenPhieuGiamGia");
         builder.Entity<KhuyenMai>().HasIndex(k => new { k.TyLeKhuyenMai, k.NgayBatDau }).IsUnique().HasDatabaseName("UQ_TyLeKhuyenMai");
         builder.Entity<KhuyenMai>().HasOne(x => x.SanPhamChiTiet).WithMany().HasForeignKey(x => x.ID_SanPhamChiTiet);
+
+
+        builder.Entity<ChiTietDonHang>().HasOne(x => x.DonHang).WithMany(p=>p.ChiTietDonHang).HasForeignKey(x => x.ID_DonHang);
+        builder.Entity<ChiTietDonHang>().HasOne(x => x.SanPhamChiTiet).WithMany(p=>p.DonHangChiTiet).HasForeignKey(x => x.ID_SanPhamChiTiet);
+        builder.Entity<DonHang>().HasOne(x => x.TaiKhoan).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_TaiKhoan);
+        builder.Entity<LichSuDonHang>().HasOne(x => x.DonHang).WithMany(p=>p.LichSuDonHang).HasForeignKey(x => x.ID_DonHang);
+      
     }
 }
 
