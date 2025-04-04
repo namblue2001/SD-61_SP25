@@ -73,8 +73,8 @@ namespace StyleTee.Controllers
             {
                 ID_TaiKhoan = userId,
                 ngayDatHang = DateTime.Now,
-                diaChiVanChuyen = shippingAddress,
-                phuongThucThanhToan = paymentMethod,
+                //diaChiVanChuyen = shippingAddress,
+                //phuongThucThanhToan = paymentMethod,
                 trangThaiThanhToan = "Pending",
                 trangThaiDonHang = "Pending",
                 tongTien = cart.GioHangChiTiet.Sum(ci => ci.soLuong * ci.SanPhamChiTiet.giaBan)
@@ -139,7 +139,7 @@ namespace StyleTee.Controllers
             }
 
             order.trangThaiDonHang = "Cancelled";
-            order.phuongThucThanhToan = "Cancelled";
+            //order.phuongThucThanhToan = "Cancelled";
 
             var statusHistory = new LichSuDonHang
             {
