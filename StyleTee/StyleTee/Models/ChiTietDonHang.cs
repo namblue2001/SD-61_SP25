@@ -25,5 +25,6 @@ namespace StyleTee.Models
         // Navigation properties
         public virtual DonHang DonHang { get; set; }
         public virtual SanPhamChiTiet SanPhamChiTiet { get; set; }
+        public virtual ICollection<SanPhamDoiTra> SanPhamDoiTra { get; set; }
     }
 } 
