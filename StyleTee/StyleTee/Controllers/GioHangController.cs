@@ -92,14 +92,6 @@ namespace StyleTee.Controllers
 
             // Lấy danh sách tỉnh/thành phố từ GHN
             var provinces = await _ghnService.GetProvinces();
-            _logger.LogInformation($"Số lượng tỉnh/thành phố lấy được: {provinces?.Count ?? 0}");
-            if (provinces != null && provinces.Any())
-            {
-                foreach (var province in provinces)
-                {
-                    _logger.LogInformation($"Tỉnh/Thành phố: {province.ProvinceName} (ID: {province.ProvinceID}, Extension: {province.NameExtension})");
-                }
-            }
             ViewBag.Provinces = provinces;
 
             // Lấy thông tin tài khoản và địa chỉ
@@ -119,25 +111,15 @@ namespace StyleTee.Controllers
             var diaChiMacDinh = taiKhoan.DiaChis
                 .FirstOrDefault(dc => dc.trangThai == "Hoạt động");
 
-            var log = new System.Text.StringBuilder();
-            log.AppendLine($"Địa chỉ mặc định: {diaChiMacDinh?.huyen}");
-
             // Lấy district_id từ GHN API
             int? districtId = null;
             if (diaChiMacDinh != null && !string.IsNullOrEmpty(diaChiMacDinh.huyen))
             {
-                log.AppendLine($"Đang lấy district_id cho huyện: {diaChiMacDinh.huyen}");
                 districtId = await _ghnService.GetDistrictIdByName(diaChiMacDinh.huyen);
-                log.AppendLine($"Kết quả district_id: {districtId}");
-            }
-            else
-            {
-                log.AppendLine("Không tìm thấy địa chỉ mặc định hoặc huyện trống");
             }
 
-            // Lưu district_id và log vào ViewBag để hiển thị trong view
+            // Lưu district_id vào ViewBag
             ViewBag.DistrictId = districtId;
-            ViewBag.Log = log.ToString();
 
             // Tạo danh sách chi tiết đơn hàng với đầy đủ thông tin
             var chiTietDonHang = new List<ChiTietDonHang>();

@@ -1,228 +1,140 @@
 @model StyleTee.Models.DonHang
 
 @{
+    Layout = "_LayoutTrangChuKhachHang";
     ViewData["Title"] = "Xác nhận đơn hàng";
 }
 
-<div class="container mt-4">
-    <h2>Xác nhận đơn hàng</h2>
+<div class="main">
+    <div class="container">
+        <div class="row margin-bottom-40">
+            <div class="col-md-12">
+                <h1>Xác nhận đơn hàng</h1>
+                <div class="content-page">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="portlet light">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-shopping-cart font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">Thông tin đơn hàng</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <form id="datHangForm">
+                                        <div class="form-group">
+                                            <label class="control-label">Địa chỉ giao hàng</label>
+                                            <select class="form-control" id="diaChiGiaoHang" name="diaChiVanChuyen" required>
+                                                <option value="">Chọn địa chỉ giao hàng</option>
+                                                @foreach (var diaChi in ViewBag.DanhSachDiaChi)
+                                                {
+                                                    <option value="@($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")"
+                                                            data-tinh="@diaChi.tinhThanhPho"
+                                                            data-huyen="@diaChi.huyen">
+                                                        @($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")
+                                                    </option>
+                                                }
+                                                <option value="new" data-bs-toggle="modal" data-bs-target="#themDiaChiModal">
+                                                    <i class="fa fa-plus"></i> Thêm địa chỉ mới
+                                                </option>
+                                            </select>
+                                        </div>
 
-    <div class="row">
-        <div class="col-md-8">
-            <div class="card mb-4">
-                <div class="card-header">
-                    <h5 class="mb-0">Thông tin đơn hàng</h5>
-                </div>
-                <div class="card-body">
-                    <form id="datHangForm">
-                        <div class="mb-3">
-                            <label class="form-label">Địa chỉ giao hàng</label>
-                            <select class="form-select" id="diaChiGiaoHang" name="diaChiVanChuyen" required>
-                                <option value="">Chọn địa chỉ giao hàng</option>
-                                @foreach (var diaChi in ViewBag.DanhSachDiaChi)
-                                {
-                                    <option value="@($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")"
-                                            data-tinh="@diaChi.tinhThanhPho"
-                                            data-huyen="@diaChi.huyen">
-                                        @($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")
-                                    </option>
-                                }
-                            </select>
-                            <button type="button" class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#themDiaChiModal">
-                                Thêm địa chỉ mới
-                            </button>
-                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Phương thức thanh toán</label>
+                                            <select class="form-control" name="phuongThucThanhToan" required>
+                                                <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
+                                                <option value="Chuyển khoản">Chuyển khoản</option>
+                                            </select>
+                                        </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Tỉnh/Thành phố (GHN)</label>
-                            <select class="form-select" id="provinceSelect" name="province">
-                                <option value="">Chọn tỉnh/thành phố</option>
-                                @if (ViewBag.Provinces != null)
-                                {
-                                    foreach (var province in ViewBag.Provinces)
+                                        <div class="form-group">
+                                            <label class="control-label">Ghi chú</label>
+                                            <textarea class="form-control" name="ghiChu" rows="3" placeholder="Nhập ghi chú cho đơn hàng (nếu có)"></textarea>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="portlet light">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-gift font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">Chi tiết sản phẩm</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    @foreach (var item in Model.ChiTietDonHang)
                                     {
-                                        <option value="@province.ProvinceID" data-name="@province.ProvinceName" data-extension="@province.NameExtension">
-                                            @province.ProvinceName
-                                        </option>
+                                        <div class="row margin-bottom-20">
+                                            <div class="col-md-2">
+                                                <img src="@item.SanPhamChiTiet.HinhAnh.FirstOrDefault()?.url_hinhAnh" 
+                                                     alt="@item.SanPhamChiTiet.SanPham.tenSanPham"
+                                                     class="img-responsive" style="max-width: 100px;">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h4 class="product-name">@item.SanPhamChiTiet.SanPham.tenSanPham</h4>
+                                                <p class="product-details">
+                                                    Kích thước: @item.SanPhamChiTiet.KichThuoc.tenKichThuoc |
+                                                    Màu sắc: @item.SanPhamChiTiet.MauSac.tenMauSac
+                                                </p>
+                                            </div>
+                                            <div class="col-md-4 text-right">
+                                                <p class="product-price">
+                                                    <span class="price">@item.donGia.ToString("N0")đ</span>
+                                                    <span class="quantity">x @item.soLuong</span>
+                                                </p>
+                                                <p class="product-total">
+                                                    <strong>Tổng: @item.tongTien.ToString("N0")đ</strong>
+                                                </p>
+                                            </div>
+                                        </div>
                                     }
-                                }
-                                else
-                                {
-                                    <option value="" disabled>Không có dữ liệu tỉnh/thành phố</option>
-                                }
-                            </select>
-                            @if (ViewBag.Provinces == null)
-                            {
-                                <div class="alert alert-warning mt-2">
-                                    Không thể lấy dữ liệu tỉnh/thành phố từ GHN API
-                                </div>
-                            }
-                        </div>
-
-                        @* <div class="mb-3">
-                            <label class="form-label">Thông tin tỉnh/thành phố</label>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="mb-1"><strong>ID:</strong> <span id="provinceId">-</span></p>
-                                    <p class="mb-1"><strong>Tên:</strong> <span id="provinceName">-</span></p>
-                                    <p class="mb-0"><strong>Tên mở rộng:</strong> <span id="provinceExtension">-</span></p>
-                                </div>
-                            </div>
-                        </div> *@
-
-                        @* <div class="mb-3">
-                            <label class="form-label">Danh sách tỉnh/thành phố từ GHN API</label>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="provinceTable">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Tên tỉnh/thành phố</th>
-                                            <th>Tên mở rộng</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @if (ViewBag.Provinces != null)
-                                        {
-                                            foreach (var province in ViewBag.Provinces)
-                                            {
-                                                <tr>
-                                                    <td>@province.ProvinceID</td>
-                                                    <td>@province.ProvinceName</td>
-                                                    <td>
-                                                        @if (province.NameExtension != null && province.NameExtension.Count > 0)
-                                                        {
-                                                            <ul class="list-unstyled mb-0">
-                                                                @foreach (var ext in province.NameExtension)
-                                                                {
-                                                                    <li>@ext</li>
-                                                                }
-                                                            </ul>
-                                                        }
-                                                    </td>
-                                                </tr>
-                                            }
-                                        }
-                                        else
-                                        {
-                                            <tr>
-                                                <td colspan="3" class="text-center">Không có dữ liệu tỉnh/thành phố</td>
-                                            </tr>
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div> *@
-
-                        <div class="mb-3">
-                            <label class="form-label">Thông tin quận/huyện</label>
-                            <div class="card">
-                                <div class="card-body">
-                                    <p class="mb-1"><strong>ID:</strong> <span id="districtId">-</span></p>
-                                    <p class="mb-1"><strong>Tên:</strong> <span id="districtName">-</span></p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Danh sách quận/huyện</label>
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="districtTable">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Tên quận/huyện</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="2" class="text-center">Vui lòng chọn địa chỉ giao hàng</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="col-md-4">
+                            <div class="portlet light">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class="fa fa-money font-green-sharp"></i>
+                                        <span class="caption-subject font-green-sharp bold uppercase">Tổng đơn hàng</span>
+                                    </div>
+                                </div>
+                                <div class="portlet-body">
+                                    <div class="row margin-bottom-10">
+                                        <div class="col-md-6">
+                                            <span>Tạm tính:</span>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <span>@Model.tongTien.ToString("N0")đ</span>
+                                        </div>
+                                    </div>
+                                    <div class="row margin-bottom-10">
+                                        <div class="col-md-6">
+                                            <span>Phí vận chuyển:</span>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <span id="phiVanChuyen">0đ</span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row margin-bottom-20">
+                                        <div class="col-md-6">
+                                            <strong>Tổng cộng:</strong>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <strong id="tongCong" class="text-danger">@Model.tongTien.ToString("N0")đ</strong>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-block" id="btnDatHang">
+                                        <i class="fa fa-check"></i> Đặt hàng
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Phí vận chuyển (GHN)</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="phiVanChuyenInput" value="0" readonly>
-                                <span class="input-group-text">đ</span>
-                            </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Phương thức thanh toán</label>
-                            <select class="form-select" name="phuongThucThanhToan" required>
-                                <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
-                                <option value="Chuyển khoản">Chuyển khoản</option>
-                            </select>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Ghi chú</label>
-                            <textarea class="form-control" name="ghiChu" rows="3"></textarea>
-                        </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Log:</label>
-                            <textarea class="form-control" id="logArea" rows="5" readonly>@ViewBag.Log</textarea>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Chi tiết sản phẩm</h5>
-                </div>
-                <div class="card-body">
-                    @foreach (var item in Model.ChiTietDonHang)
-                    {
-                        <div class="d-flex align-items-center mb-3">
-                            <img src="@item.SanPhamChiTiet.HinhAnh.FirstOrDefault()?.url_hinhAnh" 
-                                 alt="@item.SanPhamChiTiet.SanPham.tenSanPham"
-                                 class="img-thumbnail me-3" style="width: 80px; height: 80px; object-fit: cover;">
-                            <div class="flex-grow-1">
-                                <h6 class="mb-1">@item.SanPhamChiTiet.SanPham.tenSanPham</h6>
-                                <p class="mb-1">
-                                    Kích thước: @item.SanPhamChiTiet.KichThuoc.tenKichThuoc |
-                                    Màu sắc: @item.SanPhamChiTiet.MauSac.tenMauSac
-                                </p>
-                                <p class="mb-0">
-                                    Số lượng: @item.soLuong |
-                                    Đơn giá: @item.donGia.ToString("N0")đ |
-                                    Tổng tiền: @item.tongTien.ToString("N0")đ
-                                </p>
-                            </div>
-                        </div>
-                    }
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Tổng đơn hàng</h5>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Tạm tính:</span>
-                        <span>@Model.tongTien.ToString("N0")đ</span>
                     </div>
-                    <div class="d-flex justify-content-between mb-2">
-                        <span>Phí vận chuyển:</span>
-                        <span id="phiVanChuyen">0đ</span>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between mb-3">
-                        <strong>Tổng cộng:</strong>
-                        <strong id="tongCong">@Model.tongTien.ToString("N0")đ</strong>
-                    </div>
-                    <button type="button" class="btn btn-primary w-100" id="btnDatHang">
-                        Đặt hàng
-                    </button>
                 </div>
             </div>
         </div>
@@ -234,36 +146,116 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Thêm địa chỉ mới</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <h4 class="modal-title">Thêm địa chỉ mới</h4>
+                <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
                 <form id="themDiaChiForm">
-                    <div class="mb-3">
-                        <label class="form-label">Số nhà</label>
+                    <div class="form-group">
+                        <label class="control-label">Số nhà</label>
                         <input type="text" class="form-control" name="soNha" required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Xã/Phường</label>
+                    <div class="form-group">
+                        <label class="control-label">Xã/Phường</label>
                         <input type="text" class="form-control" name="xa" required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Quận/Huyện</label>
+                    <div class="form-group">
+                        <label class="control-label">Quận/Huyện</label>
                         <input type="text" class="form-control" name="huyen" required>
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Tỉnh/Thành phố</label>
+                    <div class="form-group">
+                        <label class="control-label">Tỉnh/Thành phố</label>
                         <input type="text" class="form-control" name="tinhThanhPho" required>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-default" data-bs-dismiss="modal">Hủy</button>
                 <button type="button" class="btn btn-primary" id="btnLuuDiaChi">Lưu</button>
             </div>
         </div>
     </div>
 </div>
+
+<style>
+    .main {
+        padding: 30px 0;
+        background-color: #f8f9fa;
+    }
+    .portlet {
+        margin-bottom: 25px;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .portlet.light {
+        padding: 12px 20px 15px;
+    }
+    .portlet-title {
+        margin-bottom: 15px;
+    }
+    .portlet-title .caption {
+        float: left;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 0;
+    }
+    .portlet-title .caption i {
+        color: #32c5d2;
+        font-size: 15px;
+        margin-right: 5px;
+    }
+    .portlet-body {
+        padding-top: 8px;
+    }
+    .form-control {
+        border-radius: 3px;
+    }
+    .btn {
+        border-radius: 3px;
+    }
+    .btn-primary {
+        background-color: #32c5d2;
+        border-color: #32c5d2;
+    }
+    .btn-primary:hover {
+        background-color: #2bb8c4;
+        border-color: #2bb8c4;
+    }
+    .product-name {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    .product-details {
+        color: #666;
+        margin-bottom: 5px;
+    }
+    .product-price {
+        margin-bottom: 5px;
+    }
+    .price {
+        color: #32c5d2;
+        font-weight: bold;
+    }
+    .quantity {
+        color: #666;
+    }
+    .product-total {
+        margin-bottom: 0;
+    }
+    .modal-content {
+        border-radius: 4px;
+    }
+    .modal-header {
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #eee;
+    }
+    .modal-title {
+        color: #333;
+    }
+</style>
 
 @section Scripts {
     <script>
@@ -307,6 +299,13 @@
 
             // Xử lý khi chọn địa chỉ
             $('#diaChiGiaoHang').on('change', function() {
+                var selectedValue = $(this).val();
+                if (selectedValue === 'new') {
+                    $('#themDiaChiModal').modal('show');
+                    $(this).val(''); // Reset selection
+                    return;
+                }
+                
                 // Reset tất cả giá trị
                 $('#provinceId').text('-');
                 $('#provinceName').text('-');
@@ -497,60 +496,4 @@
             });
         });
     </script>
-}
-
-<style>
-    body {
-        background-color: #f8f9fa;
-    }
-
-    .card {
-        border-radius: 12px;
-    }
-
-    .img-thumbnail {
-        border-radius: 8px;
-    }
-
-    .btn-success {
-        border-radius: 30px;
-    }
-
-    .card {
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .card-header {
-        background-color: #f8f9fa;
-        border-bottom: 1px solid #dee2e6;
-    }
-    .form-control, .form-select {
-        border-radius: 5px;
-    }
-    .btn {
-        border-radius: 5px;
-        padding: 8px 20px;
-    }
-    .btn-primary {
-        background-color: #007bff;
-        border-color: #007bff;
-    }
-    .btn-primary:hover {
-        background-color: #0056b3;
-        border-color: #0056b3;
-    }
-    .btn-secondary {
-        background-color: #6c757d;
-        border-color: #6c757d;
-    }
-    .btn-secondary:hover {
-        background-color: #545b62;
-        border-color: #545b62;
-    }
-    .modal-content {
-        border-radius: 10px;
-    }
-    .alert-warning {
-        border-radius: 5px;
-    }
-</style> 
+} 

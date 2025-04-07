@@ -215,7 +215,7 @@
                             <li><a >Hồ sơ</a></li>
                         </ul>
                     </li>
-                    <li class="dropdown"><a href="shop-item.html">Đơn hàng</a></li>
+                    <li class="dropdown"><a asp-controller="GioHang" asp-action="DanhSachDonHang">Đơn hàng</a></li>
                     <li class="dropdown dropdown100 nav-catalogue">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
                             Liên hệ
@@ -474,6 +474,8 @@
             Layout.initTwitter();
         });</script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->
+
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 <!-- END BODY -->
 </html>
