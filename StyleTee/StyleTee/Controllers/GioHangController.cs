@@ -3,6 +3,7 @@ using StyleTee.Models;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using Microsoft.Extensions.Logging;
+using StyleTee.Services;
 
 namespace StyleTee.Controllers
 {
@@ -10,11 +11,13 @@ namespace StyleTee.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<GioHangController> _logger;
+        private readonly GHNService _ghnService;
 
-        public GioHangController(ApplicationDbContext context, ILogger<GioHangController> logger)
+        public GioHangController(ApplicationDbContext context, ILogger<GioHangController> logger, GHNService ghnService)
         {
             _context = context;
             _logger = logger;
+            _ghnService = ghnService;
         }
 
         // Hiển thị giỏ hàng
@@ -87,6 +90,18 @@ namespace StyleTee.Controllers
                 return RedirectToAction("Index");
             }
 
+            // Lấy danh sách tỉnh/thành phố từ GHN
+            var provinces = await _ghnService.GetProvinces();
+            _logger.LogInformation($"Số lượng tỉnh/thành phố lấy được: {provinces?.Count ?? 0}");
+            if (provinces != null && provinces.Any())
+            {
+                foreach (var province in provinces)
+                {
+                    _logger.LogInformation($"Tỉnh/Thành phố: {province.ProvinceName} (ID: {province.ProvinceID}, Extension: {province.NameExtension})");
+                }
+            }
+            ViewBag.Provinces = provinces;
+
             // Lấy thông tin tài khoản và địa chỉ
             var taiKhoan = await _context.TaiKhoan
                 .Include(tk => tk.DiaChis)
@@ -103,6 +118,26 @@ namespace StyleTee.Controllers
             // Lấy địa chỉ mặc định (địa chỉ đầu tiên có trạng thái Hoạt động)
             var diaChiMacDinh = taiKhoan.DiaChis
                 .FirstOrDefault(dc => dc.trangThai == "Hoạt động");
+
+            var log = new System.Text.StringBuilder();
+            log.AppendLine($"Địa chỉ mặc định: {diaChiMacDinh?.huyen}");
+
+            // Lấy district_id từ GHN API
+            int? districtId = null;
+            if (diaChiMacDinh != null && !string.IsNullOrEmpty(diaChiMacDinh.huyen))
+            {
+                log.AppendLine($"Đang lấy district_id cho huyện: {diaChiMacDinh.huyen}");
+                districtId = await _ghnService.GetDistrictIdByName(diaChiMacDinh.huyen);
+                log.AppendLine($"Kết quả district_id: {districtId}");
+            }
+            else
+            {
+                log.AppendLine("Không tìm thấy địa chỉ mặc định hoặc huyện trống");
+            }
+
+            // Lưu district_id và log vào ViewBag để hiển thị trong view
+            ViewBag.DistrictId = districtId;
+            ViewBag.Log = log.ToString();
 
             // Tạo danh sách chi tiết đơn hàng với đầy đủ thông tin
             var chiTietDonHang = new List<ChiTietDonHang>();
@@ -295,6 +330,56 @@ namespace StyleTee.Controllers
             }
 
             return View(donHang);
+        }
+
+        // Hiển thị danh sách đơn hàng theo ID_TaiKhoan
+        public async Task<IActionResult> DanhSachDonHang()
+        {
+            var idTaiKhoan = HttpContext.Session.GetString("id_taikhoan");
+            if (string.IsNullOrEmpty(idTaiKhoan))
+            {
+                return RedirectToAction("DangNhap", "Access");
+            }
+
+            try
+            {
+                var danhSachDonHang = await _context.DonHang
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.SanPham)
+                    .Include(d => d.ChiTietDonHang)
+                        .ThenInclude(ct => ct.SanPhamChiTiet)
+                            .ThenInclude(spct => spct.HinhAnh)
+                    .Where(d => d.ID_TaiKhoan == Guid.Parse(idTaiKhoan))
+                    .OrderByDescending(d => d.ngayDatHang)
+                    .ToListAsync();
+
+                return View(danhSachDonHang);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"Lỗi khi tải danh sách đơn hàng cho tài khoản {idTaiKhoan}");
+                return RedirectToAction("Index");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> GetDistricts(int provinceId)
+        {
+            var districts = await _ghnService.GetDistrictsByProvinceId(provinceId);
+            return Json(new { success = true, districts = districts });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CalculateShippingFee(int districtId)
+        {
+            var fee = await _ghnService.CalculateShippingFee(districtId);
+            return Json(new { success = true, fee = fee });
+        }
+
+        public class DistrictRequest
+        {
+            public string districtName { get; set; }
         }
     }
 }

@@ -34,6 +34,124 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label">Tỉnh/Thành phố (GHN)</label>
+                            <select class="form-select" id="provinceSelect" name="province">
+                                <option value="">Chọn tỉnh/thành phố</option>
+                                @if (ViewBag.Provinces != null)
+                                {
+                                    foreach (var province in ViewBag.Provinces)
+                                    {
+                                        <option value="@province.ProvinceID" data-name="@province.ProvinceName" data-extension="@province.NameExtension">
+                                            @province.ProvinceName
+                                        </option>
+                                    }
+                                }
+                                else
+                                {
+                                    <option value="" disabled>Không có dữ liệu tỉnh/thành phố</option>
+                                }
+                            </select>
+                            @if (ViewBag.Provinces == null)
+                            {
+                                <div class="alert alert-warning mt-2">
+                                    Không thể lấy dữ liệu tỉnh/thành phố từ GHN API
+                                </div>
+                            }
+                        </div>
+
+                        @* <div class="mb-3">
+                            <label class="form-label">Thông tin tỉnh/thành phố</label>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="mb-1"><strong>ID:</strong> <span id="provinceId">-</span></p>
+                                    <p class="mb-1"><strong>Tên:</strong> <span id="provinceName">-</span></p>
+                                    <p class="mb-0"><strong>Tên mở rộng:</strong> <span id="provinceExtension">-</span></p>
+                                </div>
+                            </div>
+                        </div> *@
+
+                        @* <div class="mb-3">
+                            <label class="form-label">Danh sách tỉnh/thành phố từ GHN API</label>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="provinceTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên tỉnh/thành phố</th>
+                                            <th>Tên mở rộng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (ViewBag.Provinces != null)
+                                        {
+                                            foreach (var province in ViewBag.Provinces)
+                                            {
+                                                <tr>
+                                                    <td>@province.ProvinceID</td>
+                                                    <td>@province.ProvinceName</td>
+                                                    <td>
+                                                        @if (province.NameExtension != null && province.NameExtension.Count > 0)
+                                                        {
+                                                            <ul class="list-unstyled mb-0">
+                                                                @foreach (var ext in province.NameExtension)
+                                                                {
+                                                                    <li>@ext</li>
+                                                                }
+                                                            </ul>
+                                                        }
+                                                    </td>
+                                                </tr>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center">Không có dữ liệu tỉnh/thành phố</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> *@
+
+                        <div class="mb-3">
+                            <label class="form-label">Thông tin quận/huyện</label>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="mb-1"><strong>ID:</strong> <span id="districtId">-</span></p>
+                                    <p class="mb-1"><strong>Tên:</strong> <span id="districtName">-</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Danh sách quận/huyện</label>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped" id="districtTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Tên quận/huyện</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2" class="text-center">Vui lòng chọn địa chỉ giao hàng</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Phí vận chuyển (GHN)</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="phiVanChuyenInput" value="0" readonly>
+                                <span class="input-group-text">đ</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label">Phương thức thanh toán</label>
                             <select class="form-select" name="phuongThucThanhToan" required>
                                 <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
@@ -44,6 +162,11 @@
                         <div class="mb-3">
                             <label class="form-label">Ghi chú</label>
                             <textarea class="form-control" name="ghiChu" rows="3"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Log:</label>
+                            <textarea class="form-control" id="logArea" rows="5" readonly>@ViewBag.Log</textarea>
                         </div>
                     </form>
                 </div>
@@ -145,6 +268,22 @@
 @section Scripts {
     <script>
         $(document).ready(function() {
+            // Lưu danh sách tỉnh/thành phố vào biến
+            var provinces = [];
+            @if (ViewBag.Provinces != null)
+            {
+                foreach (var province in ViewBag.Provinces)
+                {
+                    <text>
+                    provinces.push({
+                        id: parseInt('@province.ProvinceID'),
+                        name: '@Html.Raw(province.ProvinceName)',
+                        extensions: @Json.Serialize(province.NameExtension ?? new List<string>())
+                    });
+                    </text>
+                }
+            }
+
             // Lưu địa chỉ mới
             $('#btnLuuDiaChi').click(function() {
                 var formData = $('#themDiaChiForm').serialize();
@@ -162,6 +301,160 @@
                         $('#themDiaChiForm')[0].reset();
                     } else {
                         alert('Có lỗi xảy ra khi thêm địa chỉ');
+                    }
+                });
+            });
+
+            // Xử lý khi chọn địa chỉ
+            $('#diaChiGiaoHang').on('change', function() {
+                // Reset tất cả giá trị
+                $('#provinceId').text('-');
+                $('#provinceName').text('-');
+                $('#districtId').text('-');
+                $('#districtName').text('-');
+                $('#phiVanChuyenInput').val('0');
+                $('#phiVanChuyen').text('0đ');
+                $('#tongCong').text(@Model.tongTien.ToString("N0") + 'đ');
+                $('#districtTable tbody').html(`
+                    <tr>
+                        <td colspan="2" class="text-center">Đang tải dữ liệu...</td>
+                    </tr>
+                `);
+
+                var selectedOption = $(this).find('option:selected');
+                var tinhThanhPho = selectedOption.data('tinh');
+                var huyen = selectedOption.data('huyen');
+                
+                if (!tinhThanhPho) {
+                    $('#districtTable tbody').html(`
+                        <tr>
+                            <td colspan="2" class="text-center">Vui lòng chọn địa chỉ giao hàng</td>
+                        </tr>
+                    `);
+                    return;
+                }
+
+                // Bước 1: Tìm ID tỉnh/thành phố
+                var foundProvince = null;
+                var normalizedTinhThanhPho = tinhThanhPho.toLowerCase().replace(/[^a-z0-9]/g, '');
+                
+                for (var i = 0; i < provinces.length; i++) {
+                    var province = provinces[i];
+                    var normalizedProvinceName = province.name.toLowerCase().replace(/[^a-z0-9]/g, '');
+                    
+                    if (normalizedTinhThanhPho === normalizedProvinceName || 
+                        (province.extensions && province.extensions.some(ext => 
+                            normalizedTinhThanhPho === ext.toLowerCase().replace(/[^a-z0-9]/g, '')
+                        ))) {
+                        foundProvince = {
+                            id: province.id,
+                            name: province.name
+                        };
+                        break;
+                    }
+                }
+                
+                if (!foundProvince) {
+                    $('#districtTable tbody').html(`
+                        <tr>
+                            <td colspan="2" class="text-center">Không tìm thấy tỉnh/thành phố tương ứng</td>
+                        </tr>
+                    `);
+                    return;
+                }
+
+                // Cập nhật thông tin tỉnh/thành phố
+                $('#provinceSelect').val(foundProvince.id);
+                $('#provinceId').text(foundProvince.id);
+                $('#provinceName').text(foundProvince.name);
+                console.log('Bước 1: Đã tìm thấy tỉnh/thành phố:', foundProvince);
+
+                // Bước 2: Lấy danh sách quận/huyện
+                $.ajax({
+                    url: '/GioHang/GetDistricts',
+                    type: 'POST',
+                    data: { provinceId: foundProvince.id },
+                    success: function(response) {
+                        if (!response.success || !response.districts || response.districts.length === 0) {
+                            $('#districtTable tbody').html(`
+                                <tr>
+                                    <td colspan="2" class="text-center">Không có dữ liệu quận/huyện</td>
+                                </tr>
+                            `);
+                            return;
+                        }
+
+                        var tbody = $('#districtTable tbody');
+                        tbody.empty();
+                        
+                        // Tìm quận/huyện tương ứng
+                        var foundDistrict = null;
+                        var normalizedHuyen = huyen.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        
+                        response.districts.forEach(function(district) {
+                            var normalizedDistrictName = district.districtName.toLowerCase().replace(/[^a-z0-9]/g, '');
+                            var isMatch = normalizedDistrictName === normalizedHuyen;
+                            
+                            if (isMatch) {
+                                foundDistrict = district;
+                            }
+                            
+                            tbody.append(`
+                                <tr class="${isMatch ? 'table-success' : ''}">
+                                    <td>${district.districtID}</td>
+                                    <td>${district.districtName}</td>
+                                </tr>
+                            `);
+                        });
+
+                        if (!foundDistrict) {
+                            $('#districtId').text('-');
+                            $('#districtName').text('-');
+                            console.log('Bước 2: Không tìm thấy quận/huyện tương ứng');
+                            return;
+                        }
+
+                        // Cập nhật thông tin quận/huyện
+                        $('#districtId').text(foundDistrict.districtID);
+                        $('#districtName').text(foundDistrict.districtName);
+                        console.log('Bước 2: Đã tìm thấy quận/huyện:', foundDistrict);
+
+                        // Bước 3: Tính phí vận chuyển
+                        $.ajax({
+                            url: '/GioHang/CalculateShippingFee',
+                            type: 'POST',
+                            data: { districtId: foundDistrict.districtID },
+                            success: function(response) {
+                                if (response.success && response.fee != null) {
+                                    console.log('Bước 3: Phí vận chuyển:', response.fee);
+                                    $('#phiVanChuyenInput').val(response.fee.toLocaleString('vi-VN'));
+                                    $('#phiVanChuyen').text(response.fee.toLocaleString('vi-VN') + 'đ');
+                                    
+                                    // Cập nhật tổng cộng
+                                    var tongTien = parseInt('@Model.tongTien');
+                                    var tongCong = tongTien + response.fee;
+                                    $('#tongCong').text(tongCong.toLocaleString('vi-VN') + 'đ');
+                                } else {
+                                    console.log('Bước 3: Không lấy được phí vận chuyển');
+                                    $('#phiVanChuyenInput').val('0');
+                                    $('#phiVanChuyen').text('0đ');
+                                    $('#tongCong').text(@Model.tongTien.ToString("N0") + 'đ');
+                                }
+                            },
+                            error: function(xhr, status, error) {
+                                console.log('Bước 3: Lỗi khi tính phí vận chuyển:', error);
+                                $('#phiVanChuyenInput').val('0');
+                                $('#phiVanChuyen').text('0đ');
+                                $('#tongCong').text(@Model.tongTien.ToString("N0") + 'đ');
+                            }
+                        });
+                    },
+                    error: function() {
+                        $('#districtTable tbody').html(`
+                            <tr>
+                                <td colspan="2" class="text-center">Có lỗi xảy ra khi lấy danh sách quận/huyện</td>
+                            </tr>
+                        `);
                     }
                 });
             });
@@ -189,6 +482,18 @@
                         alert('Có lỗi xảy ra khi đặt hàng');
                     }
                 });
+            });
+
+            // Xử lý chọn tỉnh/thành phố
+            $('#provinceSelect').change(function() {
+                var selectedOption = $(this).find('option:selected');
+                var provinceId = selectedOption.val();
+                var provinceName = selectedOption.data('name');
+                var provinceExtension = selectedOption.data('extension');
+
+                $('#provinceId').text(provinceId || '-');
+                $('#provinceName').text(provinceName || '-');
+                $('#provinceExtension').text(provinceExtension || '-');
             });
         });
     </script>
