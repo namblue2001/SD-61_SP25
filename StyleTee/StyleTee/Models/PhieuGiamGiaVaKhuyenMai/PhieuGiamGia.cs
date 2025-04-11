@@ -49,6 +49,7 @@ namespace StyleTee.Models.PhieuGiamGiaVaKhuyenMai
         [Range(0.01, double.MaxValue, ErrorMessage = "Giá trị đơn hàng tối thiểu phải lớn hơn 0.")]
         [RegularExpression(@"^(?! )[0-9]+(?! )$", ErrorMessage = "Giá trị đơn hàng tối thiểu phải là số và không được có khoảng trắng ở đầu và cuối.")]
         public double GiaTriDonHangToiThieu { get; set; }
+        public virtual ICollection<DonHang> DonHang { get; set; }
     }
     public static class PhieuGiamGiaValidator
     {

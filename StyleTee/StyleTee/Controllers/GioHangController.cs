@@ -145,12 +145,12 @@ namespace StyleTee.Controllers
 
             var donHang = new DonHang
             {
-                tongTien = gioHang.GioHangChiTiet.Sum(item => item.donGia * item.soLuong),
-                diaChiVanChuyen = diaChiMacDinh != null 
-                    ? $"{diaChiMacDinh.soNha}, {diaChiMacDinh.xa}, {diaChiMacDinh.huyen}, {diaChiMacDinh.tinhThanhPho}"
-                    : "",
-                phuongThucThanhToan = "Thanh toán khi nhận hàng", // Mặc định
-                ChiTietDonHang = chiTietDonHang
+                //tongTien = gioHang.GioHangChiTiet.Sum(item => item.donGia * item.soLuong),
+                //diaChiVanChuyen = diaChiMacDinh != null 
+                //    ? $"{diaChiMacDinh.soNha}, {diaChiMacDinh.xa}, {diaChiMacDinh.huyen}, {diaChiMacDinh.tinhThanhPho}"
+                //    : "",
+                //phuongThucThanhToan = "Thanh toán khi nhận hàng", // Mặc định
+                //ChiTietDonHang = chiTietDonHang
             };
 
             return View(donHang);
