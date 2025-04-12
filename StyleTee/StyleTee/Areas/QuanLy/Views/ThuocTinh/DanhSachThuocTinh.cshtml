@@ -1,0 +1,282 @@
+﻿@model IEnumerable<object>
+@{
+    var title = Context.Request.Query["title"].ToString();
+    var type = Context.Request.Query["type"].ToString();
+}
+
+<div class="card shadow">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h5 class="mb-0">Danh sách @title</h5>
+        <button type="button" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#createModal">
+            <i class="fas fa-plus"></i> Thêm mới
+        </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tên</th>
+                        <th width="200">Trạng thái</th>
+                        <th width="100">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        var data = item as dynamic;
+                        string itemId = "";
+                        string itemName = "";
+                        bool itemStatus = false;
+
+                        if (data.GetType().GetProperty("tenChatLieu") != null)
+                        {
+                            itemId = data.ID_ChatLieu.ToString();
+                            itemName = data.tenChatLieu;
+                            itemStatus = data.trangThai;
+                        }
+                        else if (data.GetType().GetProperty("tenMauSac") != null)
+                        {
+                            itemId = data.ID_MauSac.ToString();
+                            itemName = data.tenMauSac;
+                            itemStatus = data.trangThai;
+                        }
+                        else if (data.GetType().GetProperty("tenXuatXu") != null)
+                        {
+                            itemId = data.ID_XuatXu.ToString();
+                            itemName = data.tenXuatXu;
+                            itemStatus = data.trangThai;
+                        }
+                        else if (data.GetType().GetProperty("tenDanhMuc") != null)
+                        {
+                            itemId = data.ID_DanhMuc.ToString();
+                            itemName = data.tenDanhMuc;
+                            itemStatus = data.trangThai;
+                        }
+                        else if (data.GetType().GetProperty("tenThuongHieu") != null)
+                        {
+                            itemId = data.ID_ThuongHieu.ToString();
+                            itemName = data.tenThuongHieu;
+                            itemStatus = data.trangThai;
+                        }
+                        else if (data.GetType().GetProperty("tenKichThuoc") != null)
+                        {
+                            itemId = data.ID_KichThuoc.ToString();
+                            itemName = data.tenKichThuoc;
+                            itemStatus = data.trangThai;
+                        }
+
+                        <tr>
+                            <td>@itemName</td>
+                            <td>
+                                <span class="badge @(itemStatus ? "bg-success" : "bg-danger")">
+                                    @(itemStatus ? "Hoạt động" : "Ngừng hoạt động")
+                                </span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-sm edit-btn" 
+                                        data-id="@itemId" 
+                                        data-name="@itemName" 
+                                        data-status="@itemStatus.ToString().ToLower()"
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#editModal">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Thêm mới -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="createModalLabel">Thêm mới @title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="createForm" method="post">
+                @Html.AntiForgeryToken()
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tên @title</label>
+                        <input type="text" class="form-control" name="ten" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select class="form-select" name="trangThai" required>
+                            <option value="true">Hoạt động</option>
+                            <option value="false">Ngừng hoạt động</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Sửa -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Sửa @title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="editForm" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" id="editId" name="id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label">Tên @title</label>
+                        <input type="text" class="form-control" id="editName" name="ten" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Trạng thái</label>
+                        <select class="form-select" id="editStatus" name="trangThai" required>
+                            <option value="true">Hoạt động</option>
+                            <option value="false">Ngừng hoạt động</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Xử lý form thêm mới
+    $('#createForm').on('submit', function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        
+        var tenValue = $(this).find('[name="ten"]').val();
+        var trangThaiValue = $(this).find('[name="trangThai"]').val() === 'true';
+        
+        switch('@type') {
+            case 'ChatLieu':
+                formData.append('tenChatLieu', tenValue);
+                break;
+            case 'MauSac':
+                formData.append('tenMauSac', tenValue);
+                break;
+            case 'XuatXu':
+                formData.append('tenXuatXu', tenValue);
+                break;
+            case 'DanhMuc':
+                formData.append('tenDanhMuc', tenValue);
+                break;
+            case 'ThuongHieu':
+                formData.append('tenThuongHieu', tenValue);
+                break;
+            case 'KichThuoc':
+                formData.append('tenKichThuoc', tenValue);
+                break;
+        }
+        formData.append('trangThai', trangThaiValue);
+
+        $.ajax({
+            url: '/ThuocTinh/Create' + '@type',
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if (response.success) {
+                    $('#createModal').modal('hide');
+                    $('.category-card[data-type="@type"]').click();
+                    $('#createForm')[0].reset();
+                    alert('Thêm mới thành công!');
+                } else {
+                    var errors = response.errors.map(function(error) {
+                        return error.errorMessage;
+                    }).join('\n');
+                    alert('Có lỗi xảy ra:\n' + errors);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Có lỗi xảy ra khi gửi yêu cầu: ' + error);
+            }
+        });
+    });
+
+    // Xử lý khi click nút sửa
+    $('.edit-btn').click(function() {
+        var id = $(this).data('id');
+        var name = $(this).data('name');
+        var status = $(this).data('status');
+
+        $('#editId').val(id);
+        $('#editName').val(name);
+        $('#editStatus').val(status.toString());
+    });
+
+    // Xử lý form sửa
+    $('#editForm').on('submit', function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        
+        var id = $('#editId').val();
+        var tenValue = $('#editName').val();
+        var trangThaiValue = $('#editStatus').val() === 'true';
+        
+        switch('@type') {
+            case 'ChatLieu':
+                formData.append('tenChatLieu', tenValue);
+                break;
+            case 'MauSac':
+                formData.append('tenMauSac', tenValue);
+                break;
+            case 'XuatXu':
+                formData.append('tenXuatXu', tenValue);
+                break;
+            case 'DanhMuc':
+                formData.append('tenDanhMuc', tenValue);
+                break;
+            case 'ThuongHieu':
+                formData.append('tenThuongHieu', tenValue);
+                break;
+            case 'KichThuoc':
+                formData.append('tenKichThuoc', tenValue);
+                break;
+        }
+        formData.append('trangThai', trangThaiValue);
+
+        $.ajax({
+            url: '/ThuocTinh/Edit' + '@type' + '/' + id,
+            type: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                if (response.success) {
+                    $('#editModal').modal('hide');
+                    $('.category-card[data-type="@type"]').click();
+                    alert('Cập nhật thành công!');
+                } else {
+                    var errors = response.errors.map(function(error) {
+                        return error.errorMessage;
+                    }).join('\n');
+                    alert('Có lỗi xảy ra:\n' + errors);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Có lỗi xảy ra khi gửi yêu cầu: ' + error);
+            }
+        });
+    });
+});
+</script>
