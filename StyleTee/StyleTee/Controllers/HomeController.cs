@@ -24,7 +24,36 @@ public class HomeController : Controller
         TempData["Trang"] = "Hồ sơ";
         return View(quanly);
     }
-    
+    [HttpPost]
+    public IActionResult UpdateProfile(TaiKhoan model)
+    {
+        var id_taikhoan = HttpContext.Session.GetString("id_taikhoan");
+
+        if (string.IsNullOrEmpty(id_taikhoan))
+        {
+            return RedirectToAction("Login", "Auth");
+        }
+
+        var taiKhoan = _context.TaiKhoan.FirstOrDefault(a => a.ID_TaiKhoan == model.ID_TaiKhoan);
+
+        if (taiKhoan == null)
+        {
+            return NotFound();
+        }
+
+        // Cập nhật thông tin
+        taiKhoan.hoTen = model.hoTen;
+        taiKhoan.email = model.email;
+        taiKhoan.soDienThoai = model.soDienThoai;
+        taiKhoan.gioiTinh = model.gioiTinh;
+        taiKhoan.ngaySinh = model.ngaySinh;
+
+        _context.TaiKhoan.Update(taiKhoan);
+        _context.SaveChanges();
+
+        TempData["SuccessMessage"] = "Cập nhật thông tin thành công!";
+        return RedirectToAction("HoSoQuanLy");
+    }
     public IActionResult Index()
     {
         TempData["Trang"] = "Bảng điều khiển";

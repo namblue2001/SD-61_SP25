@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
+using Org.BouncyCastle.Crypto.Generators;
 
 
 
@@ -144,7 +145,7 @@ namespace StyleTee.Controllers
             }
 
             // Gửi email chứa mật khẩu cũ
-            string subject = "Khôi phục mật khẩu - Shop Online";
+            string subject = "Khôi phục mật khẩu - Shop Online StyleTee";
             string body = $"Xin chào {user.hoTen},<br><br>Mật khẩu của bạn là: <strong>{user.matKhau}</strong><br><br>Vui lòng đăng nhập và đổi mật khẩu nếu cần!";
 
             bool isSent = SendEmail(email, subject, body);
@@ -173,7 +174,7 @@ namespace StyleTee.Controllers
 
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress(_config["EmailSettings:SmtpUsername"], "Shop Online"),
+                    From = new MailAddress(_config["EmailSettings:SmtpUsername"], "Shop StyleTee"),
                     Subject = subject,
                     Body = body,
                     IsBodyHtml = true
@@ -187,6 +188,42 @@ namespace StyleTee.Controllers
             {
                 return false;
             }
+        }
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+
+            // Lấy tài khoản từ session (hoặc claim nếu dùng Identity)
+            var taiKhoanIdStr = HttpContext.Session.GetString("id_taikhoan");
+            if (string.IsNullOrEmpty(taiKhoanIdStr))
+                return RedirectToAction("DangNhap", "Access");
+
+            Guid id = Guid.Parse(taiKhoanIdStr);
+            var taiKhoan = await _context.TaiKhoan.FirstOrDefaultAsync(x => x.ID_TaiKhoan == id);
+            if (taiKhoan == null) return NotFound();
+
+            // Kiểm tra mật khẩu hiện tại
+            if (taiKhoan.matKhau != model.CurrentPassword)
+            {
+                ModelState.AddModelError(string.Empty, "Mật khẩu hiện tại không đúng");
+                return View(model);
+            }
+
+            // Cập nhật mật khẩu mới
+            taiKhoan.matKhau = model.NewPassword;
+            _context.Update(taiKhoan);
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Đổi mật khẩu thành công!";
+            return RedirectToAction("ChangePassword"); // hoặc bất kỳ view nào bạn muốn
         }
     }
 }
