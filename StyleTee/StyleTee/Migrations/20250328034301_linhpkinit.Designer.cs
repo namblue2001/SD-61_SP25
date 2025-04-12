@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StyleTee.Data;
 
@@ -11,9 +12,11 @@ using StyleTee.Data;
 namespace StyleTee.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250328034301_linhpkinit")]
+    partial class linhpkinit
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,26 +223,6 @@ namespace StyleTee.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("StyleTee.Models.AnhMinhChung", b =>
-                {
-                    b.Property<Guid>("ID_AnhMinhChung")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ID_YeuCauDoiTra")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("url")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_AnhMinhChung");
-
-                    b.HasIndex("ID_YeuCauDoiTra");
-
-                    b.ToTable("AnhMinhChung");
-                });
-
             modelBuilder.Entity("StyleTee.Models.ChatLieu", b =>
                 {
                     b.Property<Guid>("ID_ChatLieu")
@@ -342,6 +325,44 @@ namespace StyleTee.Migrations
                     b.ToTable("DiaChi");
                 });
 
+            modelBuilder.Entity("StyleTee.Models.DonHang", b =>
+                {
+                    b.Property<Guid>("ID_DonHang")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ID_TaiKhoan")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("diaChiVanChuyen")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ngayDatHang")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("phuongThucThanhToan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("tongTien")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("trangThaiDonHang")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("trangThaiThanhToan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID_DonHang");
+
+                    b.HasIndex("ID_TaiKhoan");
+
+                    b.ToTable("DonHang");
+                });
+
             modelBuilder.Entity("StyleTee.Models.GioHang", b =>
                 {
                     b.Property<Guid>("ID_GioHang")
@@ -406,38 +427,6 @@ namespace StyleTee.Migrations
                     b.HasIndex("ID_SanPhamChiTiet");
 
                     b.ToTable("HinhAnh");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.HoaDon", b =>
-                {
-                    b.Property<Guid>("ID_HoaDon")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ID_DonHang")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("ngayNhanHang")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ngayTao")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ngayVanChuyen")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("tongTien")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("trangThai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_HoaDon");
-
-                    b.HasIndex("ID_DonHang");
-
-                    b.ToTable("HoaDon");
                 });
 
             modelBuilder.Entity("StyleTee.Models.KichThuoc", b =>
@@ -601,25 +590,6 @@ namespace StyleTee.Migrations
                     b.ToTable("PhieuGiamGia");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.PhuongThucThanhToan", b =>
-                {
-                    b.Property<Guid>("ID_PTTT")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("tenPhuongThuc")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("trangThai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_PTTT");
-
-                    b.ToTable("PhuongThucThanhToan");
-                });
-
             modelBuilder.Entity("StyleTee.Models.SanPham", b =>
                 {
                     b.Property<Guid>("ID_SanPham")
@@ -717,30 +687,6 @@ namespace StyleTee.Migrations
                     b.ToTable("SanPhamChiTiet");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.SanPhamDoiTra", b =>
-                {
-                    b.Property<Guid>("ID_SPDoiTra")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ID_ChiTietDonHang")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ID_YeuCauDoiTra")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("soLuong")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID_SPDoiTra");
-
-                    b.HasIndex("ID_ChiTietDonHang");
-
-                    b.HasIndex("ID_YeuCauDoiTra");
-
-                    b.ToTable("SanPhamDoiTra");
-                });
-
             modelBuilder.Entity("StyleTee.Models.TaiKhoan", b =>
                 {
                     b.Property<Guid>("ID_TaiKhoan")
@@ -793,37 +739,6 @@ namespace StyleTee.Migrations
                     b.ToTable("TaiKhoan");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.ThongTinVanChuyen", b =>
-                {
-                    b.Property<Guid>("ID_VanChuyen")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("huyen")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("soDienThoai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tenNguoiNhan")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tinh")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("xa")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_VanChuyen");
-
-                    b.ToTable("ThongTinVanChuyen");
-                });
-
             modelBuilder.Entity("StyleTee.Models.ThuongHieu", b =>
                 {
                     b.Property<Guid>("ID_ThuongHieu")
@@ -862,30 +777,6 @@ namespace StyleTee.Migrations
                     b.HasKey("ID_XuatXu");
 
                     b.ToTable("XuatXu");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.YeuCauDoiTra", b =>
-                {
-                    b.Property<Guid>("ID_YeuCauDoiTra")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("ID_DonHang")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("liDoDoiTra")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("loaiYeuCau")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_YeuCauDoiTra");
-
-                    b.HasIndex("ID_DonHang");
-
-                    b.ToTable("YeuCauDoiTra");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -939,10 +830,40 @@ namespace StyleTee.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("StyleTee.Models.ChiTietDonHang", b =>
+                {
+                    b.HasOne("StyleTee.Models.DonHang", "DonHang")
+                        .WithMany("ChiTietDonHang")
+                        .HasForeignKey("ID_DonHang")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StyleTee.Models.SanPhamChiTiet", "SanPhamChiTiet")
+                        .WithMany("DonHangChiTiet")
+                        .HasForeignKey("ID_SanPhamChiTiet")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("DonHang");
+
+                    b.Navigation("SanPhamChiTiet");
+                });
+
             modelBuilder.Entity("StyleTee.Models.DiaChi", b =>
                 {
                     b.HasOne("StyleTee.Models.TaiKhoan", "TaiKhoan")
                         .WithMany("DiaChis")
+                        .HasForeignKey("ID_TaiKhoan")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TaiKhoan");
+                });
+
+            modelBuilder.Entity("StyleTee.Models.DonHang", b =>
+                {
+                    b.HasOne("StyleTee.Models.TaiKhoan", "TaiKhoan")
+                        .WithMany("DonHang")
                         .HasForeignKey("ID_TaiKhoan")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -991,26 +912,7 @@ namespace StyleTee.Migrations
                     b.Navigation("SanPhamChiTiet");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.OrderDetail", b =>
-                {
-                    b.HasOne("StyleTee.Models.Order", "Order")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StyleTee.Models.SanPham", "SanPham")
-                        .WithMany()
-                        .HasForeignKey("SanPhamID_SanPham")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("SanPham");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.OrderStatusHistory", b =>
+            modelBuilder.Entity("StyleTee.Models.LichSuDonHang", b =>
                 {
                     b.HasOne("StyleTee.Models.DonHang", "DonHang")
                         .WithMany("LichSuDonHang")
@@ -1102,49 +1004,21 @@ namespace StyleTee.Migrations
                     b.Navigation("XuatXu");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.SanPhamDoiTra", b =>
-                {
-                    b.HasOne("StyleTee.Models.ChiTietDonHang", "ChiTietDonHang")
-                        .WithMany("SanPhamDoiTra")
-                        .HasForeignKey("ID_ChiTietDonHang")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("StyleTee.Models.YeuCauDoiTra", "YeuCauDoiTra")
-                        .WithMany("SanPhamDoiTra")
-                        .HasForeignKey("ID_YeuCauDoiTra")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ChiTietDonHang");
-
-                    b.Navigation("YeuCauDoiTra");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.YeuCauDoiTra", b =>
-                {
-                    b.HasOne("StyleTee.Models.DonHang", "DonHang")
-                        .WithMany("YeuCauDoiTra")
-                        .HasForeignKey("ID_DonHang")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DonHang");
-                });
-
             modelBuilder.Entity("StyleTee.Models.ChatLieu", b =>
                 {
                     b.Navigation("SanPhamChiTiet");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.ChiTietDonHang", b =>
-                {
-                    b.Navigation("SanPhamDoiTra");
-                });
-
             modelBuilder.Entity("StyleTee.Models.DanhMuc", b =>
                 {
                     b.Navigation("SanPham");
+                });
+
+            modelBuilder.Entity("StyleTee.Models.DonHang", b =>
+                {
+                    b.Navigation("ChiTietDonHang");
+
+                    b.Navigation("LichSuDonHang");
                 });
 
             modelBuilder.Entity("StyleTee.Models.GioHang", b =>
@@ -1165,13 +1039,6 @@ namespace StyleTee.Migrations
             modelBuilder.Entity("StyleTee.Models.MauSac", b =>
                 {
                     b.Navigation("SanPhamChiTiets");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.Order", b =>
-                {
-                    b.Navigation("OrderDetails");
-
-                    b.Navigation("OrderStatusHistories");
                 });
 
             modelBuilder.Entity("StyleTee.Models.SanPham", b =>
@@ -1197,11 +1064,6 @@ namespace StyleTee.Migrations
                     b.Navigation("GioHang");
                 });
 
-            modelBuilder.Entity("StyleTee.Models.ThongTinVanChuyen", b =>
-                {
-                    b.Navigation("DonHang");
-                });
-
             modelBuilder.Entity("StyleTee.Models.ThuongHieu", b =>
                 {
                     b.Navigation("SanPhamChiTiet");
@@ -1210,13 +1072,6 @@ namespace StyleTee.Migrations
             modelBuilder.Entity("StyleTee.Models.XuatXu", b =>
                 {
                     b.Navigation("SanPhamChiTiets");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.YeuCauDoiTra", b =>
-                {
-                    b.Navigation("AnhMinhChung");
-
-                    b.Navigation("SanPhamDoiTra");
                 });
 #pragma warning restore 612, 618
         }

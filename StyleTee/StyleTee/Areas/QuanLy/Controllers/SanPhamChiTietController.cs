@@ -91,6 +91,7 @@ namespace StyleTee.Areas.QuanLy.Controllers
             try
             {
                 spct.ID_SanPhamChiTiet = Guid.NewGuid();
+                spct.ngayTao = DateTime.Now;
                 _context.Add(spct);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

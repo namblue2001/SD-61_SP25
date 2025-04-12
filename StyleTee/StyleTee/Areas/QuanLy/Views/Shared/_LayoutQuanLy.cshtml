@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="../../LayoutAdmin/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../../LayoutAdmin/assets/img/favicon.png">
+
     <title>
         Bảng điều khiển
     </title>
@@ -14,6 +16,7 @@
     <!-- Nucleo Icons -->
     <link href="../../LayoutAdmin/assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../../LayoutAdmin/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <!-- Font Awesome Icons -->
     <link href="../../LayoutAdmin/assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
@@ -26,7 +29,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html" target="_blank">
-                <img src="../LayoutAdmin/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="../../LayoutAdmin/assets/img/logo-ct.png" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold">StyleTee</span>
             </a>
         </div>
@@ -54,7 +57,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/tables.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="NhanVien" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-users"></i>
                         </div>
@@ -62,7 +65,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/billing.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="KhachHang" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-user"></i>
                         </div>
@@ -70,7 +73,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/virtual-reality.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="SanPham" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-box"></i>
                         </div>
@@ -78,7 +81,15 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="SanPhamChiTiet" asp-action="Index">
+                        <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <span class="nav-link-text ms-1">Quản lý sản phẩm chi tiết</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="DonHang" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-shopping-cart"></i>
                         </div>
@@ -86,23 +97,16 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="PhieuGiamGia" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-tag"></i>
                         </div>
                         <span class="nav-link-text ms-1">Quản lý khuyến mãi</span>
                     </a>
                 </li>
+                
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
-                        <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-warehouse"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Quản lý kho hàng</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="GiaoHang" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-shipping-fast"></i>
                         </div>
@@ -110,21 +114,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
+                    <a class="nav-link  " asp-area="QuanLy" asp-controller="BaoCaoThongKe" asp-action="Index">
                         <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="fas fa-chart-bar"></i>
                         </div>
                         <span class="nav-link-text ms-1">Báo cáo && thống kê</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link  " href="../pages/rtl.html">
-                        <div class="icon icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <span class="nav-link-text ms-1">Quản lý nhà cung cấp</span>
-                    </a>
-                </li>
+                
 
                 <li class="nav-item mt-3">
                     <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Trang tài khoản</h6>

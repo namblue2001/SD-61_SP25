@@ -30,7 +30,14 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<DonHang> DonHang { get; set; }
     public DbSet<ChiTietDonHang> ChiTietDonHang { get; set; }
     public DbSet<LichSuDonHang> LichSuDonHang { get; set; }
+    public DbSet<AnhMinhChung> AnhMinhChung { get; set; }
+    public DbSet<HoaDon> HoaDon { get; set; }
+    public DbSet<PhuongThucThanhToan> PhuongThucThanhToan { get; set; }
+    public DbSet<ThongTinVanChuyen> ThongTinVanChuyen { get; set; }
+    public DbSet<YeuCauDoiTra> YeuCauDoiTra { get; set; }
+    public DbSet<SanPhamDoiTra> SanPhamDoiTra { get; set; }
     
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
@@ -48,17 +55,22 @@ public class ApplicationDbContext : IdentityDbContext
         builder.Entity<GioHang>().HasOne(x => x.TaiKhoan).WithMany(p => p.GioHang).HasForeignKey(x => x.ID_TaiKhoan);
         builder.Entity<GioHangChiTiet>().HasOne(x => x.SanPhamChiTiet).WithMany(p => p.GioHangChiTiets).HasForeignKey(x => x.ID_SanPhamChiTiet);
         builder.Entity<GioHangChiTiet>().HasOne(x => x.GioHang).WithMany(p => p.GioHangChiTiet).HasForeignKey(x => x.ID_GioHang);
-
         builder.Entity<PhieuGiamGia>().HasIndex(k => k.TenPhieuGiamGia).IsUnique().HasDatabaseName("UQ_TenPhieuGiamGia");
         builder.Entity<KhuyenMai>().HasIndex(k => new { k.TyLeKhuyenMai, k.NgayBatDau }).IsUnique().HasDatabaseName("UQ_TyLeKhuyenMai");
         builder.Entity<KhuyenMai>().HasOne(x => x.SanPhamChiTiet).WithMany().HasForeignKey(x => x.ID_SanPhamChiTiet);
-
-
         builder.Entity<ChiTietDonHang>().HasOne(x => x.DonHang).WithMany(p=>p.ChiTietDonHang).HasForeignKey(x => x.ID_DonHang);
         builder.Entity<ChiTietDonHang>().HasOne(x => x.SanPhamChiTiet).WithMany(p=>p.DonHangChiTiet).HasForeignKey(x => x.ID_SanPhamChiTiet);
         builder.Entity<DonHang>().HasOne(x => x.TaiKhoan).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_TaiKhoan);
         builder.Entity<LichSuDonHang>().HasOne(x => x.DonHang).WithMany(p=>p.LichSuDonHang).HasForeignKey(x => x.ID_DonHang);
-      
+        builder.Entity<HoaDon>().HasOne(x => x.DonHang).WithMany(p=>p.HoaDon).HasForeignKey(x => x.ID_DonHang);
+        builder.Entity<DonHang>().HasOne(x => x.ThongTinVanChuyen).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_ThongTinVanChuyen);
+        builder.Entity<DonHang>().HasOne(x => x.PhuongThucThanhToan).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_PhuongThucThanhToan);
+        builder.Entity<DonHang>().HasOne(x => x.PhieuGiamGia).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_MaGiamGia);
+        builder.Entity<AnhMinhChung>().HasOne(x => x.YeuCauDoiTra).WithMany(p=>p.AnhMinhChung).HasForeignKey(x => x.ID_YeuCauDoiTra);
+        builder.Entity<YeuCauDoiTra>().HasOne(x => x.DonHang).WithMany(p=>p.YeuCauDoiTra).HasForeignKey(x => x.ID_DonHang);
+        builder.Entity<SanPhamDoiTra>().HasOne(x => x.ChiTietDonHang).WithMany(p=>p.SanPhamDoiTra).HasForeignKey(x => x.ID_ChiTietDonHang);
+        builder.Entity<SanPhamDoiTra>().HasOne(x => x.YeuCauDoiTra).WithMany(p=>p.SanPhamDoiTra).HasForeignKey(x => x.ID_YeuCauDoiTra);
+
     }
 }
 
