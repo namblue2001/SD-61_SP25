@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using StyleTee.Models;
+using StyleTee.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,19 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddHttpClient<GHNService>(client =>
+{
+    client.BaseAddress = new Uri("https://online-gateway.ghn.vn");
+    client.DefaultRequestHeaders.Add("Token", "12f949a2-0c6e-11f0-bdfc-6a0eda42fc14");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+    client.DefaultRequestHeaders.Add("User-Agent", "PostmanRuntime/7.32.3");
+    client.DefaultRequestHeaders.Add("Host", "online-gateway.ghn.vn");
+    client.DefaultRequestHeaders.Add("Origin", "https://online-gateway.ghn.vn");
+    client.DefaultRequestHeaders.Add("Referer", "https://online-gateway.ghn.vn/");
+});
+
+builder.Services.AddScoped<GHNService>();
 
 var app = builder.Build();
 app.UseSession(); // Kích hoạt Session Middleware
