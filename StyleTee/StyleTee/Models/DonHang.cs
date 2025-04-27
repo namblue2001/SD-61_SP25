@@ -22,12 +22,13 @@ namespace StyleTee.Models
         [Required]
         public Guid ID_ThongTinVanChuyen { get; set; }
         [Required]
-        public Guid ID_PhuongThucThanhToan { get; set; }
+       
         public Guid ID_MaGiamGia { get; set; }
 
         public decimal phiVanChuyen { get; set; }
         public string trangThaiDonHang { get; set; }
         public string trangThaiThanhToan { get; set; }
+        public string phuongThucThanhToan { get; set; }
         public string ghiChu { get; set; }
 
 
@@ -38,7 +39,6 @@ namespace StyleTee.Models
         public virtual ICollection<YeuCauDoiTra> YeuCauDoiTra { get; set; }
         public virtual ICollection<HoaDon> HoaDon { get; set; }
         public virtual ThongTinVanChuyen ThongTinVanChuyen { get; set; }
-        public virtual PhuongThucThanhToan PhuongThucThanhToan { get; set; }
         public virtual PhieuGiamGia PhieuGiamGia { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
