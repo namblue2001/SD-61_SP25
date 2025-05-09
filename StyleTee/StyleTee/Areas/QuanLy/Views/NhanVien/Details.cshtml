@@ -3,54 +3,74 @@
     ViewData["Title"] = "Chi tiết thông tin nhân viên";
     Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
 }
-<div class="card mb-4">
-    <div class="card-header">
-        <h3> Xin chào @Model.hoTen</h3>  <dd class="col-sm-9">
-            @if (!string.IsNullOrEmpty(Model.anhDaiDien))
-            {
-                <img src="~/Image/@Model.anhDaiDien" alt="Ảnh đại diện" height="100px" />
-            }
-            else
-            {
-                <p>Không có ảnh đại diện.</p>
-            }
-        </dd>
-    </div>
-    <div class="card-body">
-        <dl class="row">
-            <dt class="col-sm-3">ID: </dt>
-            <dd class="col-sm-9">@Model.ID_TaiKhoan</dd>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Thông tin chi tiết nhân viên</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            @if (!string.IsNullOrEmpty(Model.anhDaiDien))
+                            {
+                                <img src="~/Image/@Model.anhDaiDien" class="img-fluid rounded-circle" style="max-width: 200px;" alt="Ảnh đại diện" />
+                            }
+                            else
+                            {
+                                <img src="~/Image/default-avatar.png" class="img-fluid rounded-circle" style="max-width: 200px;" alt="Ảnh mặc định" />
+                            }
+                        </div>
+                        <div class="col-md-8">
+                            <dl class="row">
+                                <dt class="col-sm-4">Họ và tên:</dt>
+                                <dd class="col-sm-8">@Model.hoTen</dd>
 
-            <dt class="col-sm-3">Tên đăng nhập: </dt>
-            <dd class="col-sm-9">@Model.taiKhoan</dd>
+                                <dt class="col-sm-4">Tài khoản:</dt>
+                                <dd class="col-sm-8">@Model.taiKhoan</dd>
 
-            <dt class="col-sm-3">Mật khẩu: </dt>
-            <dd class="col-sm-9">@Model.matKhau</dd>
+                                <dt class="col-sm-4">Email:</dt>
+                                <dd class="col-sm-8">@Model.email</dd>
 
-            <dt class="col-sm-3">Email: </dt>
-            <dd class="col-sm-9">@Model.email</dd>
-
-            <dt class="col-sm-3">Họ tên: </dt>
-            <dd class="col-sm-9">@Model.hoTen</dd>
-
-            <dt class="col-sm-3">Số điện thoại: </dt>
-            <dd class="col-sm-9">@Model.soDienThoai</dd>
-
-            <dt class="col-sm-3">Giới tính: </dt>
-            <dd class="col-sm-9">@Model.gioiTinh</dd>
-
-            <dt class="col-sm-3">Ngày sinh: </dt>
-            <dd class="col-sm-9">@Model.ngaySinh</dd>
-
-            <dt class="col-sm-3">Trạng thái: </dt>
-            <dd class="col-sm-9">@Model.trangThai</dd>
-
-            <dt class="col-sm-3">Vai trò: </dt>
-            <dd class="col-sm-9">@Model.tenVaiTro</dd>
-        </dl>
-    </div>
-    <div class="card-footer">
-        <a asp-action="Edit" asp-route-id="@Model.ID_TaiKhoan" class="btn btn-primary">Edit</a>
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                                <dt class="col-sm-4">Số điện thoại:</dt>
+                                <dd class="col-sm-8">@Model.soDienThoai</dd>
+                                <dt class="col-sm-4">Giới tính:</dt>
+                                <dd class="col-sm-8">@Model.gioiTinh</dd>
+                                <dt class="col-sm-4">Ngày sinh:</dt>
+                                <dd class="col-sm-8">@(Model.ngaySinh.ToString("dd/MM/yyyy") ?? "Chưa cập nhật")</dd>
+                                <dt class="col-sm-4">Trạng thái:</dt>
+                                <dd class="col-sm-8">
+                                    @Model.trangThai
+                                </dd>
+                                <dt class="col-sm-4">Vai trò:</dt>
+                                <dd class="col-sm-8">@Model.tenVaiTro</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-12">
+                            <a asp-area="QuanLy" asp-asp-controller="NhanVien" asp-action="Edit" asp-route-id="@Model.ID_TaiKhoan" class="btn btn-primary">
+                                <i class="fas fa-edit"></i> Chỉnh sửa
+                            </a>
+                            <a asp-area="QuanLy" asp-asp-controller="NhanVien" asp-action="Index" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Thêm các script cần thiết ở đây
+        });
+    </script>
+}
+

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A78EPXxyFnCxZgzOcAhBO9yC3gwZam5rpdwdPdzc3T0RUF0nqS1Je7jkGrXT11YcX5YF/I/gSuj4KrTyLrZONg==",
+  "dgSpecHash": "GpGds/6VjhH3Xl9fzXHh5aftMWbANw+6uRqyZe83nPk4MiaAtJjuDOojJDScmJcmqqQf+zfR8adTo4n5C2QlYg==",
   "success": true,
-  "projectFilePath": "D:\\fall2025\\hehe\\StyleTee\\StyleTee\\StyleTee.csproj",
+  "projectFilePath": "D:\\fall2025\\lingk\\StyleTee\\StyleTee\\StyleTee.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

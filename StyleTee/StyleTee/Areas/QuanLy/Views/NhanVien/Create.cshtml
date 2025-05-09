@@ -1,7 +1,6 @@
 ﻿@model StyleTee.Models.TaiKhoan
 @{
     ViewData["Title"] = "Danh sách nhân viên";
-    Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
 }
 <div class="container-fluid py-4">
     <div class="row">
@@ -16,8 +15,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form asp-action="Create" asp-controller="NhanVien" method="post" enctype="multipart/form-data">
-                        @Html.AntiForgeryToken()
+                    <form asp-action="Create" method="post" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="row">
 
@@ -52,7 +50,10 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="gioiTinh" class="form-control-label">Giới tính</label>
-                                    <input asp-for="gioiTinh" class="form-control" />
+                                    <select asp-for="gioiTinh" class="form-control">
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </select>
                                     <span asp-validation-for="gioiTinh" class="text-danger"></span>
                                 </div>
                             </div>
@@ -82,6 +83,19 @@
                                 <i class="fas fa-save"></i> Thêm nhân viên
                             </button>
                         </div>
+                        @if (!ViewData.ModelState.IsValid)
+                        {
+                            <div class="alert alert-danger">
+                                <div asp-validation-summary="None" class="text-danger"></div>
+                            </div>
+                        }
+
+                        @if (TempData["SuccessMessages"] != null)
+                        {
+                            <div class="alert alert-success">
+                                @TempData["SuccessMessages"]
+                            </div>
+                        }
                     </form>
                     @section Scripts {
                         @{
