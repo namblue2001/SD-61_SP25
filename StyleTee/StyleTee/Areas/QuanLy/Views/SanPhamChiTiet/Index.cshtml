@@ -1,23 +1,29 @@
 ﻿@model IEnumerable<StyleTee.Models.SanPhamChiTiet>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Danh sách sản phẩm chi tiết";
     List<string> imageExtension = new List<string>()
     {
         ".jpg",".png",".webp",".tiff",".gif",".jpeg",".svg"
     };
 }
 
-
-
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fas fa-check-circle me-1"></i>
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
             <div class="card mb-4">
                 <div class="card-header pb-0 d-flex justify-content-between align-items-center">
                     <h6>Danh sách </h6>
                     <a asp-action="Create" class="btn btn-primary btn-sm">
-                        <i class="fas fa-plus"></i> Thêm Sản Phẩm Chi Tiết 
+                        <i class="fas fa-plus"></i> Thêm Sản Phẩm Chi Tiết
                     </a>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
@@ -90,7 +96,7 @@
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.ngayTao</p>
                                         </td>
-                                     
+
 
                                         <td class="align-middle">
                                             <a asp-action="Edit" asp-route-id="@item.ID_SanPhamChiTiet" class="btn btn-green btn-sm text-secondary">

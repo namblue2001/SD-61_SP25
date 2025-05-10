@@ -9,207 +9,207 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = StyleTee
 build_property.RootNamespace = StyleTee
-build_property.ProjectDir = D:\fall2025\lingk\StyleTee\StyleTee\
+build_property.ProjectDir = D:\fall2025\s\StyleTee\StyleTee\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\fall2025\lingk\StyleTee\StyleTee
+build_property.MSBuildProjectDirectory = D:\fall2025\s\StyleTee\StyleTee
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/KhachHang/Details.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/KhachHang/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcS2hhY2hIYW5nXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/KhachHang/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/KhachHang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcS2hhY2hIYW5nXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/Details.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcU2FuUGhhbVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/SanPhamChiTiet.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/SanPham/SanPhamChiTiet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcU2FuUGhhbVxTYW5QaGFtQ2hpVGlldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/Shared/_LayoutNhanVien.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/Shared/_LayoutNhanVien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcU2hhcmVkXF9MYXlvdXROaGFuVmllbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/_ViewImports.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/NhanVien/Views/_ViewStart.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/NhanVien/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmhhblZpZW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Create.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXE5oYW5WaWVuXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Details.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXE5oYW5WaWVuXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Edit.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXE5oYW5WaWVuXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/NhanVien/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXE5oYW5WaWVuXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Create.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFBoaWV1R2lhbUdpYVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Details.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFBoaWV1R2lhbUdpYVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Edit.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFBoaWV1R2lhbUdpYVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/PhieuGiamGia/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFBoaWV1R2lhbUdpYVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Create.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1DaGlUaWV0XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Details.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1DaGlUaWV0XERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Edit.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1DaGlUaWV0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPhamChiTiet/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1DaGlUaWV0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Create.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Edit.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/SanPham/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNhblBoYW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFNoYXJlZFxfTGF5b3V0UXVhbkx5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/ThuocTinh/DanhSachThuocTinh.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/ThuocTinh/DanhSachThuocTinh.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFRodW9jVGluaFxEYW5oU2FjaFRodW9jVGluaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/ThuocTinh/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/ThuocTinh/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXFRodW9jVGluaFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/_ViewImports.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Areas/QuanLy/Views/_ViewStart.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Areas/QuanLy/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUXVhbkx5XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Access/DangKy.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Access/DangKy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXERhbmdLeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Access/DangNhap.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Access/DangNhap.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXERhbmdOaGFwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Access/ForgotPassword.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Access/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXEZvcmdvdFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/GioHang/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/GioHang/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/GioHang/XacNhanDonHang.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/GioHang/XacNhanDonHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvSGFuZ1xYYWNOaGFuRG9uSGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/ChiTietSanPham.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/ChiTietSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGlUaWV0U2FuUGhhbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/HoSoQuanLy.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/HoSoQuanLy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb1NvUXVhbkx5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/Index.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/NhanVien.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/NhanVien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOaGFuVmllbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/SanPham.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/SanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Home/ThanhToan.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Home/ThanhToan.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUaGFuaFRvYW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Order/Checkout.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Order/Checkout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQ2hlY2tvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Order/MyOrders.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Order/MyOrders.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcTXlPcmRlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Order/OrderDetails.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Order/OrderDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Shared/Error.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Shared/_LayoutTrangChuKhachHang.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Shared/_LayoutTrangChuKhachHang.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRUcmFuZ0NodUtoYWNoSGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/ThanhToan/ReturnVNPay.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/ThanhToan/ReturnVNPay.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGhhbmhUb2FuXFJldHVyblZOUGF5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/_ViewImports.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/_ViewStart.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/fall2025/lingk/StyleTee/StyleTee/Views/Shared/_Layout.cshtml]
+[D:/fall2025/s/StyleTee/StyleTee/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-t16aob2kca
