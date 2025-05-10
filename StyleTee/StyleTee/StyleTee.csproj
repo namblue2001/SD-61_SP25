@@ -27,10 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\LayoutAdmin\img\SanPham\" />
-    <Folder Include="wwwroot\LayoutAdmin\img\SanPhamChiTiet\" />
-    <Folder Include="wwwroot\LayoutAdmin\img\NhanVien\" />
     <Folder Include="wwwroot\Image\" />
+    <Folder Include="wwwroot\LayoutAdmin\img\SanPhamChiTiet\" />
+    <Folder Include="wwwroot\LayoutAdmin\img\SanPham\" />
   </ItemGroup>
 
 </Project>

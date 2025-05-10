@@ -1,78 +1,193 @@
 ﻿@model StyleTee.Models.SanPhamChiTiet
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Thêm sản phẩm chi tiết";
+    var existingProducts = ViewBag.ExistingProducts as IEnumerable<StyleTee.Models.SanPhamChiTiet>;
 }
 
-<h2>Create</h2>
-
-<h4>SanPhamChiTiet</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ID_SanPham" class="control-label"></label>
-                <select asp-for="ID_SanPham" class ="form-control" asp-items="ViewBag.ID_SanPham"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_Mau" class="control-label"></label>
-                <select asp-for="ID_Mau" class ="form-control" asp-items="ViewBag.ID_MauSac"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_XuatXu" class="control-label"></label>
-                <select asp-for="ID_XuatXu" class ="form-control" asp-items="ViewBag.ID_XuatXu"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_ThuongHieu" class="control-label"></label>
-                <select asp-for="ID_ThuongHieu" class ="form-control" asp-items="ViewBag.ID_ThuongHieu"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_Size" class="control-label"></label>
-                <select asp-for="ID_Size" class ="form-control" asp-items="ViewBag.ID_KichThuoc"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_KieuDang" class="control-label"></label>
-                <select asp-for="ID_KieuDang" class ="form-control" asp-items="ViewBag.ID_KieuDang"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="ID_ChatLieu" class="control-label"></label>
-                <select asp-for="ID_ChatLieu" class ="form-control" asp-items="ViewBag.ID_ChatLieu"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="giaBan" class="control-label"></label>
-                <input asp-for="giaBan" class="form-control" />
-                <span asp-validation-for="giaBan" class="text-danger"></span>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label class="control-label"><i class=""></i> Ảnh đại diện<span>*</span></label>
-                    <input type="file" name="formFile" value="@Model.anhDaiDien" asp-for="anhDaiDien" class="form-control" autofocus />
-                    <span asp-validation-for="anhDaiDien" class="text-sm text-danger"></span>
+<div class="container-fluid py-4">
+    <div class="row">
+        <!-- Left side - Existing Products -->
+        <div class="col-md-5">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Danh sách sản phẩm hiện có</h6>
+                </div>
+                <div class="card-body px-0 pt-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sản phẩm</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Thông tin chi tiết</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Giá & Số lượng</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (existingProducts != null)
+                                {
+                                    foreach (var item in existingProducts)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex px-2 py-1">
+                                                    @if (!string.IsNullOrEmpty(item.anhDaiDien))
+                                                    {
+                                                        <img src="~/LayoutAdmin/img/SanPhamChiTiet/@item.anhDaiDien" class="avatar avatar-lg me-3" alt="product">
+                                                    }
+                                                    <div class="d-flex flex-column justify-content-center">
+                                                        <h6 class="mb-0 text-sm">@item.SanPham?.tenSanPham</h6>
+                                                        <p class="text-xs text-secondary mb-0">@item.ThuongHieu?.tenThuongHieu</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-xs font-weight-bold mb-0">Size: @item.KichThuoc?.tenKichThuoc</p>
+                                                    <p class="text-xs text-secondary mb-0">Màu: @item.MauSac?.tenMauSac</p>
+                                                    <p class="text-xs text-secondary mb-0">Chất liệu: @item.ChatLieu?.tenChatLieu</p>
+                                                    <p class="text-xs text-secondary mb-0">Kiểu dáng: @item.KieuDang?.tenKieuDang</p>
+                                                    <p class="text-xs text-secondary mb-0">Xuất xứ: @item.XuatXu?.tenXuatXu</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column">
+                                                    <p class="text-xs font-weight-bold mb-0">Giá: @item.giaBan.ToString("N0") VNĐ</p>
+                                                    <p class="text-xs text-secondary mb-0">Số lượng: @item.soLuongTon</p>
+                                                    <p class="text-xs text-secondary mb-0">Ngày tạo: @item.ngayTao.ToString("dd/MM/yyyy")</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ngayTao" class="control-label"></label>
-                <input asp-for="ngayTao" class="form-control" />
-                <span asp-validation-for="ngayTao" class="text-danger"></span>
+        </div>
+
+        <!-- Right side - Create Form -->
+        <div class="col-md-7">
+            <div class="card mb-4">
+                <div class="card-header pb-0">
+                    <h6>Thêm sản phẩm chi tiết mới</h6>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ID_SanPham" class="control-label">Sản phẩm</label>
+                                    <select asp-for="ID_SanPham" class="form-control" asp-items="ViewBag.ID_SanPham">
+                                        <option value="">-- Chọn sản phẩm --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_SanPham" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ID_Mau" class="control-label">Màu sắc</label>
+                                    <select asp-for="ID_Mau" class="form-control" asp-items="ViewBag.ID_MauSac">
+                                        <option value="">-- Chọn màu sắc --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_Mau" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ID_XuatXu" class="control-label">Xuất xứ</label>
+                                    <select asp-for="ID_XuatXu" class="form-control" asp-items="ViewBag.ID_XuatXu">
+                                        <option value="">-- Chọn xuất xứ --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_XuatXu" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ID_ThuongHieu" class="control-label">Thương hiệu</label>
+                                    <select asp-for="ID_ThuongHieu" class="form-control" asp-items="ViewBag.ID_ThuongHieu">
+                                        <option value="">-- Chọn thương hiệu --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_ThuongHieu" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ID_Size" class="control-label">Size</label>
+                                    <select asp-for="ID_Size" class="form-control" asp-items="ViewBag.ID_KichThuoc">
+                                        <option value="">-- Chọn size --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_Size" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ID_KieuDang" class="control-label">Kiểu dáng</label>
+                                    <select asp-for="ID_KieuDang" class="form-control" asp-items="ViewBag.ID_KieuDang">
+                                        <option value="">-- Chọn kiểu dáng --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_KieuDang" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="ID_ChatLieu" class="control-label">Chất liệu</label>
+                                    <select asp-for="ID_ChatLieu" class="form-control" asp-items="ViewBag.ID_ChatLieu">
+                                        <option value="">-- Chọn chất liệu --</option>
+                                    </select>
+                                    <span asp-validation-for="ID_ChatLieu" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="giaBan" class="control-label">Giá bán</label>
+                                    <input asp-for="giaBan" class="form-control" />
+                                    <span asp-validation-for="giaBan" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="soLuongTon" class="control-label">Số lượng</label>
+                                    <input asp-for="soLuongTon" class="form-control" />
+                                    <span asp-validation-for="soLuongTon" class="text-danger"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label asp-for="anhDaiDien" class="control-label">Ảnh đại diện</label>
+                                    <div class="image-preview-container mb-2">
+                                        <img id="preview" src="#" alt="Preview" class="img-thumbnail" style="max-width: 200px; display: none;" />
+                                    </div>
+                                    <input type="file" name="formFile" class="form-control" accept=".jpg,.jpeg,.png,.gif" required onchange="previewImage(this, 'preview')" />
+                                    <span asp-validation-for="anhDaiDien" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary">Thêm mới</button>
+                            <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="soLuongTon" class="control-label"></label>
-                <input asp-for="soLuongTon" class="form-control" />
-                <span asp-validation-for="soLuongTon" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function previewImage(input, previewId) {
+            var preview = document.getElementById(previewId);
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.style.display = 'none';
+            }
+        }
+    </script>
 }
