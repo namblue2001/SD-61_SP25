@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using Microsoft.Extensions.Logging;
 using StyleTee.Services;
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace StyleTee.Controllers
 {
@@ -120,7 +123,7 @@ namespace StyleTee.Controllers
 
             // Lưu district_id vào ViewBag
             ViewBag.DistrictId = districtId;
-
+            
             // Tạo danh sách chi tiết đơn hàng với đầy đủ thông tin
             var chiTietDonHang = new List<ChiTietDonHang>();
             foreach (var item in gioHang.GioHangChiTiet)
@@ -362,6 +365,40 @@ namespace StyleTee.Controllers
         public class DistrictRequest
         {
             public string districtName { get; set; }
+        }
+
+        [HttpPost]
+        public IActionResult HuyDonHang(Guid id)
+        {
+            try
+            {
+                var donHang = _context.DonHang.FirstOrDefault(d => d.ID_DonHang == id);
+                if (donHang == null)
+                {
+                    return Json(new { success = false, message = "Không tìm thấy đơn hàng" });
+                }
+
+                if (donHang.trangThaiDonHang != "Chờ xử lý")
+                {
+                    return Json(new { success = false, message = "Chỉ có thể hủy đơn hàng đang chờ xử lý" });
+                }
+
+                donHang.trangThaiDonHang = "Đã hủy";
+                _context.SaveChanges();
+
+                return Json(new { success = true });
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        private Guid GetCurrentUserId()
+        {
+            // TODO: Lấy ID của người dùng hiện tại từ hệ thống xác thực
+            // Tạm thời trả về một ID cố định để test
+            return Guid.Parse("YOUR_USER_ID_HERE");
         }
     }
 }
