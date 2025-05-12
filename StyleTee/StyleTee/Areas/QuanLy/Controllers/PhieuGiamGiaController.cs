@@ -26,7 +26,7 @@ namespace StyleTee.Areas.QuanLy.Controllers
         public async Task<IActionResult> Index()
         {
             Trang();
-            ViewBag.KhuyenMai = _context.KhuyenMai.ToList();
+            //ViewBag.KhuyenMai = _context.KhuyenMai.ToList();
             return _context.PhieuGiamGia != null ? View(await _context.PhieuGiamGia.ToListAsync()) : Problem("Entity set 'ApplicationDbContext.PhieuGiamGia'  is null.");
         }
 

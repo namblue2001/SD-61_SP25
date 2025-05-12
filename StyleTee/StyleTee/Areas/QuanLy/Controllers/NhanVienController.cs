@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace StyleTee.Areas.QuanLy.Controllers
 {
-
     [Area("QuanLy")]
     [Route("QuanLy")]
     [Route("QuanLy/NhanVien")]
@@ -22,11 +21,11 @@ namespace StyleTee.Areas.QuanLy.Controllers
         }
         [Route("Index")]
         public async Task<IActionResult> Index()
- {
-     Trang();
-     var nhanvien = _context.TaiKhoan.Where(x => x.tenVaiTro == "Nhân Viên");
-     return View(await nhanvien.ToListAsync());
- }
+        {
+            Trang();
+            var nhanvien = _context.TaiKhoan.Where(x => x.tenVaiTro == "Nhân Viên");
+            return View(await nhanvien.ToListAsync());
+        }
 
         [Route("Create")]
 
@@ -34,56 +33,57 @@ namespace StyleTee.Areas.QuanLy.Controllers
         {
             return View();
         }
-         public void Trang()
- {
+        public void Trang()
+        {
 
- }
+        }
+        [Route("Create")]
         [HttpPost]
         [ValidateAntiForgeryToken]
 
         public IActionResult Create(string hoTen, string email, string soDienThoai, DateTime ngaySinh, string gioiTinh, string taiKhoan, string matKhau, IFormFile? imageFile)
- {
+        {
 
-     var nhanvien = new TaiKhoan
-     {
-         hoTen = hoTen,
-         email = email,
-         soDienThoai = soDienThoai,
-         ngaySinh = ngaySinh,
-         gioiTinh = gioiTinh,
-         taiKhoan = taiKhoan,
-         matKhau = matKhau,
-         ID_TaiKhoan = Guid.NewGuid(),
-         trangThai = "Hoạt động",
-         tenVaiTro = "Nhân Viên",
-     };
-     if (imageFile != null && imageFile.FileName != null)
-     {
+            var nhanvien = new TaiKhoan
+            {
+                hoTen = hoTen,
+                email = email,
+                soDienThoai = soDienThoai,
+                ngaySinh = ngaySinh,
+                gioiTinh = gioiTinh,
+                taiKhoan = taiKhoan,
+                matKhau = matKhau,
+                ID_TaiKhoan = Guid.NewGuid(),
+                trangThai = "Hoạt động",
+                tenVaiTro = "Nhân Viên",
+            };
+            if (imageFile != null && imageFile.FileName != null)
+            {
 
-         // Thực hiện trỏ tới thu mục Root để copy file từ ngoài vào
-         var path = Path.Combine(Directory.GetCurrentDirectory(),
-             "wwwroot", "Image", imageFile.FileName);
-         // Kết quả thu được sẽ có dạng ~wwwroot/img/filename
-         var stream = new FileStream(path, FileMode.Create); // Mode = Create vì ta copy
-         imageFile.CopyTo(stream); // Copy ảnh vào stream có path là path mình vừa truyền
-                                   // Gán lại thuộc tính imageURL = đường dẫn vào file trong root
+                // Thực hiện trỏ tới thu mục Root để copy file từ ngoài vào
+                var path = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot", "Image", imageFile.FileName);
+                // Kết quả thu được sẽ có dạng ~wwwroot/img/filename
+                var stream = new FileStream(path, FileMode.Create); // Mode = Create vì ta copy
+                imageFile.CopyTo(stream); // Copy ảnh vào stream có path là path mình vừa truyền
+                                          // Gán lại thuộc tính imageURL = đường dẫn vào file trong root
 
-         nhanvien.anhDaiDien = imageFile.FileName;
-     };
-     try
-     {
-         _context.TaiKhoan.Add(nhanvien);
-         _context.SaveChanges();
-         return RedirectToAction("Index", "NhanVien");
-     }
-     catch (Exception ex)
-     {
-         Console.WriteLine(ex.Message);
-         TempData["lỗi"] = "Thông tin bạn nhập không đúng. Vui lòng kiểm tra lại";
-         return View(nhanvien);
-     }
+                nhanvien.anhDaiDien = imageFile.FileName;
+            };
+            try
+            {
+                _context.TaiKhoan.Add(nhanvien);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "NhanVien");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                TempData["lỗi"] = "Thông tin bạn nhập không đúng. Vui lòng kiểm tra lại";
+                return View(nhanvien);
+            }
 
- }
+        }
         [Route("Edit")]
         [HttpGet]
         public IActionResult Edit(Guid id)
@@ -91,6 +91,7 @@ namespace StyleTee.Areas.QuanLy.Controllers
             var staff = _context.TaiKhoan.FirstOrDefault(x => x.ID_TaiKhoan == id);
             return View(staff);
         }
+        [Route("Edit")]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(TaiKhoan nhanvien, IFormFile? imageFile, Guid id)

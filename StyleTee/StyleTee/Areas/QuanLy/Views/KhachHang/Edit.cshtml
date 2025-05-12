@@ -1,6 +1,6 @@
 ﻿@model StyleTee.Models.TaiKhoan
 @{
-    ViewData["Title"] = "Sửa thông tin nhân viên";
+    ViewData["Title"] = "Cập nhật khách hàng";
     Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
 }
 
@@ -9,7 +9,7 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header pb-0 d-flex justify-content-between align-items-center">
-                    <h6>Sửa thông tin nhân viên</h6>
+                    <h6>Sửa thông tin khách hàng</h6>
                     <a asp-action="Index" class="btn btn-secondary btn-sm">
                         <i class="fas fa-arrow-left"></i> Quay lại
                     </a>
@@ -28,16 +28,6 @@
                                     <span asp-validation-for="taiKhoan" class="text-danger"></span>
                                 </div>
                             </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label asp-for="matKhau" class="form-control-label">Mật khẩu</label>
-                                    <input asp-for="matKhau" class="form-control" type="password" />
-                                    <span asp-validation-for="matKhau" class="text-danger"></span>
-                                </div>
-                            </div>
-
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="email" class="form-control-label">Email</label>
@@ -45,9 +35,6 @@
                                     <span asp-validation-for="email" class="text-danger"></span>
                                 </div>
                             </div>
-
-
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="hoTen" class="form-control-label">Họ tên</label>
@@ -55,8 +42,6 @@
                                     <span asp-validation-for="hoTen" class="text-danger"></span>
                                 </div>
                             </div>
-
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="soDienThoai" class="form-control-label">Số điện thoại</label>
@@ -64,9 +49,6 @@
                                     <span asp-validation-for="soDienThoai" class="text-danger"></span>
                                 </div>
                             </div>
-
-
-
                             @*  <div class="col-md-6">
                             <div class="form-group">
                             <label asp-for="anhDaiDien" class="form-control-label">ảnh đại diện</label>
@@ -74,14 +56,12 @@
                             <span asp-validation-for="anhDaiDien" class="text-danger"></span>
                             </div>
                             </div> *@
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="form-control-label">Ảnh đại diện </label>
                                     <input type="file" name="imageFile" multiple class="form-control" asp-for="anhDaiDien" value="@Model.anhDaiDien" />
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="gioiTinh" class="form-control-label">Giới tính</label>
@@ -89,7 +69,6 @@
                                     <span asp-validation-for="gioiTinh" class="text-danger"></span>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="ngaySinh" class="form-control-label">Ngày sinh</label>
@@ -97,7 +76,6 @@
                                     <span asp-validation-for="ngaySinh" class="text-danger"></span>
                                 </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label asp-for="trangThai" class="form-control-label">Trạng thái</label>
@@ -105,17 +83,11 @@
                                     <span asp-validation-for="trangThai" class="text-danger"></span>
                                 </div>
                             </div>
-
-
-
-
                             <div class="form-group mt-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-save"></i> Cập nhật nhân viên
+                                    <i class="fas fa-save"></i> Cập nhật khách hàng
                                 </button>
-
                             </div>
-
                     </form>
                 </div>
 

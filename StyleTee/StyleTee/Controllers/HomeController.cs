@@ -20,6 +20,11 @@ public class HomeController : Controller
     public IActionResult HoSoQuanLy()
     {
         var id_taikhoan = HttpContext.Session.GetString("id_taikhoan");
+        if (string.IsNullOrEmpty(id_taikhoan))
+        {
+            // Nếu chưa đăng nhập, chuyển hướng về trang đăng nhập
+            return RedirectToAction("DangNhap", "Access", new { area = "" });
+        }
         var quanly = _context.TaiKhoan.FirstOrDefault(a => a.ID_TaiKhoan == Guid.Parse(id_taikhoan));
         TempData["Trang"] = "Hồ sơ";
         return View(quanly);
