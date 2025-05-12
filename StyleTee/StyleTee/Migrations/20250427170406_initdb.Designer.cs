@@ -12,8 +12,8 @@ using StyleTee.Data;
 namespace StyleTee.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250404092613_linn")]
-    partial class linn
+    [Migration("20250427170406_initdb")]
+    partial class initdb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -354,9 +354,6 @@ namespace StyleTee.Migrations
                     b.Property<Guid>("ID_MaGiamGia")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("ID_PhuongThucThanhToan")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("ID_TaiKhoan")
                         .HasColumnType("uniqueidentifier");
 
@@ -373,6 +370,10 @@ namespace StyleTee.Migrations
                     b.Property<decimal>("phiVanChuyen")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("phuongThucThanhToan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("tongTien")
                         .HasColumnType("decimal(18,2)");
 
@@ -387,8 +388,6 @@ namespace StyleTee.Migrations
                     b.HasKey("ID_DonHang");
 
                     b.HasIndex("ID_MaGiamGia");
-
-                    b.HasIndex("ID_PhuongThucThanhToan");
 
                     b.HasIndex("ID_TaiKhoan");
 
@@ -654,25 +653,6 @@ namespace StyleTee.Migrations
                         .HasDatabaseName("UQ_TenPhieuGiamGia");
 
                     b.ToTable("PhieuGiamGia");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.PhuongThucThanhToan", b =>
-                {
-                    b.Property<Guid>("ID_PTTT")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("tenPhuongThuc")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("trangThai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID_PTTT");
-
-                    b.ToTable("PhuongThucThanhToan");
                 });
 
             modelBuilder.Entity("StyleTee.Models.SanPham", b =>
@@ -1043,12 +1023,6 @@ namespace StyleTee.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("StyleTee.Models.PhuongThucThanhToan", "PhuongThucThanhToan")
-                        .WithMany("DonHang")
-                        .HasForeignKey("ID_PhuongThucThanhToan")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("StyleTee.Models.TaiKhoan", "TaiKhoan")
                         .WithMany("DonHang")
                         .HasForeignKey("ID_TaiKhoan")
@@ -1062,8 +1036,6 @@ namespace StyleTee.Migrations
                         .IsRequired();
 
                     b.Navigation("PhieuGiamGia");
-
-                    b.Navigation("PhuongThucThanhToan");
 
                     b.Navigation("TaiKhoan");
 
@@ -1291,11 +1263,6 @@ namespace StyleTee.Migrations
                 });
 
             modelBuilder.Entity("StyleTee.Models.PhieuGiamGiaVaKhuyenMai.PhieuGiamGia", b =>
-                {
-                    b.Navigation("DonHang");
-                });
-
-            modelBuilder.Entity("StyleTee.Models.PhuongThucThanhToan", b =>
                 {
                     b.Navigation("DonHang");
                 });
