@@ -1,0 +1,61 @@
+﻿@model StyleTee.Models.TaiKhoan
+@{
+    ViewData["Title"] = "Chi tiết nhân viên";
+    Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                    <h6>Chi tiết nhân viên</h6>
+                    <a asp-action="Index" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            @if (!string.IsNullOrEmpty(Model.anhDaiDien))
+                            {
+                                <img src="~/LayoutAdmin/img/NhanVien/@Model.anhDaiDien" class="img-fluid rounded-circle" style="max-height: 200px;" />
+                            }
+                            else
+                            {
+                                <img src="https://via.placeholder.com/200" class="img-fluid rounded-circle" />
+                            }
+                        </div>
+                        <div class="col-md-8">
+                            <dl class="row">
+                                <dt class="col-sm-4">Tên đăng nhập:</dt>
+                                <dd class="col-sm-8">@Model.taiKhoan</dd>
+
+                                <dt class="col-sm-4">Email:</dt>
+                                <dd class="col-sm-8">@Model.email</dd>
+
+                                <dt class="col-sm-4">Họ tên:</dt>
+                                <dd class="col-sm-8">@Model.hoTen</dd>
+
+                                <dt class="col-sm-4">Số điện thoại:</dt>
+                                <dd class="col-sm-8">@Model.soDienThoai</dd>
+
+                                <dt class="col-sm-4">Giới tính:</dt>
+                                <dd class="col-sm-8">@Model.gioiTinh</dd>
+
+                                <dt class="col-sm-4">Ngày sinh:</dt>
+                                <dd class="col-sm-8">@Model.ngaySinh.ToString("dd/MM/yyyy")</dd>
+
+                                <dt class="col-sm-4">Vai trò:</dt>
+                                <dd class="col-sm-8">@Model.tenVaiTro</dd>
+
+                                <dt class="col-sm-4">Trạng thái:</dt>
+                                <dd class="col-sm-8">@Model.trangThai</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

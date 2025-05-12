@@ -25,7 +25,7 @@ namespace StyleTee.Models
         [Column(TypeName = "decimal(18,2)")]
         public decimal giaBan { get; set; }
         public string anhDaiDien {get;set;}
-        public DateTime ngayTao {get;set;}
+        public DateTime ngayTao {get;set;} = DateTime.Now;
         public int soLuongTon {get;set;}
         public ChatLieu ChatLieu { get; set; }
         public KieuDang  KieuDang { get; set; }

@@ -8,7 +8,6 @@ using System.Linq;
 
 namespace StyleTee.Areas.QuanLy.Controllers
 {
-
     [Area("QuanLy")]
     [Route("QuanLy")]
     [Route("QuanLy/NhanVien")]
@@ -77,7 +76,6 @@ namespace StyleTee.Areas.QuanLy.Controllers
         [Route("Create")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-
         public IActionResult Create(TaiKhoan nhanvien, IFormFile? imageFile)
         {
             try

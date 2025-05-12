@@ -1,0 +1,97 @@
+﻿@model StyleTee.Models.TaiKhoan
+@{
+    ViewData["Title"] = "Thêm khách hàng";
+    Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
+}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-4">
+                <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+                    <h6>Thêm khách hàng</h6>
+                    <a asp-action="Index" class="btn btn-secondary btn-sm">
+                        <i class="fas fa-arrow-left"></i> Quay lại
+                    </a>
+                </div>
+
+                <div class="card-body">
+                    <form asp-action="Create" asp-controller="KhachHang" method="post" enctype="multipart/form-data">
+                        @Html.AntiForgeryToken()
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="hoTen" class="form-control-label">Họ và tên</label>
+                                    <input asp-for="hoTen" class="form-control" />
+                                    <span asp-validation-for="hoTen" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="email" class="form-control-label">Email</label>
+                                    <input asp-for="email" class="form-control" />
+                                    <span asp-validation-for="email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="soDienThoai" class="form-control-label">Số điện thoại</label>
+                                    <input asp-for="soDienThoai" class="form-control" />
+                                    <span asp-validation-for="soDienThoai" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ngaySinh" class="form-control-label">Ngày Sinh</label>
+                                    <input asp-for="ngaySinh" type="date" class="form-control" />
+                                    <span asp-validation-for="ngaySinh" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="gioiTinh" class="form-control-label">Giới tính</label>
+                                    <select asp-for="gioiTinh" class="form-control">
+                                        <option value="">-- Chọn giới tính --</option>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </select>
+                                    <span asp-validation-for="gioiTinh" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-control-label">Ảnh đại diện </label>
+                                    <input type="file" name="imageFile" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="taiKhoan" class="form-control-label">Tên đăng nhập</label>
+                                    <input asp-for="taiKhoan" class="form-control" />
+                                    <span asp-validation-for="taiKhoan" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="matKhau" class="form-control-label">Mật khẩu</label>
+                                    <input asp-for="matKhau" class="form-control" />
+                                    <span asp-validation-for="matKhau" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-4">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Thêm khách hàng
+                            </button>
+                        </div>
+                    </form>
+                    @section Scripts {
+                        @{
+                            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,25 +1,17 @@
 ﻿@model IEnumerable<StyleTee.Models.TaiKhoan>
-
 @{
-    ViewData["Title"] = "Index";
-}
-
-@{
-    ViewData["Title"] = "Danh sách nhân viên";
-    List<string> imageExtension = new List<string>()
-    {
-        ".jpg",".png",".webp",".tiff",".gif",".jpeg",".svg"
-    };
+    ViewData["Title"] = "Danh sách khách hàng";
     Layout = "~/Areas/QuanLy/Views/Shared/_LayoutQuanLy.cshtml";
+    List<string> imageExtension = new() { ".jpg", ".png", ".webp", ".gif", ".jpeg" };
 }
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header pb-0 d-flex justify-content-between align-items-center">
-                    <h6>Danh sách nhân viên</h6>
+                    <h6>Danh sách khách hàng</h6>
                     <a asp-action="Create" class="btn btn-primary btn-sm">
-                        <i class="fas fa-plus"></i> Thêm nhân viên mới
+                        <i class="fas fa-plus"></i> Thêm khách hàng mới
                     </a>
                 </div>
                 <div class="card-body px-0 pt-0 pb-2">
@@ -28,9 +20,8 @@
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên đăng nhập</th>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mật khẩu</th>
-                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Họ tên</th>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Email</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Số điện thoại</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ảnh đại diện</th>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Giới tính</th>
@@ -44,18 +35,14 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.taiKhoan</p>
                                         </td>
                                         <td>
-                                            <p class="text-xs font-weight-bold mb-0">@item.matKhau</p>
+                                            <p class="text-xs font-weight-bold mb-0">@item.hoTen</p>
                                         </td>
                                         <td>
                                             <p class="text-xs font-weight-bold mb-0">@item.email</p>
-                                        </td>
-                                        <td>
-                                            <p class="text-xs font-weight-bold mb-0">@item.hoTen</p>
                                         </td>
 
                                         <td>
@@ -68,7 +55,7 @@
                                             }
                                             @if (imageExtension.Contains(extension)) // Check đuôi ảnh
                                             {
-                                                <img src="~/Image/@item.anhDaiDien" height="100px">
+                                                <img src="~/LayoutAdmin/img/NhanVien/@item.anhDaiDien" height="100px">
                                                 // Gán ảnh
                                             }
                                             else // Nếu không đúng ta set 1 ảnh mặc định
@@ -96,7 +83,6 @@
                                             <a asp-action="Details" asp-route-id="@item.ID_TaiKhoan" class="btn btn-yellow btn-sm text-secondary ">
                                                 Chi tiết
                                             </a>
-
                                         </td>
                                     </tr>
                                 }

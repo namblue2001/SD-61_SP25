@@ -1,152 +1,156 @@
-﻿@model GioHang
+﻿@model List<GioHangChiTietViewModel>
 
-<div class="container mt-5">
-    <h2 class="text-center mb-4">🛒 Giỏ hàng của bạn</h2>
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">🛒 Giỏ Hàng Của Bạn</h2>
 
-    @if (Model.GioHangChiTiet != null && Model.GioHangChiTiet.Any())
+    @if (Model != null && Model.Any())
     {
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="card shadow-lg p-4 border-0">
-                    <table class="table align-middle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>Hình ảnh</th>
-                                <th>Tên sản phẩm</th>
-                                <th>Đơn giá</th>
-                                <th>Số lượng</th>
-                                <th>Thành tiền</th>
-                                <th>Hành động</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model.GioHangChiTiet)
-                            {
-                                <tr class="border-bottom">
-                                    <td>
-                                        <img src="@item.SanPhamChiTiet.HinhAnh.FirstOrDefault()?.url_hinhAnh" class="img-thumbnail" width="60" height="60">
-                                    </td>
-                                    <td>
-                                        <strong>@item.SanPhamChiTiet.SanPham.tenSanPham</strong>
-                                        <br>
-                                        <small class="text-muted">
-                                            Size: @item.SanPhamChiTiet.KichThuoc.tenKichThuoc |
-                                            Màu: @item.SanPhamChiTiet.MauSac.tenMauSac
-                                        </small>
-                                    </td>
-                                    <td class="text-primary fw-bold">@item.donGia.ToString("N0") đ</td>
-                                    <td>
-                                        <form method="post" asp-action="UpdateQuantity" asp-controller="GioHang" class="d-flex align-items-center">
-                                            <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet">
-                                            <input type="number" name="soLuong" value="@item.soLuong" min="1" class="form-control text-center mx-2" style="width: 70px;">
-                                            <button type="submit" class="btn btn-sm btn-outline-secondary">✔</button>
-                                        </form>
-                                    </td>
-                                    <td class="text-success fw-bold">@((item.donGia * item.soLuong).ToString("N0")) đ</td>
-                                    <td>
-                                        <form method="post" asp-action="RemoveFromCart" asp-controller="GioHang">
-                                            <input type="hidden" name="idSanPhamChiTiet" value="@item.ID_SanPhamChiTiet">
-                                            <button type="submit" class="btn btn-sm btn-danger">🗑</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
+        <table class="table table-bordered text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>Sản Phẩm</th>
+                    <th>Đơn Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành Tiền</th>
+                    <th>Thao Tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="product-checkbox" data-id="@item.ID_SanPhamChiTiet">
+                        </td>
+                        <td class="d-flex align-items-center">
+                            <img src="~/images/@item.AnhDaiDien" class="img-thumbnail me-2" width="60">
+                            <span>@item.TenSanPham</span>
+                        </td>
+                        <td class="donGia text-danger fw-bold">@item.DonGia.ToString("N0") đ</td>
+                        <td>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('@item.ID_SanPhamChiTiet', -1)">-</button>
+                                <input type="text" class="form-control text-center mx-2 soLuong" value="@item.SoLuong" style="width: 50px;" readonly>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="updateQuantity('@item.ID_SanPhamChiTiet', 1)">+</button>
+                            </div>
+                        </td>
+                        <td class="fw-bold thanhTien">@((item.SoLuong * item.DonGia).ToString("N0")) đ</td>
+                        <td>
+                            <a asp-action="XoaKhoiGio" asp-route-sanPhamChiTietId="@item.ID_SanPhamChiTiet" class="btn btn-danger btn-sm">
+                                🗑 Xóa
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+                <button class="btn btn-outline-danger btn-sm" onclick="removeSelected()">🗑 Xóa đã chọn</button>
+            </div>
+            <div class="fw-bold fs-5">
+                Tổng tiền: <span id="tongTien" class="text-danger">0 đ</span>
+            </div>
+            <a asp-controller="GioHang" asp-action="XacNhanDonHang" class="btn btn-success btn-lg">💳 Thanh Toán</a>
+        </div>
+
+        <div class="border p-3 rounded shadow-sm bg-white">
+            <h5>🚚 Thông Tin Vận Chuyển</h5>
+            <div class="mb-2">
+                Phí vận chuyển: <span id="phiVanChuyen">--</span>
+                <div id="shippingSpinner" class="spinner-border text-secondary d-none ms-2" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
             </div>
-
-            <!-- Thông tin tổng tiền -->
-            <div class="col-lg-4">
-                <div class="card shadow-lg border-0 p-4">
-                    <h4 class="text-center">🛍 Thông tin giỏ hàng</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Tạm tính:
-                            <span class="fw-bold text-primary" id="tamTinh">0 đ</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <strong>Tổng cộng:</strong>
-                            <span class="fw-bold text-danger fs-5" id="tongCong">0 đ</span>
-                        </li>
-                    </ul>
-                    <div class="text-center mt-3">
-                        <a href="/" class="btn btn-outline-primary w-100 mb-2">🔙 Tiếp tục mua hàng</a>
-                        <a asp-action="XacNhanDonHang" class="btn btn-success w-100">💳 Thanh toán</a>
-                    </div>
-                </div>
+            <div>
+                Tổng thanh toán: <span id="tongThanhToan" class="fw-bold text-success fs-5">--</span>
             </div>
         </div>
     }
     else
     {
         <div class="alert alert-warning text-center">
-            <h5>Giỏ hàng trống 🛒</h5>
-            <a href="/" class="btn btn-primary mt-3">Bắt đầu mua sắm</a>
+            <h5>Giỏ hàng của bạn đang trống! 😢</h5>
+            <a asp-controller="SanPham" asp-action="Index" class="btn btn-primary">🛒 Mua sắm ngay</a>
         </div>
     }
 </div>
 
 @section Scripts {
     <script>
-        $(document).ready(function() {
-            // Hiển thị spinner khi bắt đầu tính phí
-            $('#shippingSpinner').removeClass('d-none');
-            
-            // Lấy địa chỉ mặc định của người dùng
-            $.get('/DiaChi/GetDefaultAddress', function(response) {
-                console.log('Response từ GetDefaultAddress:', response);
-                
-                if (response.error) {
-                    console.error('Lỗi lấy địa chỉ:', response.error);
-                    $('#shippingSpinner').addClass('d-none');
-                    return;
+        function updateQuantity(id, change) {
+            let input = document.querySelector(`[data-id='${id}']`).closest('tr').querySelector(".soLuong");
+            let newValue = Math.max(1, parseInt(input.value) + change);
+            input.value = newValue;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll("tbody tr").forEach(row => {
+                if (row.querySelector(".product-checkbox").checked) {
+                    let price = parseInt(row.querySelector(".donGia").textContent.replace(/\D/g, ""));
+                    let quantity = parseInt(row.querySelector(".soLuong").value);
+                    total += price * quantity;
+                    row.querySelector(".thanhTien").textContent = (price * quantity).toLocaleString() + " đ";
                 }
-                
+            });
+            document.getElementById("tongTien").textContent = total.toLocaleString() + " đ";
+        }
+
+        document.getElementById("select-all").addEventListener("change", function () {
+            let checked = this.checked;
+            document.querySelectorAll(".product-checkbox").forEach(cb => cb.checked = checked);
+            updateTotal();
+        });
+
+        document.querySelectorAll(".product-checkbox").forEach(cb => {
+            cb.addEventListener("change", updateTotal);
+        });
+
+        function removeSelected() {
+            let selectedItems = document.querySelectorAll(".product-checkbox:checked");
+            if (selectedItems.length === 0) {
+                alert("Vui lòng chọn ít nhất một sản phẩm để xóa!");
+                return;
+            }
+            if (confirm("Bạn có chắc muốn xóa các sản phẩm đã chọn?")) {
+                selectedItems.forEach(item => {
+                    let id = item.dataset.id;
+                    window.location.href = `/GioHang/XoaKhoiGio?sanPhamChiTietId=${id}`;
+                });
+            }
+        }
+
+        $(document).ready(function () {
+            $('#shippingSpinner').removeClass('d-none');
+
+            $.get('/DiaChi/GetDefaultAddress', function (response) {
                 if (response.diaChi) {
-                    // Gọi API tính phí vận chuyển
-                    $.get('/Shipping/CalculateFee', { diaChi: response.diaChi }, function(response) {
-                        console.log('Response từ CalculateFee:', response);
-                        
-                        if (response.error) {
-                            console.error('Lỗi tính phí vận chuyển:', response.error);
-                            $('#shippingSpinner').addClass('d-none');
-                            return;
+                    $.get('/Shipping/CalculateFee', { diaChi: response.diaChi }, function (feeResp) {
+                        if (!feeResp.error) {
+                            $('#phiVanChuyen').text(feeResp.phiVanChuyen.toLocaleString('vi-VN') + ' đ');
+
+                            let tamTinh = 0;
+                            $(".product-checkbox:checked").each(function () {
+                                let row = $(this).closest('tr');
+                                let price = parseInt(row.find(".donGia").text().replace(/\D/g, ""));
+                                let qty = parseInt(row.find(".soLuong").val());
+                                tamTinh += price * qty;
+                            });
+
+                            let tongThanhToan = tamTinh + feeResp.phiVanChuyen;
+                            $('#tongThanhToan').text(tongThanhToan.toLocaleString('vi-VN') + ' đ');
                         }
-                        
-                        // Cập nhật phí vận chuyển
-                        $('#phiVanChuyen').text(response.phiVanChuyen.toLocaleString() + ' đ');
-                        
-                        // Tính tổng thanh toán
-                        var tamTinh = @Model.GioHangChiTiet.Sum(item => item.donGia * item.soLuong);
-                        var tongThanhToan = tamTinh + response.phiVanChuyen;
-                        $('#tongThanhToan').text(tongThanhToan.toLocaleString() + ' đ');
-                        
-                        // Ẩn spinner sau khi hoàn thành
-                        $('#shippingSpinner').addClass('d-none');
-                    }).fail(function(jqXHR, textStatus, errorThrown) {
-                        console.error('Lỗi khi gọi API tính phí:', textStatus, errorThrown);
                         $('#shippingSpinner').addClass('d-none');
                     });
                 } else {
                     $('#shippingSpinner').addClass('d-none');
                 }
-            }).fail(function(jqXHR, textStatus, errorThrown) {
-                console.error('Lỗi khi lấy địa chỉ:', textStatus, errorThrown);
-                $('#shippingSpinner').addClass('d-none');
             });
         });
-
-        function capNhatTongTien() {
-            var tongTien = 0;
-            $('.soLuong').each(function() {
-                var soLuong = parseInt($(this).val());
-                var donGia = parseFloat($(this).closest('tr').find('.donGia').text().replace(/[^\d]/g, ''));
-                tongTien += soLuong * donGia;
-            });
-            $('#tamTinh').text(tongTien.toLocaleString('vi-VN') + ' đ');
-            $('#tongCong').text(tongTien.toLocaleString('vi-VN') + ' đ');
-        }
     </script>
 }
 
@@ -176,4 +180,4 @@
     .shadow-lg {
         border-radius: 12px;
     }
-</style> 
+</style>
