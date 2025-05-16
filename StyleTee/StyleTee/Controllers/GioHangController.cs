@@ -3,6 +3,7 @@ using StyleTee.Models;
 using Microsoft.EntityFrameworkCore;
 using StyleTee.Data;
 using Microsoft.Extensions.Logging;
+using StyleTee.Services;
 //using StyleTee.Services;
 
 namespace StyleTee.Controllers
@@ -11,13 +12,13 @@ namespace StyleTee.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly ILogger<GioHangController> _logger;
-        //private readonly GHNService _ghnService;
+        private readonly GHNService _ghnService;
 
-        public GioHangController(ApplicationDbContext context, ILogger<GioHangController> logger/*, GHNService ghnService*/)
+        public GioHangController(ApplicationDbContext context, ILogger<GioHangController> logger, GHNService ghnService)
         {
             _context = context;
             _logger = logger;
-            //_ghnService = ghnService;
+            _ghnService = ghnService;
         }
         // 📌 **Hàm lấy ID người dùng đang đăng nhập**
         private Guid? GetUserId()
@@ -105,9 +106,20 @@ namespace StyleTee.Controllers
             return RedirectToAction("Index");
         }
         // Hiển thị trang xác nhận đơn hàng
-        public async Task<IActionResult> XacNhanDonHang()
+        public async Task<IActionResult> XacNhanDonHang(string selectedItems)
         {
             var idTaiKhoan = GetUserId();
+            if (idTaiKhoan == null) return RedirectToAction("DangNhap", "Access");
+
+            // Chuyển đổi chuỗi selectedItems thành danh sách Guid
+            var selectedProductIds = selectedItems?.Split(',')
+                .Select(id => Guid.Parse(id))
+                .ToList() ?? new List<Guid>();
+
+            if (!selectedProductIds.Any())
+            {
+                return RedirectToAction("Index");
+            }
 
             var gioHang = await _context.GioHang
                 .Include(g => g.GioHangChiTiet)
@@ -124,14 +136,23 @@ namespace StyleTee.Controllers
                         .ThenInclude(sp => sp.MauSac)
                 .FirstOrDefaultAsync(g => g.ID_TaiKhoan == idTaiKhoan);
 
-            if (gioHang == null || !gioHang.GioHangChiTiet.Any())
+            if (gioHang == null)
             {
                 return RedirectToAction("Index");
             }
 
             // Lấy danh sách tỉnh/thành phố từ GHN
-            //var provinces = await _ghnService.GetProvinces();
-            //ViewBag.Provinces = provinces;
+            var provinces = await _ghnService.GetProvinces();
+            ViewBag.Provinces = provinces;
+            // Lọc chỉ lấy các sản phẩm đã chọn
+            var selectedCartItems = gioHang.GioHangChiTiet
+                .Where(ct => selectedProductIds.Contains(ct.ID_SanPhamChiTiet))
+                .ToList();
+
+            if (!selectedCartItems.Any())
+            {
+                return RedirectToAction("Index");
+            }
 
             // Lấy thông tin tài khoản và địa chỉ
             var taiKhoan = await _context.TaiKhoan
@@ -151,18 +172,18 @@ namespace StyleTee.Controllers
                 .FirstOrDefault(dc => dc.trangThai == "Hoạt động");
 
             // Lấy district_id từ GHN API
-            //int? districtId = null;
-            //if (diaChiMacDinh != null && !string.IsNullOrEmpty(diaChiMacDinh.huyen))
-            //{
-            //    districtId = await _ghnService.GetDistrictIdByName(diaChiMacDinh.huyen);
-            //}
+            int? districtId = null;
+            if (diaChiMacDinh != null && !string.IsNullOrEmpty(diaChiMacDinh.huyen))
+            {
+                districtId = await _ghnService.GetDistrictIdByName(diaChiMacDinh.huyen);
+            }
 
             // Lưu district_id vào ViewBag
-            //ViewBag.DistrictId = districtId;
+            ViewBag.DistrictId = districtId;
 
             // Tạo danh sách chi tiết đơn hàng với đầy đủ thông tin
             var chiTietDonHang = new List<ChiTietDonHang>();
-            foreach (var item in gioHang.GioHangChiTiet)
+            foreach (var item in selectedCartItems)
             {
                 var sanPhamChiTiet = await _context.SanPhamChiTiet
                     .Include(sp => sp.SanPham)
@@ -184,12 +205,8 @@ namespace StyleTee.Controllers
 
             var donHang = new DonHang
             {
-                //tongTien = gioHang.GioHangChiTiet.Sum(item => item.donGia * item.soLuong),
-                //diaChiVanChuyen = diaChiMacDinh != null 
-                //    ? $"{diaChiMacDinh.soNha}, {diaChiMacDinh.xa}, {diaChiMacDinh.huyen}, {diaChiMacDinh.tinhThanhPho}"
-                //    : "",
-                //phuongThucThanhToan = "Thanh toán khi nhận hàng", // Mặc định
-                //ChiTietDonHang = chiTietDonHang
+                tongTien = chiTietDonHang.Sum(item => item.donGia * item.soLuong),
+                ChiTietDonHang = chiTietDonHang
             };
 
             return View(donHang);
@@ -372,19 +389,19 @@ namespace StyleTee.Controllers
             }
         }
 
-        //[HttpPost]
-        //public async Task<IActionResult> GetDistricts(int provinceId)
-        //{
-        //    var districts = await _ghnService.GetDistrictsByProvinceId(provinceId);
-        //    return Json(new { success = true, districts = districts });
-        //}
+        [HttpPost]
+        public async Task<IActionResult> GetDistricts(int provinceId)
+        {
+            var districts = await _ghnService.GetDistrictsByProvinceId(provinceId);
+            return Json(new { success = true, districts = districts });
+        }
 
-        //[HttpPost]
-        //public async Task<IActionResult> CalculateShippingFee(int districtId)
-        //{
-        //    var fee = await _ghnService.CalculateShippingFee(districtId);
-        //    return Json(new { success = true, fee = fee });
-        //}
+        [HttpPost]
+        public async Task<IActionResult> CalculateShippingFee(int districtId)
+        {
+            var fee = await _ghnService.CalculateShippingFee(districtId);
+            return Json(new { success = true, fee = fee });
+        }
 
         public class DistrictRequest
         {

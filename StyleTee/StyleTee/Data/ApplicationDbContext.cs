@@ -1,11 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using StyleTee.Models;
 using StyleTee.Models.PhieuGiamGiaVaKhuyenMai;
 
 namespace StyleTee.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
@@ -66,9 +65,17 @@ public class ApplicationDbContext : IdentityDbContext
         builder.Entity<DonHang>().HasOne(x => x.PhieuGiamGia).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_MaGiamGia);
         builder.Entity<AnhMinhChung>().HasOne(x => x.YeuCauDoiTra).WithMany(p=>p.AnhMinhChung).HasForeignKey(x => x.ID_YeuCauDoiTra);
         builder.Entity<YeuCauDoiTra>().HasOne(x => x.DonHang).WithMany(p=>p.YeuCauDoiTra).HasForeignKey(x => x.ID_DonHang);
-        builder.Entity<SanPhamDoiTra>().HasOne(x => x.ChiTietDonHang).WithMany(p=>p.SanPhamDoiTra).HasForeignKey(x => x.ID_ChiTietDonHang);
-        builder.Entity<SanPhamDoiTra>().HasOne(x => x.YeuCauDoiTra).WithMany(p=>p.SanPhamDoiTra).HasForeignKey(x => x.ID_YeuCauDoiTra);
+        builder.Entity<SanPhamDoiTra>()
+            .HasOne(x => x.ChiTietDonHang)
+            .WithMany(p => p.SanPhamDoiTra)
+            .HasForeignKey(x => x.ID_ChiTietDonHang)
+            .OnDelete(DeleteBehavior.NoAction);
 
+        builder.Entity<SanPhamDoiTra>()
+            .HasOne(x => x.YeuCauDoiTra)
+            .WithMany(p => p.SanPhamDoiTra)
+            .HasForeignKey(x => x.ID_YeuCauDoiTra)
+            .OnDelete(DeleteBehavior.NoAction);
     }
 }
 

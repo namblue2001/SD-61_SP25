@@ -53,7 +53,7 @@
             <div class="fw-bold fs-5">
                 Tổng tiền: <span id="tongTien" class="text-danger">0 đ</span>
             </div>
-            <a asp-controller="GioHang" asp-action="XacNhanDonHang" class="btn btn-success btn-lg">💳 Thanh Toán</a>
+            <button onclick="thanhToan()" class="btn btn-success btn-lg">💳 Thanh Toán</button>
         </div>
 
         <div class="border p-3 rounded shadow-sm bg-white">
@@ -122,6 +122,21 @@
                     window.location.href = `/GioHang/XoaKhoiGio?sanPhamChiTietId=${id}`;
                 });
             }
+        }
+
+        function thanhToan() {
+            let selectedItems = [];
+            document.querySelectorAll(".product-checkbox:checked").forEach(cb => {
+                selectedItems.push(cb.dataset.id);
+            });
+
+            if (selectedItems.length === 0) {
+                alert("Vui lòng chọn ít nhất một sản phẩm để thanh toán!");
+                return;
+            }
+
+            // Chuyển hướng đến trang xác nhận đơn hàng với danh sách sản phẩm đã chọn
+            window.location.href = `/GioHang/XacNhanDonHang?selectedItems=${selectedItems.join(',')}`;
         }
 
         $(document).ready(function () {

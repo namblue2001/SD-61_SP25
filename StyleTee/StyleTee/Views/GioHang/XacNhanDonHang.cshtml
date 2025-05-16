@@ -262,19 +262,19 @@
         $(document).ready(function() {
             // Lưu danh sách tỉnh/thành phố vào biến
             var provinces = [];
-            @if (ViewBag.Provinces != null)
+        @if (ViewBag.Provinces != null)
+        {
+            foreach (var province in ViewBag.Provinces)
             {
-                foreach (var province in ViewBag.Provinces)
-                {
-                    <text>
-                    provinces.push({
-                        id: parseInt('@province.ProvinceID'),
-                        name: '@Html.Raw(province.ProvinceName)',
-                        extensions: @Json.Serialize(province.NameExtension ?? new List<string>())
-                    });
-                    </text>
-                }
+                <text>
+                              provinces.push({
+                                id: parseInt('@province.ProvinceID'),
+                                name: '@Html.Raw(province.ProvinceName)',
+                                extensions: @Json.Serialize(province.NameExtension ?? new List<string>())
+                            });
+                </text>
             }
+        }
 
             // Lưu địa chỉ mới
             $('#btnLuuDiaChi').click(function() {
@@ -305,7 +305,7 @@
                     $(this).val(''); // Reset selection
                     return;
                 }
-                
+
                 // Reset tất cả giá trị
                 $('#provinceId').text('-');
                 $('#provinceName').text('-');
@@ -323,7 +323,7 @@
                 var selectedOption = $(this).find('option:selected');
                 var tinhThanhPho = selectedOption.data('tinh');
                 var huyen = selectedOption.data('huyen');
-                
+
                 if (!tinhThanhPho) {
                     $('#districtTable tbody').html(`
                         <tr>
@@ -336,13 +336,13 @@
                 // Bước 1: Tìm ID tỉnh/thành phố
                 var foundProvince = null;
                 var normalizedTinhThanhPho = tinhThanhPho.toLowerCase().replace(/[^a-z0-9]/g, '');
-                
+
                 for (var i = 0; i < provinces.length; i++) {
                     var province = provinces[i];
                     var normalizedProvinceName = province.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-                    
-                    if (normalizedTinhThanhPho === normalizedProvinceName || 
-                        (province.extensions && province.extensions.some(ext => 
+
+                    if (normalizedTinhThanhPho === normalizedProvinceName ||
+                        (province.extensions && province.extensions.some(ext =>
                             normalizedTinhThanhPho === ext.toLowerCase().replace(/[^a-z0-9]/g, '')
                         ))) {
                         foundProvince = {
@@ -352,7 +352,7 @@
                         break;
                     }
                 }
-                
+
                 if (!foundProvince) {
                     $('#districtTable tbody').html(`
                         <tr>
@@ -385,19 +385,19 @@
 
                         var tbody = $('#districtTable tbody');
                         tbody.empty();
-                        
+
                         // Tìm quận/huyện tương ứng
                         var foundDistrict = null;
                         var normalizedHuyen = huyen.toLowerCase().replace(/[^a-z0-9]/g, '');
-                        
+
                         response.districts.forEach(function(district) {
                             var normalizedDistrictName = district.districtName.toLowerCase().replace(/[^a-z0-9]/g, '');
                             var isMatch = normalizedDistrictName === normalizedHuyen;
-                            
+
                             if (isMatch) {
                                 foundDistrict = district;
                             }
-                            
+
                             tbody.append(`
                                 <tr class="${isMatch ? 'table-success' : ''}">
                                     <td>${district.districtID}</td>
@@ -428,7 +428,7 @@
                                     console.log('Bước 3: Phí vận chuyển:', response.fee);
                                     $('#phiVanChuyenInput').val(response.fee.toLocaleString('vi-VN'));
                                     $('#phiVanChuyen').text(response.fee.toLocaleString('vi-VN') + 'đ');
-                                    
+
                                     // Cập nhật tổng cộng
                                     var tongTien = parseInt('@Model.tongTien');
                                     var tongCong = tongTien + response.fee;
@@ -496,4 +496,4 @@
             });
         });
     </script>
-} 
+}
