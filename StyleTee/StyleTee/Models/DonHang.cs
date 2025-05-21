@@ -19,11 +19,13 @@ namespace StyleTee.Models
         [Required]
         public decimal tongTien { get; set; }
 
+        public Guid? ID_MaGiamGia { get; set; }
+
         [Required]
-        public Guid ID_ThongTinVanChuyen { get; set; }
+        public string soDienThoai { get; set; }
+
         [Required]
-       
-        public Guid ID_MaGiamGia { get; set; }
+        public string diaChi { get; set; }
 
         public decimal phiVanChuyen { get; set; }
         public string trangThaiDonHang { get; set; }
@@ -31,14 +33,12 @@ namespace StyleTee.Models
         public string phuongThucThanhToan { get; set; }
         public string ghiChu { get; set; }
 
-
         // Navigation properties
         //public virtual ApplicationUser User { get; set; }
         public virtual ICollection<ChiTietDonHang> ChiTietDonHang { get; set; }
         public virtual ICollection<LichSuDonHang> LichSuDonHang { get; set; }
         public virtual ICollection<YeuCauDoiTra> YeuCauDoiTra { get; set; }
         public virtual ICollection<HoaDon> HoaDon { get; set; }
-        public virtual ThongTinVanChuyen ThongTinVanChuyen { get; set; }
         public virtual PhieuGiamGia PhieuGiamGia { get; set; }
         public virtual TaiKhoan TaiKhoan { get; set; }
     }

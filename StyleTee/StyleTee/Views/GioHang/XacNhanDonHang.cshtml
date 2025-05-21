@@ -30,8 +30,9 @@
                                                 {
                                                     <option value="@($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")"
                                                             data-tinh="@diaChi.tinhThanhPho"
-                                                            data-huyen="@diaChi.huyen">
-                                                        @($"{diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")
+                                                            data-huyen="@diaChi.huyen"
+                                                            data-sdt="@diaChi.sdtNguoiNhan">
+                                                        @($"{diaChi.tenNguoiNhan} - {diaChi.sdtNguoiNhan} | {diaChi.soNha}, {diaChi.xa}, {diaChi.huyen}, {diaChi.tinhThanhPho}")
                                                     </option>
                                                 }
                                                 <option value="new" data-bs-toggle="modal" data-bs-target="#themDiaChiModal">
@@ -152,6 +153,14 @@
             <div class="modal-body">
                 <form id="themDiaChiForm">
                     <div class="form-group">
+                        <label class="control-label">Tên người nhận</label>
+                        <input type="text" class="form-control" name="tenNguoiNhan" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" name="soDienThoai" required>
+                    </div>
+                    <div class="form-group">
                         <label class="control-label">Số nhà</label>
                         <input type="text" class="form-control" name="soNha" required>
                     </div>
@@ -259,6 +268,17 @@
 
 @section Scripts {
     <script>
+        // Định nghĩa biến chiTietDonHang từ model
+        var chiTietDonHang = @Html.Raw(Json.Serialize(Model.ChiTietDonHang.Select(ct => new {
+            ID_SanPhamChiTiet = ct.ID_SanPhamChiTiet,
+            soLuong = ct.soLuong,
+            donGia = ct.donGia,
+            tongTien = ct.tongTien
+        })));
+
+        // Lấy danh sách ID giỏ hàng từ ViewBag
+        var selectedCartItemIds = @Html.Raw(Json.Serialize(ViewBag.SelectedCartItemIds));
+
         $(document).ready(function() {
             // Lưu danh sách tỉnh/thành phố vào biến
             var provinces = [];
@@ -283,7 +303,7 @@
                     if (response.success) {
                         var diaChi = response.diaChi;
                         var option = new Option(
-                            `${diaChi.soNha}, ${diaChi.xa}, ${diaChi.huyen}, ${diaChi.tinhThanhPho}`,
+                            `${diaChi.tenNguoiNhan} - ${diaChi.soDienThoai} | ${diaChi.soNha}, ${diaChi.xa}, ${diaChi.huyen}, ${diaChi.tinhThanhPho}`,
                             `${diaChi.soNha}, ${diaChi.xa}, ${diaChi.huyen}, ${diaChi.tinhThanhPho}`,
                             true,
                             true
@@ -299,6 +319,14 @@
 
             // Xử lý khi chọn địa chỉ
             $('#diaChiGiaoHang').on('change', function() {
+                var selectedOption = $(this).find('option:selected');
+                var sdt = selectedOption.data('sdt');
+                if (sdt) {
+                    $('#soDienThoai').val(sdt);
+                } else {
+                    $('#soDienThoai').val('');
+                }
+
                 var selectedValue = $(this).val();
                 if (selectedValue === 'new') {
                     $('#themDiaChiModal').modal('show');
@@ -461,14 +489,23 @@
             // Xử lý đặt hàng
             $('#btnDatHang').click(function() {
                 var formData = $('#datHangForm').serialize();
+                var selectedOption = $('#diaChiGiaoHang').find('option:selected');
+                var soDienThoai = selectedOption.data('sdt') || '';
+                var phiVanChuyen = parseInt($('#phiVanChuyen').text().replace(/[^\d]/g, '')) || 0;
+                var tongTien = parseInt($('#tongCong').text().replace(/[^\d]/g, '')) || 0;
+                
                 $.ajax({
                     url: '/GioHang/DatHang',
                     type: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({
+                        cartItemIds: selectedCartItemIds,
                         diaChiVanChuyen: $('#diaChiGiaoHang').val(),
                         phuongThucThanhToan: $('select[name="phuongThucThanhToan"]').val(),
-                        ghiChu: $('textarea[name="ghiChu"]').val()
+                        ghiChu: $('textarea[name="ghiChu"]').val(),
+                        soDienThoai: soDienThoai,
+                        phiVanChuyen: phiVanChuyen,
+                        tongTien: tongTien
                     }),
                     success: function(response) {
                         if (response.success) {

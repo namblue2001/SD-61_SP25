@@ -11,6 +11,13 @@ namespace StyleTee.Models
         [Required(ErrorMessage = "ID tài khoản là bắt buộc.")]
         public Guid ID_TaiKhoan { get; set; }
 
+        [Required(ErrorMessage = "Tên người nhận là bắt buộc.")]
+        public string tenNguoiNhan { get; set; }
+
+        [Required(ErrorMessage = "Số điện thoại người nhận là bắt buộc.")]
+        [RegularExpression(@"^0\d{9}$", ErrorMessage = "Số điện thoại phải bắt đầu bằng số 0 và có đúng 10 chữ số.")]
+        public string sdtNguoiNhan { get; set; }
+
         [Required(ErrorMessage = "Số nhà là bắt buộc.")]
         public string soNha { get; set; }
 
@@ -27,7 +34,6 @@ namespace StyleTee.Models
         public string trangThai { get; set; }
 
 		public TaiKhoan TaiKhoan { get; set; }
-        
 	}
 }
 
