@@ -224,7 +224,7 @@ namespace StyleTee.Controllers
                     ID_DonHang = Guid.NewGuid(),
                     ID_TaiKhoan = Guid.Parse(idTaiKhoan),
                     ngayDatHang = DateTime.Now,
-                    trangThaiDonHang = "Chờ xử lý",
+                    trangThaiDonHang = request.phuongThucThanhToan == "Thanh toán bằng VNPay" ? "Đã xác nhận" : "Chờ xử lý",
                     trangThaiThanhToan = "Chưa thanh toán",
                     diaChi = request.diaChiVanChuyen,
                     phuongThucThanhToan = request.phuongThucThanhToan,
@@ -257,6 +257,19 @@ namespace StyleTee.Controllers
                 // Xóa các sản phẩm đã đặt hàng khỏi giỏ hàng
                 _context.GioHangChiTiet.RemoveRange(selectedCartItems);
                 await _context.SaveChangesAsync();
+
+                // Nếu thanh toán bằng VNPay, chuyển hướng đến trang thanh toán VNPay
+                if (request.phuongThucThanhToan == "Thanh toán bằng VNPay")
+                {
+                    return Json(new { 
+                        success = true, 
+                        donHangId = donHang.ID_DonHang,
+                        redirectUrl = Url.Action("ThanhToanVNPay", "ThanhToan", new { 
+                            tongTien = request.tongTien,
+                            orderId = donHang.ID_DonHang
+                        })
+                    });
+                }
 
                 return Json(new { success = true, donHangId = donHang.ID_DonHang });
             }

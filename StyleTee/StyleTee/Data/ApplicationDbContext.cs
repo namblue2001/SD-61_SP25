@@ -31,7 +31,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<LichSuDonHang> LichSuDonHang { get; set; }
     public DbSet<AnhMinhChung> AnhMinhChung { get; set; }
     public DbSet<HoaDon> HoaDon { get; set; }
-    public DbSet<ThongTinVanChuyen> ThongTinVanChuyen { get; set; }
     public DbSet<YeuCauDoiTra> YeuCauDoiTra { get; set; }
     public DbSet<SanPhamDoiTra> SanPhamDoiTra { get; set; }
     
@@ -61,7 +60,6 @@ public class ApplicationDbContext : DbContext
         builder.Entity<DonHang>().HasOne(x => x.TaiKhoan).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_TaiKhoan);
         builder.Entity<LichSuDonHang>().HasOne(x => x.DonHang).WithMany(p=>p.LichSuDonHang).HasForeignKey(x => x.ID_DonHang);
         builder.Entity<HoaDon>().HasOne(x => x.DonHang).WithMany(p=>p.HoaDon).HasForeignKey(x => x.ID_DonHang);
-        builder.Entity<DonHang>().HasOne(x => x.ThongTinVanChuyen).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_ThongTinVanChuyen);
         builder.Entity<DonHang>().HasOne(x => x.PhieuGiamGia).WithMany(p=>p.DonHang).HasForeignKey(x => x.ID_MaGiamGia);
         builder.Entity<AnhMinhChung>().HasOne(x => x.YeuCauDoiTra).WithMany(p=>p.AnhMinhChung).HasForeignKey(x => x.ID_YeuCauDoiTra);
         builder.Entity<YeuCauDoiTra>().HasOne(x => x.DonHang).WithMany(p=>p.YeuCauDoiTra).HasForeignKey(x => x.ID_DonHang);

@@ -45,7 +45,7 @@
                                             <label class="control-label">Phương thức thanh toán</label>
                                             <select class="form-control" name="phuongThucThanhToan" required>
                                                 <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
-                                                <option value="Chuyển khoản">Chuyển khoản</option>
+                                                <option value="Thanh toán bằng VNPay">Thanh toán bằng VNPay</option>
                                             </select>
                                         </div>
 
@@ -509,7 +509,13 @@
                     }),
                     success: function(response) {
                         if (response.success) {
-                            window.location.href = `/GioHang/DatHangThanhCong/${response.donHangId}`;
+                            if (response.redirectUrl) {
+                                // Chuyển hướng đến trang thanh toán VNPay
+                                window.location.href = response.redirectUrl;
+                            } else {
+                                // Chuyển hướng đến trang đặt hàng thành công
+                                window.location.href = `/GioHang/DatHangThanhCong/${response.donHangId}`;
+                            }
                         } else {
                             alert(response.message);
                         }
